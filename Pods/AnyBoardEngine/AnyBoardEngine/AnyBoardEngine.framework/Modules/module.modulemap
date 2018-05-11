@@ -1,0 +1,6 @@
+framework module AnyBoardEngine {
+  umbrella header "AnyBoardEngine.h"
+
+  export *
+  module * { export * }
+}

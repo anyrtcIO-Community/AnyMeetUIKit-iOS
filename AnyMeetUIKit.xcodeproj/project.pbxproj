@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81120A5335300D83DD1 /* AMApiManager.mm */; };
+		6593C81720A5335300D83DD1 /* AMNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81320A5335300D83DD1 /* AMNetManager.h */; };
+		6593C81820A5335300D83DD1 /* libAnyApiManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C81420A5335300D83DD1 /* libAnyApiManager.a */; };
+		6593C81920A5335300D83DD1 /* AMApiManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81520A5335300D83DD1 /* AMApiManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6593C81C20A534A600D83DD1 /* AnyMeetUIKitConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81A20A534A600D83DD1 /* AnyMeetUIKitConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6593C81D20A534A600D83DD1 /* AnyMeetUIKitConfig.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81B20A534A600D83DD1 /* AnyMeetUIKitConfig.mm */; };
+		65972F0C20A56718005E5CEA /* AMApiCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F0B20A56718005E5CEA /* AMApiCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65972F0F20A5681A005E5CEA /* AMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F0D20A5681A005E5CEA /* AMLog.h */; };
+		65972F1020A5681A005E5CEA /* AMLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65972F0E20A5681A005E5CEA /* AMLog.mm */; };
+		65972F1320A57159005E5CEA /* AMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65972F1120A57159005E5CEA /* AMUserModel.m */; };
+		65972F1420A57159005E5CEA /* AMUserModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F1220A57159005E5CEA /* AMUserModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65972F1920A5772E005E5CEA /* AMMeetInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65972F1520A5772E005E5CEA /* AMMeetInfoModel.m */; };
+		65972F1A20A5772E005E5CEA /* AMMeetListModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F1620A5772E005E5CEA /* AMMeetListModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65972F1B20A5772E005E5CEA /* AMMeetListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65972F1720A5772E005E5CEA /* AMMeetListModel.m */; };
+		65972F1C20A5772E005E5CEA /* AMMeetInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F1820A5772E005E5CEA /* AMMeetInfoModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E8B002AF9C682AEFAE20FD8 /* Pods_AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKit.h; sourceTree = "<group>"; };
+		6593C7FE20A52F8D00D83DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6593C81120A5335300D83DD1 /* AMApiManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AMApiManager.mm; sourceTree = "<group>"; };
+		6593C81320A5335300D83DD1 /* AMNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMNetManager.h; sourceTree = "<group>"; };
+		6593C81420A5335300D83DD1 /* libAnyApiManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAnyApiManager.a; sourceTree = "<group>"; };
+		6593C81520A5335300D83DD1 /* AMApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMApiManager.h; sourceTree = "<group>"; };
+		6593C81A20A534A600D83DD1 /* AnyMeetUIKitConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKitConfig.h; sourceTree = "<group>"; };
+		6593C81B20A534A600D83DD1 /* AnyMeetUIKitConfig.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnyMeetUIKitConfig.mm; sourceTree = "<group>"; };
+		65972F0B20A56718005E5CEA /* AMApiCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMApiCommon.h; sourceTree = "<group>"; };
+		65972F0D20A5681A005E5CEA /* AMLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMLog.h; sourceTree = "<group>"; };
+		65972F0E20A5681A005E5CEA /* AMLog.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AMLog.mm; sourceTree = "<group>"; };
+		65972F1120A57159005E5CEA /* AMUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMUserModel.m; sourceTree = "<group>"; };
+		65972F1220A57159005E5CEA /* AMUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMUserModel.h; sourceTree = "<group>"; };
+		65972F1520A5772E005E5CEA /* AMMeetInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMeetInfoModel.m; sourceTree = "<group>"; };
+		65972F1620A5772E005E5CEA /* AMMeetListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMeetListModel.h; sourceTree = "<group>"; };
+		65972F1720A5772E005E5CEA /* AMMeetListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMeetListModel.m; sourceTree = "<group>"; };
+		65972F1820A5772E005E5CEA /* AMMeetInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMeetInfoModel.h; sourceTree = "<group>"; };
+		90EF4D576BF63003CC24540C /* Pods-AnyMeetUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyMeetUIKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnyMeetUIKit/Pods-AnyMeetUIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		C156BAF614A3C731528F9CB2 /* Pods-AnyMeetUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyMeetUIKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnyMeetUIKit/Pods-AnyMeetUIKit.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6593C7F620A52F8D00D83DD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E8B002AF9C682AEFAE20FD8 /* Pods_AnyMeetUIKit.framework in Frameworks */,
+				6593C81820A5335300D83DD1 /* libAnyApiManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E8EFB0887558B6590F25832 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6593C7F020A52F8D00D83DD1 = {
+			isa = PBXGroup;
+			children = (
+				6593C7FC20A52F8D00D83DD1 /* AnyMeetUIKit */,
+				6593C7FB20A52F8D00D83DD1 /* Products */,
+				BF5DB7DB1FB58338D79FDFD7 /* Pods */,
+				2E8EFB0887558B6590F25832 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6593C7FB20A52F8D00D83DD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6593C7FC20A52F8D00D83DD1 /* AnyMeetUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6593C81020A5335300D83DD1 /* Net */,
+				6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */,
+				6593C7FE20A52F8D00D83DD1 /* Info.plist */,
+				6593C81A20A534A600D83DD1 /* AnyMeetUIKitConfig.h */,
+				6593C81B20A534A600D83DD1 /* AnyMeetUIKitConfig.mm */,
+				65972F0D20A5681A005E5CEA /* AMLog.h */,
+				65972F0E20A5681A005E5CEA /* AMLog.mm */,
+			);
+			path = AnyMeetUIKit;
+			sourceTree = "<group>";
+		};
+		6593C81020A5335300D83DD1 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				6593C81E20A536FF00D83DD1 /* Model */,
+				6593C81520A5335300D83DD1 /* AMApiManager.h */,
+				6593C81120A5335300D83DD1 /* AMApiManager.mm */,
+				6593C81220A5335300D83DD1 /* lib */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		6593C81220A5335300D83DD1 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				65972F0B20A56718005E5CEA /* AMApiCommon.h */,
+				6593C81320A5335300D83DD1 /* AMNetManager.h */,
+				6593C81420A5335300D83DD1 /* libAnyApiManager.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		6593C81E20A536FF00D83DD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65972F1820A5772E005E5CEA /* AMMeetInfoModel.h */,
+				65972F1520A5772E005E5CEA /* AMMeetInfoModel.m */,
+				65972F1620A5772E005E5CEA /* AMMeetListModel.h */,
+				65972F1720A5772E005E5CEA /* AMMeetListModel.m */,
+				65972F1220A57159005E5CEA /* AMUserModel.h */,
+				65972F1120A57159005E5CEA /* AMUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF5DB7DB1FB58338D79FDFD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90EF4D576BF63003CC24540C /* Pods-AnyMeetUIKit.debug.xcconfig */,
+				C156BAF614A3C731528F9CB2 /* Pods-AnyMeetUIKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6593C7F720A52F8D00D83DD1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6593C81920A5335300D83DD1 /* AMApiManager.h in Headers */,
+				65972F1C20A5772E005E5CEA /* AMMeetInfoModel.h in Headers */,
+				65972F1A20A5772E005E5CEA /* AMMeetListModel.h in Headers */,
+				65972F1420A57159005E5CEA /* AMUserModel.h in Headers */,
+				6593C81C20A534A600D83DD1 /* AnyMeetUIKitConfig.h in Headers */,
+				65972F0C20A56718005E5CEA /* AMApiCommon.h in Headers */,
+				6593C81720A5335300D83DD1 /* AMNetManager.h in Headers */,
+				65972F0F20A5681A005E5CEA /* AMLog.h in Headers */,
+				6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6593C7F920A52F8D00D83DD1 /* AnyMeetUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6593C80220A52F8D00D83DD1 /* Build configuration list for PBXNativeTarget "AnyMeetUIKit" */;
+			buildPhases = (
+				D657EC5CB3C6CC69EF4E1480 /* [CP] Check Pods Manifest.lock */,
+				6593C7F520A52F8D00D83DD1 /* Sources */,
+				6593C7F620A52F8D00D83DD1 /* Frameworks */,
+				6593C7F720A52F8D00D83DD1 /* Headers */,
+				6593C7F820A52F8D00D83DD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnyMeetUIKit;
+			productName = AnyMeetUIKit;
+			productReference = 6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6593C7F120A52F8D00D83DD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = derek;
+				TargetAttributes = {
+					6593C7F920A52F8D00D83DD1 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 6593C7F420A52F8D00D83DD1 /* Build configuration list for PBXProject "AnyMeetUIKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6593C7F020A52F8D00D83DD1;
+			productRefGroup = 6593C7FB20A52F8D00D83DD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6593C7F920A52F8D00D83DD1 /* AnyMeetUIKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6593C7F820A52F8D00D83DD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D657EC5CB3C6CC69EF4E1480 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnyMeetUIKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6593C7F520A52F8D00D83DD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65972F1920A5772E005E5CEA /* AMMeetInfoModel.m in Sources */,
+				65972F1020A5681A005E5CEA /* AMLog.mm in Sources */,
+				6593C81D20A534A600D83DD1 /* AnyMeetUIKitConfig.mm in Sources */,
+				65972F1320A57159005E5CEA /* AMUserModel.m in Sources */,
+				65972F1B20A5772E005E5CEA /* AMMeetListModel.m in Sources */,
+				6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6593C80020A52F8D00D83DD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6593C80120A52F8D00D83DD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6593C80320A52F8D00D83DD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90EF4D576BF63003CC24540C /* Pods-AnyMeetUIKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AnyMeetUIKit/Net/lib";
+				INFOPLIST_FILE = AnyMeetUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnyMeetUIKit/Net/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AnyBoardEngine\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"RTMeetEngine\"",
+					"-framework",
+					"\"SocketIO\"",
+					"-framework",
+					"\"Starscream\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dync.AnyMeetUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6593C80420A52F8D00D83DD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C156BAF614A3C731528F9CB2 /* Pods-AnyMeetUIKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AnyMeetUIKit/Net/lib";
+				INFOPLIST_FILE = AnyMeetUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnyMeetUIKit/Net/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AnyBoardEngine\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"RTMeetEngine\"",
+					"-framework",
+					"\"SocketIO\"",
+					"-framework",
+					"\"Starscream\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dync.AnyMeetUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6593C7F420A52F8D00D83DD1 /* Build configuration list for PBXProject "AnyMeetUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6593C80020A52F8D00D83DD1 /* Debug */,
+				6593C80120A52F8D00D83DD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6593C80220A52F8D00D83DD1 /* Build configuration list for PBXNativeTarget "AnyMeetUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6593C80320A52F8D00D83DD1 /* Debug */,
+				6593C80420A52F8D00D83DD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6593C7F120A52F8D00D83DD1 /* Project object */;
+}

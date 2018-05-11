@@ -1,0 +1,6 @@
+framework module RTMeetEngine {
+  umbrella header "RTMeetEngine.h"
+
+  export *
+  module * { export * }
+}
