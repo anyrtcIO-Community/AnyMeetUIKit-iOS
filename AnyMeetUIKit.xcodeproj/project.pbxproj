@@ -7,6 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633E67DB20AD7E6C0019390C /* AnyMeetUIKit.pch in Headers */ = {isa = PBXBuildFile; fileRef = 633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */; };
+		633E684B20AD938F0019390C /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 633E684A20AD938F0019390C /* AnyMeetUIKit.bundle */; };
+		634920E320AD70F800F129F5 /* AMColorMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920D620AD70F800F129F5 /* AMColorMenuView.m */; };
+		634920E420AD70F800F129F5 /* AMDocToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920D720AD70F800F129F5 /* AMDocToolView.h */; };
+		634920E520AD70F800F129F5 /* AMPopverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920D920AD70F800F129F5 /* AMPopverView.m */; };
+		634920E620AD70F800F129F5 /* AMPopverViewConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920DA20AD70F800F129F5 /* AMPopverViewConfiguration.h */; };
+		634920E720AD70F800F129F5 /* AMPopverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920DB20AD70F800F129F5 /* AMPopverView.h */; };
+		634920E920AD70F800F129F5 /* AMDocBlockView.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920DD20AD70F800F129F5 /* AMDocBlockView.h */; };
+		634920EA20AD70F800F129F5 /* AMDocToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920DE20AD70F800F129F5 /* AMDocToolView.m */; };
+		634920EC20AD70F800F129F5 /* AMColorMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920E020AD70F800F129F5 /* AMColorMenuView.h */; };
+		634920ED20AD70F800F129F5 /* AMDocBlockView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 634920E120AD70F800F129F5 /* AMDocBlockView.mm */; };
+		634920F120AD719600F129F5 /* AMCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920EF20AD719600F129F5 /* AMCommon.h */; };
+		634920F220AD719600F129F5 /* AMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920F020AD719600F129F5 /* AMCommon.m */; };
+		6349212120AD74A100F129F5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 634920F720AD74A000F129F5 /* LICENSE */; };
+		6349212220AD74A100F129F5 /* TZPhotoPreviewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920FA20AD74A000F129F5 /* TZPhotoPreviewCell.h */; };
+		6349212320AD74A100F129F5 /* TZPhotoPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920FB20AD74A000F129F5 /* TZPhotoPickerController.h */; };
+		6349212420AD74A100F129F5 /* TZImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920FC20AD74A000F129F5 /* TZImageCropManager.m */; };
+		6349212520AD74A100F129F5 /* TZImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920FD20AD74A000F129F5 /* TZImageManager.h */; };
+		6349212620AD74A100F129F5 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920FE20AD74A000F129F5 /* TZAssetCell.m */; };
+		6349212720AD74A100F129F5 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920FF20AD74A000F129F5 /* TZVideoPlayerController.m */; };
+		6349212820AD74A100F129F5 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210020AD74A000F129F5 /* TZAssetModel.m */; };
+		6349212920AD74A100F129F5 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210120AD74A000F129F5 /* NSBundle+TZImagePicker.m */; };
+		6349212A20AD74A100F129F5 /* TZLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210220AD74A000F129F5 /* TZLocationManager.h */; };
+		6349212B20AD74A100F129F5 /* TZImagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210320AD74A000F129F5 /* TZImagePickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349212C20AD74A100F129F5 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210420AD74A000F129F5 /* UIView+Layout.m */; };
+		6349212D20AD74A100F129F5 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210520AD74A000F129F5 /* TZPhotoPreviewController.m */; };
+		6349212E20AD74A100F129F5 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6349210620AD74A000F129F5 /* TZImagePickerController.bundle */; };
+		6349212F20AD74A100F129F5 /* TZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210720AD74A000F129F5 /* TZProgressView.m */; };
+		6349213020AD74A100F129F5 /* TZGifPhotoPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210820AD74A000F129F5 /* TZGifPhotoPreviewController.h */; };
+		6349213120AD74A100F129F5 /* TZAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210920AD74A100F129F5 /* TZAssetCell.h */; };
+		6349213220AD74A100F129F5 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210A20AD74A100F129F5 /* TZImageManager.m */; };
+		6349213420AD74A100F129F5 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210C20AD74A100F129F5 /* TZPhotoPickerController.m */; };
+		6349213520AD74A100F129F5 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210D20AD74A100F129F5 /* TZPhotoPreviewCell.m */; };
+		6349213620AD74A100F129F5 /* NSBundle+TZImagePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210E20AD74A100F129F5 /* NSBundle+TZImagePicker.h */; };
+		6349213720AD74A100F129F5 /* TZAssetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210F20AD74A100F129F5 /* TZAssetModel.h */; };
+		6349213820AD74A100F129F5 /* TZVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211020AD74A100F129F5 /* TZVideoPlayerController.h */; };
+		6349213920AD74A100F129F5 /* TZPhotoPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211120AD74A100F129F5 /* TZPhotoPreviewController.h */; };
+		6349213A20AD74A100F129F5 /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211220AD74A100F129F5 /* UIView+Layout.h */; };
+		6349213B20AD74A100F129F5 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349211320AD74A100F129F5 /* TZImagePickerController.m */; };
+		6349213C20AD74A100F129F5 /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349211420AD74A100F129F5 /* TZLocationManager.m */; };
+		6349213D20AD74A100F129F5 /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349211520AD74A100F129F5 /* TZGifPhotoPreviewController.m */; };
+		6349213E20AD74A100F129F5 /* TZProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211620AD74A100F129F5 /* TZProgressView.h */; };
+		6349213F20AD74A100F129F5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6349211720AD74A100F129F5 /* README.md */; };
+		6349214020AD74A100F129F5 /* Base64Generater.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349211920AD74A100F129F5 /* Base64Generater.m */; };
+		6349214120AD74A100F129F5 /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211A20AD74A100F129F5 /* GTMBase64.h */; };
+		6349214220AD74A100F129F5 /* Base64Generater.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211B20AD74A100F129F5 /* Base64Generater.h */; };
+		6349214320AD74A100F129F5 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211C20AD74A100F129F5 /* GTMDefines.h */; };
+		6349214420AD74A100F129F5 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349211D20AD74A100F129F5 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6349214520AD74A100F129F5 /* ASHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211F20AD74A100F129F5 /* ASHUD.h */; };
+		6349214620AD74A100F129F5 /* ASHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349212020AD74A100F129F5 /* ASHUD.m */; };
+		6349214C20AD74AD00F129F5 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349214820AD74AD00F129F5 /* UIAlertController+Blocks.m */; };
+		6349214D20AD74AD00F129F5 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349214920AD74AD00F129F5 /* UIViewController+Common.m */; };
+		6349214E20AD74AD00F129F5 /* UIAlertController+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349214A20AD74AD00F129F5 /* UIAlertController+Blocks.h */; };
+		6349214F20AD74AD00F129F5 /* UIViewController+Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349214B20AD74AD00F129F5 /* UIViewController+Common.h */; };
+		6349216320AD74DE00F129F5 /* AMInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215220AD74DD00F129F5 /* AMInformationModel.m */; };
+		6349216420AD74DE00F129F5 /* AMInformationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215320AD74DD00F129F5 /* AMInformationController.h */; };
+		6349216520AD74DE00F129F5 /* AMInformationCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215420AD74DD00F129F5 /* AMInformationCell.h */; };
+		6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215520AD74DD00F129F5 /* AMInformationModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349216720AD74DE00F129F5 /* AMInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215620AD74DD00F129F5 /* AMInformationController.m */; };
+		6349216820AD74DE00F129F5 /* AMInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215720AD74DD00F129F5 /* AMInformationCell.m */; };
+		6349216920AD74DE00F129F5 /* AMMoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215A20AD74DD00F129F5 /* AMMoreController.m */; };
+		6349216A20AD74DE00F129F5 /* AMMoreController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215B20AD74DD00F129F5 /* AMMoreController.h */; };
+		6349216B20AD74DE00F129F5 /* AMConfereeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215D20AD74DD00F129F5 /* AMConfereeController.h */; };
+		6349216C20AD74DE00F129F5 /* AMConfereeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215E20AD74DD00F129F5 /* AMConfereeCell.m */; };
+		6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215F20AD74DD00F129F5 /* AMConfereeModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349216E20AD74DE00F129F5 /* AMConfereeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349216020AD74DD00F129F5 /* AMConfereeController.m */; };
+		6349216F20AD74DE00F129F5 /* AMConfereeCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349216120AD74DD00F129F5 /* AMConfereeCell.h */; };
+		6349217020AD74DE00F129F5 /* AMConfereeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349216220AD74DD00F129F5 /* AMConfereeModel.m */; };
+		6349217D20AD74EF00F129F5 /* AMVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217220AD74EF00F129F5 /* AMVideoController.m */; };
+		6349217E20AD74EF00F129F5 /* AMTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217320AD74EF00F129F5 /* AMTabbarView.m */; };
+		6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217420AD74EF00F129F5 /* AMVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349218020AD74EF00F129F5 /* AnyMeetVideoController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217520AD74EF00F129F5 /* AnyMeetVideoController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217620AD74EF00F129F5 /* AMTopToolView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217720AD74EF00F129F5 /* AMTabbarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349218320AD74EF00F129F5 /* AMVideoController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217820AD74EF00F129F5 /* AMVideoController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217A20AD74EF00F129F5 /* AMVideoView.m */; };
+		6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217B20AD74EF00F129F5 /* AMTopToolView.m */; };
+		6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */; };
 		6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81120A5335300D83DD1 /* AMApiManager.mm */; };
 		6593C81720A5335300D83DD1 /* AMNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81320A5335300D83DD1 /* AMNetManager.h */; };
@@ -28,6 +106,85 @@
 
 /* Begin PBXFileReference section */
 		157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKit.pch; sourceTree = "<group>"; };
+		633E684A20AD938F0019390C /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
+		634920D620AD70F800F129F5 /* AMColorMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMColorMenuView.m; sourceTree = "<group>"; };
+		634920D720AD70F800F129F5 /* AMDocToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDocToolView.h; sourceTree = "<group>"; };
+		634920D920AD70F800F129F5 /* AMPopverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPopverView.m; sourceTree = "<group>"; };
+		634920DA20AD70F800F129F5 /* AMPopverViewConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPopverViewConfiguration.h; sourceTree = "<group>"; };
+		634920DB20AD70F800F129F5 /* AMPopverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPopverView.h; sourceTree = "<group>"; };
+		634920DD20AD70F800F129F5 /* AMDocBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDocBlockView.h; sourceTree = "<group>"; };
+		634920DE20AD70F800F129F5 /* AMDocToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDocToolView.m; sourceTree = "<group>"; };
+		634920E020AD70F800F129F5 /* AMColorMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMColorMenuView.h; sourceTree = "<group>"; };
+		634920E120AD70F800F129F5 /* AMDocBlockView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AMDocBlockView.mm; sourceTree = "<group>"; };
+		634920EF20AD719600F129F5 /* AMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCommon.h; sourceTree = "<group>"; };
+		634920F020AD719600F129F5 /* AMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCommon.m; sourceTree = "<group>"; };
+		634920F720AD74A000F129F5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		634920FA20AD74A000F129F5 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		634920FB20AD74A000F129F5 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		634920FC20AD74A000F129F5 /* TZImageCropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageCropManager.m; sourceTree = "<group>"; };
+		634920FD20AD74A000F129F5 /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		634920FE20AD74A000F129F5 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		634920FF20AD74A000F129F5 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		6349210020AD74A000F129F5 /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		6349210120AD74A000F129F5 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
+		6349210220AD74A000F129F5 /* TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZLocationManager.h; sourceTree = "<group>"; };
+		6349210320AD74A000F129F5 /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		6349210420AD74A000F129F5 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		6349210520AD74A000F129F5 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		6349210620AD74A000F129F5 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		6349210720AD74A000F129F5 /* TZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZProgressView.m; sourceTree = "<group>"; };
+		6349210820AD74A000F129F5 /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
+		6349210920AD74A100F129F5 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		6349210A20AD74A100F129F5 /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		6349210B20AD74A100F129F5 /* TZImageCropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageCropManager.h; sourceTree = "<group>"; };
+		6349210C20AD74A100F129F5 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		6349210D20AD74A100F129F5 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		6349210E20AD74A100F129F5 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
+		6349210F20AD74A100F129F5 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		6349211020AD74A100F129F5 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		6349211120AD74A100F129F5 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		6349211220AD74A100F129F5 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		6349211320AD74A100F129F5 /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		6349211420AD74A100F129F5 /* TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZLocationManager.m; sourceTree = "<group>"; };
+		6349211520AD74A100F129F5 /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
+		6349211620AD74A100F129F5 /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
+		6349211720AD74A100F129F5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6349211920AD74A100F129F5 /* Base64Generater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Generater.m; sourceTree = "<group>"; };
+		6349211A20AD74A100F129F5 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		6349211B20AD74A100F129F5 /* Base64Generater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Generater.h; sourceTree = "<group>"; };
+		6349211C20AD74A100F129F5 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		6349211D20AD74A100F129F5 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		6349211F20AD74A100F129F5 /* ASHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHUD.h; sourceTree = "<group>"; };
+		6349212020AD74A100F129F5 /* ASHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHUD.m; sourceTree = "<group>"; };
+		6349214820AD74AD00F129F5 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
+		6349214920AD74AD00F129F5 /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
+		6349214A20AD74AD00F129F5 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
+		6349214B20AD74AD00F129F5 /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
+		6349215220AD74DD00F129F5 /* AMInformationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMInformationModel.m; sourceTree = "<group>"; };
+		6349215320AD74DD00F129F5 /* AMInformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMInformationController.h; sourceTree = "<group>"; };
+		6349215420AD74DD00F129F5 /* AMInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMInformationCell.h; sourceTree = "<group>"; };
+		6349215520AD74DD00F129F5 /* AMInformationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMInformationModel.h; sourceTree = "<group>"; };
+		6349215620AD74DD00F129F5 /* AMInformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMInformationController.m; sourceTree = "<group>"; };
+		6349215720AD74DD00F129F5 /* AMInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMInformationCell.m; sourceTree = "<group>"; };
+		6349215A20AD74DD00F129F5 /* AMMoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMoreController.m; sourceTree = "<group>"; };
+		6349215B20AD74DD00F129F5 /* AMMoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMoreController.h; sourceTree = "<group>"; };
+		6349215D20AD74DD00F129F5 /* AMConfereeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMConfereeController.h; sourceTree = "<group>"; };
+		6349215E20AD74DD00F129F5 /* AMConfereeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMConfereeCell.m; sourceTree = "<group>"; };
+		6349215F20AD74DD00F129F5 /* AMConfereeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMConfereeModel.h; sourceTree = "<group>"; };
+		6349216020AD74DD00F129F5 /* AMConfereeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMConfereeController.m; sourceTree = "<group>"; };
+		6349216120AD74DD00F129F5 /* AMConfereeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMConfereeCell.h; sourceTree = "<group>"; };
+		6349216220AD74DD00F129F5 /* AMConfereeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMConfereeModel.m; sourceTree = "<group>"; };
+		6349217220AD74EF00F129F5 /* AMVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMVideoController.m; sourceTree = "<group>"; };
+		6349217320AD74EF00F129F5 /* AMTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTabbarView.m; sourceTree = "<group>"; };
+		6349217420AD74EF00F129F5 /* AMVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMVideoView.h; sourceTree = "<group>"; };
+		6349217520AD74EF00F129F5 /* AnyMeetVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyMeetVideoController.h; sourceTree = "<group>"; };
+		6349217620AD74EF00F129F5 /* AMTopToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMTopToolView.h; sourceTree = "<group>"; };
+		6349217720AD74EF00F129F5 /* AMTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMTabbarView.h; sourceTree = "<group>"; };
+		6349217820AD74EF00F129F5 /* AMVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMVideoController.h; sourceTree = "<group>"; };
+		6349217A20AD74EF00F129F5 /* AMVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMVideoView.m; sourceTree = "<group>"; };
+		6349217B20AD74EF00F129F5 /* AMTopToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTopToolView.m; sourceTree = "<group>"; };
+		6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyMeetVideoController.m; sourceTree = "<group>"; };
 		6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKit.h; sourceTree = "<group>"; };
 		6593C7FE20A52F8D00D83DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +228,234 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		634920D420AD702900F129F5 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				634920F420AD747A00F129F5 /* Helper */,
+				6349217120AD74EF00F129F5 /* Main */,
+				6349215020AD74DD00F129F5 /* Menu */,
+				634920D520AD70F800F129F5 /* DocShare */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		634920D520AD70F800F129F5 /* DocShare */ = {
+			isa = PBXGroup;
+			children = (
+				634920E020AD70F800F129F5 /* AMColorMenuView.h */,
+				634920D620AD70F800F129F5 /* AMColorMenuView.m */,
+				634920D720AD70F800F129F5 /* AMDocToolView.h */,
+				634920DE20AD70F800F129F5 /* AMDocToolView.m */,
+				634920DD20AD70F800F129F5 /* AMDocBlockView.h */,
+				634920E120AD70F800F129F5 /* AMDocBlockView.mm */,
+				634920D820AD70F800F129F5 /* popView */,
+			);
+			path = DocShare;
+			sourceTree = "<group>";
+		};
+		634920D820AD70F800F129F5 /* popView */ = {
+			isa = PBXGroup;
+			children = (
+				634920D920AD70F800F129F5 /* AMPopverView.m */,
+				634920DA20AD70F800F129F5 /* AMPopverViewConfiguration.h */,
+				634920DB20AD70F800F129F5 /* AMPopverView.h */,
+			);
+			path = popView;
+			sourceTree = "<group>";
+		};
+		634920F420AD747A00F129F5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				634920EF20AD719600F129F5 /* AMCommon.h */,
+				634920F020AD719600F129F5 /* AMCommon.m */,
+				6349214720AD74AD00F129F5 /* Category */,
+				634920F520AD74A000F129F5 /* Library */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		634920F520AD74A000F129F5 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				634920F620AD74A000F129F5 /* TZImagePickerController */,
+				6349211820AD74A100F129F5 /* Base64Util */,
+				6349211E20AD74A100F129F5 /* ASProgressHUD */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		634920F620AD74A000F129F5 /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				634920F720AD74A000F129F5 /* LICENSE */,
+				634920F820AD74A000F129F5 /* TZImagePickerController */,
+				6349211720AD74A100F129F5 /* README.md */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		634920F820AD74A000F129F5 /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				634920F920AD74A000F129F5 /* TZImagePickerController */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		634920F920AD74A000F129F5 /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				634920FA20AD74A000F129F5 /* TZPhotoPreviewCell.h */,
+				634920FB20AD74A000F129F5 /* TZPhotoPickerController.h */,
+				634920FC20AD74A000F129F5 /* TZImageCropManager.m */,
+				634920FD20AD74A000F129F5 /* TZImageManager.h */,
+				634920FE20AD74A000F129F5 /* TZAssetCell.m */,
+				634920FF20AD74A000F129F5 /* TZVideoPlayerController.m */,
+				6349210020AD74A000F129F5 /* TZAssetModel.m */,
+				6349210120AD74A000F129F5 /* NSBundle+TZImagePicker.m */,
+				6349210220AD74A000F129F5 /* TZLocationManager.h */,
+				6349210320AD74A000F129F5 /* TZImagePickerController.h */,
+				6349210420AD74A000F129F5 /* UIView+Layout.m */,
+				6349210520AD74A000F129F5 /* TZPhotoPreviewController.m */,
+				6349210620AD74A000F129F5 /* TZImagePickerController.bundle */,
+				6349210720AD74A000F129F5 /* TZProgressView.m */,
+				6349210820AD74A000F129F5 /* TZGifPhotoPreviewController.h */,
+				6349210920AD74A100F129F5 /* TZAssetCell.h */,
+				6349210A20AD74A100F129F5 /* TZImageManager.m */,
+				6349210B20AD74A100F129F5 /* TZImageCropManager.h */,
+				6349210C20AD74A100F129F5 /* TZPhotoPickerController.m */,
+				6349210D20AD74A100F129F5 /* TZPhotoPreviewCell.m */,
+				6349210E20AD74A100F129F5 /* NSBundle+TZImagePicker.h */,
+				6349210F20AD74A100F129F5 /* TZAssetModel.h */,
+				6349211020AD74A100F129F5 /* TZVideoPlayerController.h */,
+				6349211120AD74A100F129F5 /* TZPhotoPreviewController.h */,
+				6349211220AD74A100F129F5 /* UIView+Layout.h */,
+				6349211320AD74A100F129F5 /* TZImagePickerController.m */,
+				6349211420AD74A100F129F5 /* TZLocationManager.m */,
+				6349211520AD74A100F129F5 /* TZGifPhotoPreviewController.m */,
+				6349211620AD74A100F129F5 /* TZProgressView.h */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		6349211820AD74A100F129F5 /* Base64Util */ = {
+			isa = PBXGroup;
+			children = (
+				6349211920AD74A100F129F5 /* Base64Generater.m */,
+				6349211A20AD74A100F129F5 /* GTMBase64.h */,
+				6349211B20AD74A100F129F5 /* Base64Generater.h */,
+				6349211C20AD74A100F129F5 /* GTMDefines.h */,
+				6349211D20AD74A100F129F5 /* GTMBase64.m */,
+			);
+			path = Base64Util;
+			sourceTree = "<group>";
+		};
+		6349211E20AD74A100F129F5 /* ASProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6349211F20AD74A100F129F5 /* ASHUD.h */,
+				6349212020AD74A100F129F5 /* ASHUD.m */,
+			);
+			path = ASProgressHUD;
+			sourceTree = "<group>";
+		};
+		6349214720AD74AD00F129F5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6349214820AD74AD00F129F5 /* UIAlertController+Blocks.m */,
+				6349214920AD74AD00F129F5 /* UIViewController+Common.m */,
+				6349214A20AD74AD00F129F5 /* UIAlertController+Blocks.h */,
+				6349214B20AD74AD00F129F5 /* UIViewController+Common.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		6349215020AD74DD00F129F5 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				6349215120AD74DD00F129F5 /* Message */,
+				6349215820AD74DD00F129F5 /* Document */,
+				6349215920AD74DD00F129F5 /* More */,
+				6349215C20AD74DD00F129F5 /* Conferee */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		6349215120AD74DD00F129F5 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				6349215220AD74DD00F129F5 /* AMInformationModel.m */,
+				6349215320AD74DD00F129F5 /* AMInformationController.h */,
+				6349215420AD74DD00F129F5 /* AMInformationCell.h */,
+				6349215520AD74DD00F129F5 /* AMInformationModel.h */,
+				6349215620AD74DD00F129F5 /* AMInformationController.m */,
+				6349215720AD74DD00F129F5 /* AMInformationCell.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		6349215820AD74DD00F129F5 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		6349215920AD74DD00F129F5 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				6349215A20AD74DD00F129F5 /* AMMoreController.m */,
+				6349215B20AD74DD00F129F5 /* AMMoreController.h */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		6349215C20AD74DD00F129F5 /* Conferee */ = {
+			isa = PBXGroup;
+			children = (
+				6349215D20AD74DD00F129F5 /* AMConfereeController.h */,
+				6349215E20AD74DD00F129F5 /* AMConfereeCell.m */,
+				6349215F20AD74DD00F129F5 /* AMConfereeModel.h */,
+				6349216020AD74DD00F129F5 /* AMConfereeController.m */,
+				6349216120AD74DD00F129F5 /* AMConfereeCell.h */,
+				6349216220AD74DD00F129F5 /* AMConfereeModel.m */,
+			);
+			path = Conferee;
+			sourceTree = "<group>";
+		};
+		6349217120AD74EF00F129F5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6349218B20AD787000F129F5 /* View */,
+				6349218A20AD784500F129F5 /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6349218A20AD784500F129F5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6349217520AD74EF00F129F5 /* AnyMeetVideoController.h */,
+				6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */,
+				6349217820AD74EF00F129F5 /* AMVideoController.h */,
+				6349217220AD74EF00F129F5 /* AMVideoController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6349218B20AD787000F129F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6349217720AD74EF00F129F5 /* AMTabbarView.h */,
+				6349217320AD74EF00F129F5 /* AMTabbarView.m */,
+				6349217420AD74EF00F129F5 /* AMVideoView.h */,
+				6349217A20AD74EF00F129F5 /* AMVideoView.m */,
+				6349217620AD74EF00F129F5 /* AMTopToolView.h */,
+				6349217B20AD74EF00F129F5 /* AMTopToolView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6593C7F020A52F8D00D83DD1 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +477,7 @@
 		6593C7FC20A52F8D00D83DD1 /* AnyMeetUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				634920D420AD702900F129F5 /* Interface */,
 				6593C81020A5335300D83DD1 /* Net */,
 				6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */,
 				6593C7FE20A52F8D00D83DD1 /* Info.plist */,
@@ -99,6 +485,8 @@
 				6593C81B20A534A600D83DD1 /* AnyMeetUIKitConfig.mm */,
 				65972F0D20A5681A005E5CEA /* AMLog.h */,
 				65972F0E20A5681A005E5CEA /* AMLog.mm */,
+				633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */,
+				633E684A20AD938F0019390C /* AnyMeetUIKit.bundle */,
 			);
 			path = AnyMeetUIKit;
 			sourceTree = "<group>";
@@ -153,15 +541,53 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6349218320AD74EF00F129F5 /* AMVideoController.h in Headers */,
+				6349213920AD74A100F129F5 /* TZPhotoPreviewController.h in Headers */,
+				6349212520AD74A100F129F5 /* TZImageManager.h in Headers */,
+				6349213120AD74A100F129F5 /* TZAssetCell.h in Headers */,
+				6349216420AD74DE00F129F5 /* AMInformationController.h in Headers */,
+				6349212B20AD74A100F129F5 /* TZImagePickerController.h in Headers */,
+				6349214F20AD74AD00F129F5 /* UIViewController+Common.h in Headers */,
+				6349218020AD74EF00F129F5 /* AnyMeetVideoController.h in Headers */,
+				634920E420AD70F800F129F5 /* AMDocToolView.h in Headers */,
+				6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */,
+				6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */,
+				6349212A20AD74A100F129F5 /* TZLocationManager.h in Headers */,
+				6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */,
+				6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */,
+				6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */,
+				634920E620AD70F800F129F5 /* AMPopverViewConfiguration.h in Headers */,
 				6593C81920A5335300D83DD1 /* AMApiManager.h in Headers */,
+				6349214320AD74A100F129F5 /* GTMDefines.h in Headers */,
+				6349214E20AD74AD00F129F5 /* UIAlertController+Blocks.h in Headers */,
+				6349214520AD74A100F129F5 /* ASHUD.h in Headers */,
+				6349216F20AD74DE00F129F5 /* AMConfereeCell.h in Headers */,
+				634920F120AD719600F129F5 /* AMCommon.h in Headers */,
+				6349214220AD74A100F129F5 /* Base64Generater.h in Headers */,
+				633E67DB20AD7E6C0019390C /* AnyMeetUIKit.pch in Headers */,
+				6349212220AD74A100F129F5 /* TZPhotoPreviewCell.h in Headers */,
+				6349213E20AD74A100F129F5 /* TZProgressView.h in Headers */,
+				634920E920AD70F800F129F5 /* AMDocBlockView.h in Headers */,
+				6349213020AD74A100F129F5 /* TZGifPhotoPreviewController.h in Headers */,
+				6349213620AD74A100F129F5 /* NSBundle+TZImagePicker.h in Headers */,
+				6349213720AD74A100F129F5 /* TZAssetModel.h in Headers */,
 				65972F1C20A5772E005E5CEA /* AMMeetInfoModel.h in Headers */,
+				6349213A20AD74A100F129F5 /* UIView+Layout.h in Headers */,
 				65972F1A20A5772E005E5CEA /* AMMeetListModel.h in Headers */,
+				6349213820AD74A100F129F5 /* TZVideoPlayerController.h in Headers */,
+				634920E720AD70F800F129F5 /* AMPopverView.h in Headers */,
 				65972F1420A57159005E5CEA /* AMUserModel.h in Headers */,
+				6349216A20AD74DE00F129F5 /* AMMoreController.h in Headers */,
+				6349216B20AD74DE00F129F5 /* AMConfereeController.h in Headers */,
+				6349212320AD74A100F129F5 /* TZPhotoPickerController.h in Headers */,
+				6349214120AD74A100F129F5 /* GTMBase64.h in Headers */,
 				6593C81C20A534A600D83DD1 /* AnyMeetUIKitConfig.h in Headers */,
 				65972F0C20A56718005E5CEA /* AMApiCommon.h in Headers */,
+				634920EC20AD70F800F129F5 /* AMColorMenuView.h in Headers */,
 				6593C81720A5335300D83DD1 /* AMNetManager.h in Headers */,
 				65972F0F20A5681A005E5CEA /* AMLog.h in Headers */,
 				6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */,
+				6349216520AD74DE00F129F5 /* AMInformationCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +649,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633E684B20AD938F0019390C /* AnyMeetUIKit.bundle in Resources */,
+				6349213F20AD74A100F129F5 /* README.md in Resources */,
+				6349212120AD74A100F129F5 /* LICENSE in Resources */,
+				6349212E20AD74A100F129F5 /* TZImagePickerController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +684,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634920EA20AD70F800F129F5 /* AMDocToolView.m in Sources */,
+				634920ED20AD70F800F129F5 /* AMDocBlockView.mm in Sources */,
+				6349212F20AD74A100F129F5 /* TZProgressView.m in Sources */,
+				6349216320AD74DE00F129F5 /* AMInformationModel.m in Sources */,
+				6349213220AD74A100F129F5 /* TZImageManager.m in Sources */,
+				634920E320AD70F800F129F5 /* AMColorMenuView.m in Sources */,
+				6349216E20AD74DE00F129F5 /* AMConfereeController.m in Sources */,
+				6349217D20AD74EF00F129F5 /* AMVideoController.m in Sources */,
+				6349212420AD74A100F129F5 /* TZImageCropManager.m in Sources */,
 				65972F1920A5772E005E5CEA /* AMMeetInfoModel.m in Sources */,
+				6349212620AD74A100F129F5 /* TZAssetCell.m in Sources */,
+				6349214020AD74A100F129F5 /* Base64Generater.m in Sources */,
+				6349216820AD74DE00F129F5 /* AMInformationCell.m in Sources */,
+				6349213C20AD74A100F129F5 /* TZLocationManager.m in Sources */,
 				65972F1020A5681A005E5CEA /* AMLog.mm in Sources */,
+				6349216720AD74DE00F129F5 /* AMInformationController.m in Sources */,
+				6349217020AD74DE00F129F5 /* AMConfereeModel.m in Sources */,
+				6349216C20AD74DE00F129F5 /* AMConfereeCell.m in Sources */,
+				6349216920AD74DE00F129F5 /* AMMoreController.m in Sources */,
+				6349212D20AD74A100F129F5 /* TZPhotoPreviewController.m in Sources */,
+				6349213B20AD74A100F129F5 /* TZImagePickerController.m in Sources */,
+				6349214D20AD74AD00F129F5 /* UIViewController+Common.m in Sources */,
 				6593C81D20A534A600D83DD1 /* AnyMeetUIKitConfig.mm in Sources */,
+				6349212C20AD74A100F129F5 /* UIView+Layout.m in Sources */,
+				6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */,
+				6349212920AD74A100F129F5 /* NSBundle+TZImagePicker.m in Sources */,
+				6349213520AD74A100F129F5 /* TZPhotoPreviewCell.m in Sources */,
+				6349212720AD74A100F129F5 /* TZVideoPlayerController.m in Sources */,
 				65972F1320A57159005E5CEA /* AMUserModel.m in Sources */,
+				6349214620AD74A100F129F5 /* ASHUD.m in Sources */,
 				65972F1B20A5772E005E5CEA /* AMMeetListModel.m in Sources */,
+				634920E520AD70F800F129F5 /* AMPopverView.m in Sources */,
+				6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */,
+				6349212820AD74A100F129F5 /* TZAssetModel.m in Sources */,
+				6349213420AD74A100F129F5 /* TZPhotoPickerController.m in Sources */,
+				6349213D20AD74A100F129F5 /* TZGifPhotoPreviewController.m in Sources */,
+				6349217E20AD74EF00F129F5 /* AMTabbarView.m in Sources */,
 				6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */,
+				6349214420AD74A100F129F5 /* GTMBase64.m in Sources */,
+				6349214C20AD74AD00F129F5 /* UIAlertController+Blocks.m in Sources */,
+				634920F220AD719600F129F5 /* AMCommon.m in Sources */,
+				6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +859,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/AnyMeetUIKit.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AnyMeetUIKit/Net/lib";
 				INFOPLIST_FILE = AnyMeetUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -439,6 +906,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/AnyMeetUIKit.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AnyMeetUIKit/Net/lib";
 				INFOPLIST_FILE = AnyMeetUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

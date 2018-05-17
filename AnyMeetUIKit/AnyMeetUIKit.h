@@ -18,5 +18,4 @@ FOUNDATION_EXPORT const unsigned char AnyMeetUIKitVersionString[];
 #import <AnyMeetUIKit/AnyMeetUIKitConfig.h>
 #import <AnyMeetUIKit/AMApiCommon.h>
 #import <AnyMeetUIKit/AMApiManager.h>
-
-
+#import <AnyMeetUIKit/AnyMeetVideoController.h>

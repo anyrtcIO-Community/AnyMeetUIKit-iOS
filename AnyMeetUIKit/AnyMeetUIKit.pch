@@ -1,0 +1,88 @@
+//
+//  AnyMeetUIKit.pch
+//  AnyMeetUIKit
+//
+//  Created by jh on 2018/5/3.
+//  Copyright © 2018年 derek. All rights reserved.
+//
+
+#ifndef AnyMeetUIKit_pch
+#define AnyMeetUIKit_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+
+// MARK: - 其他与会者视频大小
+
+static const CGFloat Video_Width = 90;
+static const CGFloat Video_Height = 120;
+
+// MARK: - 宏
+
+#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125,2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define Bundle_Name @"AnyMeetUIKit.bundle"
+#define Bundle_Path [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:Bundle_Name]
+#define Bundle [NSBundle bundleWithPath:Bundle_Path]
+
+#define Video_MySelf @"Video_MySelf"
+
+#define Music_Tip @"Music_Tip"
+
+// MARK: ------------ 自定义 ---------------
+
+//公共类
+#import "AMCommon.h"
+
+#import <AnyMeetUIKit/AnyMeetUIKit.h>
+
+#import "UIViewController+Common.h"
+
+//参会人员
+#import "AMConfereeController.h"
+
+#import "AMConfereeModel.h"
+
+#import "AMInformationModel.h"
+
+//更多
+#import "AMMoreController.h"
+
+#import "AMTopToolView.h"
+
+#import "AMTabbarView.h"
+
+#import "AMVideoView.h"
+
+// MARK: ------------ lib ---------------
+
+#import "UIImageView+WebCache.h"
+
+#import "Masonry.h"
+
+#import "ASHUD.h"
+
+#import <MJExtension/MJExtension.h>
+
+#import "TZImagePickerController.h"
+
+#import "UIAlertController+Blocks.h"
+
+#import "Base64Generater.h"
+
+
+// MARK: --------- RTMeeting SDK ---------
+
+#import <RTMeetEngine/AnyRTCMeetEngine.h>
+
+#import <RTMeetEngine/RTMeetKit.h>
+
+#import <RTMeetEngine/RTMeetKitDelegate.h>
+
+#import <RTMeetEngine/RTMeetAudioKit.h>
+
+#import <RTMeetEngine/RTMeetAudioKitDelegate.h>
+
+#endif /* AnyMeetUIKit_pch */
