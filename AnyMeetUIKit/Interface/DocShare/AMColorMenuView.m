@@ -27,7 +27,7 @@
 }
 
 + (instancetype)loadColorMenuView {
-     return [[[NSBundle bundleWithPath:Bundle_Path] loadNibNamed:@"AnyMeetUIKit.bundle/AMColorMenuView" owner:self options:nil] lastObject];
+    return [[[NSBundle bundleForClass:self.class] loadNibNamed:@"AMColorMenuView" owner:self options:nil] lastObject];
 }
 
 - (void)awakeFromNib {

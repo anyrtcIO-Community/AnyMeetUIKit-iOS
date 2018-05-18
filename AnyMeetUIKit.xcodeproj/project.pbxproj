@@ -87,6 +87,9 @@
 		63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */; };
 		63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */; };
 		63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */; };
+		63D1161E20AEB70600BC0A36 /* AMColorMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D1161D20AEB6E800BC0A36 /* AMColorMenuView.xib */; };
+		63D1161F20AEB70D00BC0A36 /* AMDocToolGuestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D1161B20AEB6E700BC0A36 /* AMDocToolGuestView.xib */; };
+		63D1162020AEB70D00BC0A36 /* AMDocToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D1161C20AEB6E700BC0A36 /* AMDocToolView.xib */; };
 		6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81120A5335300D83DD1 /* AMApiManager.mm */; };
 		6593C81720A5335300D83DD1 /* AMNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81320A5335300D83DD1 /* AMNetManager.h */; };
@@ -189,6 +192,9 @@
 		63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
 		63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
+		63D1161B20AEB6E700BC0A36 /* AMDocToolGuestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AMDocToolGuestView.xib; sourceTree = "<group>"; };
+		63D1161C20AEB6E700BC0A36 /* AMDocToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AMDocToolView.xib; sourceTree = "<group>"; };
+		63D1161D20AEB6E800BC0A36 /* AMColorMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AMColorMenuView.xib; sourceTree = "<group>"; };
 		6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKit.h; sourceTree = "<group>"; };
 		6593C7FE20A52F8D00D83DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -252,6 +258,9 @@
 				634920DE20AD70F800F129F5 /* AMDocToolView.m */,
 				634920DD20AD70F800F129F5 /* AMDocBlockView.h */,
 				634920E120AD70F800F129F5 /* AMDocBlockView.mm */,
+				63D1161D20AEB6E800BC0A36 /* AMColorMenuView.xib */,
+				63D1161B20AEB6E700BC0A36 /* AMDocToolGuestView.xib */,
+				63D1161C20AEB6E700BC0A36 /* AMDocToolView.xib */,
 				634920D820AD70F800F129F5 /* popView */,
 			);
 			path = DocShare;
@@ -648,6 +657,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D1161F20AEB70D00BC0A36 /* AMDocToolGuestView.xib in Resources */,
+				63D1162020AEB70D00BC0A36 /* AMDocToolView.xib in Resources */,
+				63D1161E20AEB70600BC0A36 /* AMColorMenuView.xib in Resources */,
 				63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */,
 				6349213F20AD74A100F129F5 /* README.md in Resources */,
 				6349212120AD74A100F129F5 /* LICENSE in Resources */,

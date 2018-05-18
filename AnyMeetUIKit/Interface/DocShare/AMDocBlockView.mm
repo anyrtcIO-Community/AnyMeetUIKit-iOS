@@ -308,9 +308,9 @@ extern NSString *GetVerifyUrl();
     if (!_toolView) {
        
         if (self.isHost) {
-            _toolView = [[[NSBundle bundleWithPath:Bundle_Path] loadNibNamed:@"AnyMeetUIKit.bundle/AMDocToolView" owner:self options:nil] lastObject];
+            _toolView = [[[NSBundle bundleForClass:self.class] loadNibNamed:@"AMDocToolView" owner:self options:nil] lastObject];
         }else{
-            _toolView = [[[NSBundle bundleWithPath:Bundle_Path] loadNibNamed:@"AnyMeetUIKit.bundle/AMDocToolGuestView" owner:self options:nil] lastObject];
+            _toolView = [[[NSBundle bundleForClass:self.class] loadNibNamed:@"AMDocToolGuestView" owner:self options:nil] lastObject];
         }
         _toolView.hidden = YES;
         __weak typeof(self)weakSelf = self;
