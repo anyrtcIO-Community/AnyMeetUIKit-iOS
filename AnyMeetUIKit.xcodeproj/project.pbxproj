@@ -90,14 +90,16 @@
 		63D1161E20AEB70600BC0A36 /* AMColorMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D1161D20AEB6E800BC0A36 /* AMColorMenuView.xib */; };
 		63D1161F20AEB70D00BC0A36 /* AMDocToolGuestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D1161B20AEB6E700BC0A36 /* AMDocToolGuestView.xib */; };
 		63D1162020AEB70D00BC0A36 /* AMDocToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D1161C20AEB6E700BC0A36 /* AMDocToolView.xib */; };
+		653395D920AEC5BB00BA13B7 /* AMNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 653395D420AEC5BB00BA13B7 /* AMNetWork.m */; };
+		653395DA20AEC5BB00BA13B7 /* AMNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 653395D520AEC5BB00BA13B7 /* AMNetManager.h */; };
+		653395DB20AEC5BB00BA13B7 /* AMApiCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 653395D620AEC5BB00BA13B7 /* AMApiCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		653395DC20AEC5BB00BA13B7 /* AMNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 653395D720AEC5BB00BA13B7 /* AMNetManager.m */; };
+		653395DD20AEC5BB00BA13B7 /* AMNetWork.h in Headers */ = {isa = PBXBuildFile; fileRef = 653395D820AEC5BB00BA13B7 /* AMNetWork.h */; };
 		6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81120A5335300D83DD1 /* AMApiManager.mm */; };
-		6593C81720A5335300D83DD1 /* AMNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81320A5335300D83DD1 /* AMNetManager.h */; };
-		6593C81820A5335300D83DD1 /* libAnyApiManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C81420A5335300D83DD1 /* libAnyApiManager.a */; };
 		6593C81920A5335300D83DD1 /* AMApiManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81520A5335300D83DD1 /* AMApiManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6593C81C20A534A600D83DD1 /* AnyMeetUIKitConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81A20A534A600D83DD1 /* AnyMeetUIKitConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6593C81D20A534A600D83DD1 /* AnyMeetUIKitConfig.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81B20A534A600D83DD1 /* AnyMeetUIKitConfig.mm */; };
-		65972F0C20A56718005E5CEA /* AMApiCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F0B20A56718005E5CEA /* AMApiCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65972F0F20A5681A005E5CEA /* AMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F0D20A5681A005E5CEA /* AMLog.h */; };
 		65972F1020A5681A005E5CEA /* AMLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65972F0E20A5681A005E5CEA /* AMLog.mm */; };
 		65972F1320A57159005E5CEA /* AMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65972F1120A57159005E5CEA /* AMUserModel.m */; };
@@ -195,16 +197,18 @@
 		63D1161B20AEB6E700BC0A36 /* AMDocToolGuestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AMDocToolGuestView.xib; sourceTree = "<group>"; };
 		63D1161C20AEB6E700BC0A36 /* AMDocToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AMDocToolView.xib; sourceTree = "<group>"; };
 		63D1161D20AEB6E800BC0A36 /* AMColorMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AMColorMenuView.xib; sourceTree = "<group>"; };
+		653395D420AEC5BB00BA13B7 /* AMNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMNetWork.m; sourceTree = "<group>"; };
+		653395D520AEC5BB00BA13B7 /* AMNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMNetManager.h; sourceTree = "<group>"; };
+		653395D620AEC5BB00BA13B7 /* AMApiCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMApiCommon.h; sourceTree = "<group>"; };
+		653395D720AEC5BB00BA13B7 /* AMNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMNetManager.m; sourceTree = "<group>"; };
+		653395D820AEC5BB00BA13B7 /* AMNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMNetWork.h; sourceTree = "<group>"; };
 		6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKit.h; sourceTree = "<group>"; };
 		6593C7FE20A52F8D00D83DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6593C81120A5335300D83DD1 /* AMApiManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AMApiManager.mm; sourceTree = "<group>"; };
-		6593C81320A5335300D83DD1 /* AMNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMNetManager.h; sourceTree = "<group>"; };
-		6593C81420A5335300D83DD1 /* libAnyApiManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAnyApiManager.a; sourceTree = "<group>"; };
 		6593C81520A5335300D83DD1 /* AMApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMApiManager.h; sourceTree = "<group>"; };
 		6593C81A20A534A600D83DD1 /* AnyMeetUIKitConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKitConfig.h; sourceTree = "<group>"; };
 		6593C81B20A534A600D83DD1 /* AnyMeetUIKitConfig.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AnyMeetUIKitConfig.mm; sourceTree = "<group>"; };
-		65972F0B20A56718005E5CEA /* AMApiCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMApiCommon.h; sourceTree = "<group>"; };
 		65972F0D20A5681A005E5CEA /* AMLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMLog.h; sourceTree = "<group>"; };
 		65972F0E20A5681A005E5CEA /* AMLog.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AMLog.mm; sourceTree = "<group>"; };
 		65972F1120A57159005E5CEA /* AMUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMUserModel.m; sourceTree = "<group>"; };
@@ -223,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E8B002AF9C682AEFAE20FD8 /* Pods_AnyMeetUIKit.framework in Frameworks */,
-				6593C81820A5335300D83DD1 /* libAnyApiManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +466,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		653395D320AEC5BB00BA13B7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				653395D620AEC5BB00BA13B7 /* AMApiCommon.h */,
+				653395D520AEC5BB00BA13B7 /* AMNetManager.h */,
+				653395D720AEC5BB00BA13B7 /* AMNetManager.m */,
+				653395D820AEC5BB00BA13B7 /* AMNetWork.h */,
+				653395D420AEC5BB00BA13B7 /* AMNetWork.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		6593C7F020A52F8D00D83DD1 = {
 			isa = PBXGroup;
 			children = (
@@ -501,22 +516,12 @@
 		6593C81020A5335300D83DD1 /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				653395D320AEC5BB00BA13B7 /* Base */,
 				6593C81E20A536FF00D83DD1 /* Model */,
 				6593C81520A5335300D83DD1 /* AMApiManager.h */,
 				6593C81120A5335300D83DD1 /* AMApiManager.mm */,
-				6593C81220A5335300D83DD1 /* lib */,
 			);
 			path = Net;
-			sourceTree = "<group>";
-		};
-		6593C81220A5335300D83DD1 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				65972F0B20A56718005E5CEA /* AMApiCommon.h */,
-				6593C81320A5335300D83DD1 /* AMNetManager.h */,
-				6593C81420A5335300D83DD1 /* libAnyApiManager.a */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 		6593C81E20A536FF00D83DD1 /* Model */ = {
@@ -548,8 +553,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653395DB20AEC5BB00BA13B7 /* AMApiCommon.h in Headers */,
 				6349218320AD74EF00F129F5 /* AMVideoController.h in Headers */,
 				63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */,
+				653395DD20AEC5BB00BA13B7 /* AMNetWork.h in Headers */,
 				6349213920AD74A100F129F5 /* TZPhotoPreviewController.h in Headers */,
 				6349212520AD74A100F129F5 /* TZImageManager.h in Headers */,
 				6349213120AD74A100F129F5 /* TZAssetCell.h in Headers */,
@@ -557,6 +564,7 @@
 				6349212B20AD74A100F129F5 /* TZImagePickerController.h in Headers */,
 				6349214F20AD74AD00F129F5 /* UIViewController+Common.h in Headers */,
 				6349218020AD74EF00F129F5 /* AnyMeetVideoController.h in Headers */,
+				653395DA20AEC5BB00BA13B7 /* AMNetManager.h in Headers */,
 				634920E420AD70F800F129F5 /* AMDocToolView.h in Headers */,
 				6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */,
 				6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */,
@@ -590,9 +598,7 @@
 				6349212320AD74A100F129F5 /* TZPhotoPickerController.h in Headers */,
 				6349214120AD74A100F129F5 /* GTMBase64.h in Headers */,
 				6593C81C20A534A600D83DD1 /* AnyMeetUIKitConfig.h in Headers */,
-				65972F0C20A56718005E5CEA /* AMApiCommon.h in Headers */,
 				634920EC20AD70F800F129F5 /* AMColorMenuView.h in Headers */,
-				6593C81720A5335300D83DD1 /* AMNetManager.h in Headers */,
 				65972F0F20A5681A005E5CEA /* AMLog.h in Headers */,
 				6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */,
 				6349216520AD74DE00F129F5 /* AMInformationCell.h in Headers */,
@@ -701,6 +707,7 @@
 				6349216320AD74DE00F129F5 /* AMInformationModel.m in Sources */,
 				6349213220AD74A100F129F5 /* TZImageManager.m in Sources */,
 				634920E320AD70F800F129F5 /* AMColorMenuView.m in Sources */,
+				653395D920AEC5BB00BA13B7 /* AMNetWork.m in Sources */,
 				6349216E20AD74DE00F129F5 /* AMConfereeController.m in Sources */,
 				6349217D20AD74EF00F129F5 /* AMVideoController.m in Sources */,
 				6349212420AD74A100F129F5 /* TZImageCropManager.m in Sources */,
@@ -735,6 +742,7 @@
 				6349217E20AD74EF00F129F5 /* AMTabbarView.m in Sources */,
 				6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */,
 				6349214420AD74A100F129F5 /* GTMBase64.m in Sources */,
+				653395DC20AEC5BB00BA13B7 /* AMNetManager.m in Sources */,
 				6349214C20AD74AD00F129F5 /* UIAlertController+Blocks.m in Sources */,
 				634920F220AD719600F129F5 /* AMCommon.m in Sources */,
 				6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */,

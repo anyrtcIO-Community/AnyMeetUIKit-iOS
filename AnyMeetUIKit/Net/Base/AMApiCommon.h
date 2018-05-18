@@ -38,6 +38,7 @@ typedef NS_ENUM(NSInteger,AMErrorCode) {
     AM_Visit_Api_Often_Error = 500001,          // 接口访问频繁
     AM_Update_Data_Error = 600001,              // 数据更新失败
     AM_Exit_Person_List_Error = 600002,         // 会议成员已经存在于会议列表中
+    AM_Invite_Member_NotExist_Error = 600003,   // 邀请人员不存在
     AM_Verify_Sign_Error = 700001,              // 验证签名失败
     AM_Verify_AnyRTC_Info_Error = 800001,       // 验证anyRTC信息失败
     AM_Visit_AnyRTC_Network_Error = 800002,     // 访问anyRTC网站信息失败
