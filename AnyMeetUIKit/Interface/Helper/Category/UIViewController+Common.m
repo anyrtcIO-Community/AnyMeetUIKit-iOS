@@ -29,7 +29,7 @@
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.frame = CGRectMake(10, 25, 60, 30);
-    [backButton setImage:[UIImage imageNamed:@"return_back" inBundle:Bundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [backButton setImage:Bundle_IMAGE(@"return_back") forState:UIControlStateNormal];
     [backButton setTitle:@" 返回" forState:UIControlStateNormal];
     backButton.titleLabel.font = [UIFont systemFontOfSize:16];
     [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];

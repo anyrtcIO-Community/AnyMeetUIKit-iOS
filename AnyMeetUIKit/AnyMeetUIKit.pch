@@ -27,6 +27,8 @@ static const CGFloat Video_Height = 120;
 #define Bundle_Path [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:Bundle_Name]
 #define Bundle [NSBundle bundleWithPath:Bundle_Path]
 
+#define Bundle_IMAGE(name) [UIImage imageNamed:[NSString stringWithFormat:@"AnyMeetUIKit.bundle/%@",name] inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]
+
 #define Video_MySelf @"Video_MySelf"
 
 #define Music_Tip @"Music_Tip"
@@ -72,6 +74,7 @@ static const CGFloat Video_Height = 120;
 
 #import "Base64Generater.h"
 
+#import "UIButton+ImageTitleSpacing.h"
 
 // MARK: --------- RTMeeting SDK ---------
 

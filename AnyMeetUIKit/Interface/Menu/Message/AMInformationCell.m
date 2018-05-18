@@ -31,7 +31,7 @@
 - (void)initializeMessage{
     _iconImageView = [[UIImageView alloc]init];
     _iconImageView.contentMode = UIViewContentModeScaleAspectFill;
-    _iconImageView.image = [UIImage imageNamed:@"blue" inBundle:Bundle compatibleWithTraitCollection:nil];
+    _iconImageView.image = Bundle_IMAGE(@"blue");
     _iconImageView.layer.masksToBounds = YES;
     _iconImageView.layer.cornerRadius = 20;
     [self.contentView addSubview:_iconImageView];
@@ -57,7 +57,7 @@
 - (void)updateInfoModel:(AMInformationModel *)infoModel userId:(NSString *)userId{
     CGFloat messageX = CGRectGetWidth(UIScreen.mainScreen.bounds)/2.0;
     NSLog(@"%@",Bundle);
-    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:infoModel.t_msg_u_icon] placeholderImage:[UIImage imageNamed:@"blue" inBundle:Bundle compatibleWithTraitCollection:nil] options:SDWebImageRetryFailed];
+    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:infoModel.t_msg_u_icon] placeholderImage:Bundle_IMAGE(@"blue") options:SDWebImageRetryFailed];
     _nameLabel.text = infoModel.t_msg_u_name;
     //富文本
     NSString *info = [Base64Generater DecoderWithBase64:infoModel.t_msg_content];

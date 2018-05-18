@@ -308,9 +308,9 @@ extern NSString *GetVerifyUrl();
     if (!_toolView) {
        
         if (self.isHost) {
-            _toolView = [[[NSBundle bundleWithPath:Bundle_Path] loadNibNamed:@"AMDocToolView" owner:self options:nil] lastObject];
+            _toolView = [[[NSBundle bundleWithPath:Bundle_Path] loadNibNamed:@"AnyMeetUIKit.bundle/AMDocToolView" owner:self options:nil] lastObject];
         }else{
-            _toolView = [[[NSBundle bundleWithPath:Bundle_Path] loadNibNamed:@"AMDocToolGuestView" owner:self options:nil] lastObject];
+            _toolView = [[[NSBundle bundleWithPath:Bundle_Path] loadNibNamed:@"AnyMeetUIKit.bundle/AMDocToolGuestView" owner:self options:nil] lastObject];
         }
         _toolView.hidden = YES;
         __weak typeof(self)weakSelf = self;
@@ -361,7 +361,7 @@ extern NSString *GetVerifyUrl();
 - (UIButton*)leftButton {
     if (!_leftButton) {
         _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_leftButton setBackgroundImage:[UIImage imageNamed:@"left_sliding" inBundle:Bundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [_leftButton setBackgroundImage:Bundle_IMAGE(@"left_sliding") forState:UIControlStateNormal];
         [_leftButton addTarget:self action:@selector(leftButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _leftButton;
@@ -369,7 +369,7 @@ extern NSString *GetVerifyUrl();
 - (UIButton*)rightButton {
     if (!_rightButton) {
         _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_rightButton setBackgroundImage:[UIImage imageNamed:@"right_sliding" inBundle:Bundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [_rightButton setBackgroundImage:Bundle_IMAGE(@"right_sliding") forState:UIControlStateNormal];
         [_rightButton addTarget:self action:@selector(rightButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _rightButton;
@@ -377,8 +377,8 @@ extern NSString *GetVerifyUrl();
 - (UIButton *)tooButton {
     if (!_tooButton) {
         _tooButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_tooButton setBackgroundImage:[UIImage imageNamed:@"drawing_open" inBundle:Bundle compatibleWithTraitCollection:nil] forState:UIControlStateSelected];
-        [_tooButton setBackgroundImage:[UIImage imageNamed:@"drawing_close" inBundle:Bundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [_tooButton setBackgroundImage:Bundle_IMAGE(@"drawing_open") forState:UIControlStateSelected];
+        [_tooButton setBackgroundImage:Bundle_IMAGE(@"drawing_close") forState:UIControlStateNormal];
         [_tooButton addTarget:self action:@selector(tooButtonEvent:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _tooButton;

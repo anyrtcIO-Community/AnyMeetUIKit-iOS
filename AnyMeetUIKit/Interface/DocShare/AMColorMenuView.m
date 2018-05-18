@@ -27,8 +27,9 @@
 }
 
 + (instancetype)loadColorMenuView {
-     return [[[NSBundle bundleWithPath:Bundle_Path] loadNibNamed:@"AMColorMenuView" owner:self options:nil] lastObject];
+     return [[[NSBundle bundleWithPath:Bundle_Path] loadNibNamed:@"AnyMeetUIKit.bundle/AMColorMenuView" owner:self options:nil] lastObject];
 }
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:.6];

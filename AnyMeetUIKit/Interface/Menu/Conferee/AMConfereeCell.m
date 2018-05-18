@@ -30,7 +30,7 @@
     
     _headImageView = [[UIImageView alloc]init];
     _headImageView.contentMode = UIViewContentModeScaleAspectFill;
-    _headImageView.image = [UIImage imageNamed:@"blue" inBundle:Bundle compatibleWithTraitCollection:nil];
+    _headImageView.image = Bundle_IMAGE(@"blue");
     [self.contentView addSubview:_headImageView];
     [_headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(20);
@@ -40,7 +40,7 @@
     
     //视频
     _audioImageView = [[UIImageView alloc]init];
-    _audioImageView.image = [UIImage imageNamed:@"button_shipin" inBundle:Bundle compatibleWithTraitCollection:nil];
+    _audioImageView.image = Bundle_IMAGE(@"button_shipin");
     [self.contentView addSubview:_audioImageView];
     [_audioImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-20);
@@ -50,7 +50,7 @@
     
     //音频
     _videoImageView = [[UIImageView alloc]init];
-    _videoImageView.image = [UIImage imageNamed:@"button_yuyin" inBundle:Bundle compatibleWithTraitCollection:nil];
+    _videoImageView.image = Bundle_IMAGE(@"button_yuyin");
     [self.contentView addSubview:_videoImageView];
     [_videoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self->_audioImageView.mas_left).offset(-15);
@@ -70,14 +70,14 @@
 
 - (void)setConfereeModel:(AMConfereeModel *)confereeModel{
     _confereeModel = confereeModel;
-    [_headImageView sd_setImageWithURL:[NSURL URLWithString:confereeModel.headUrl] placeholderImage:[UIImage imageNamed:@"blue" inBundle:Bundle compatibleWithTraitCollection:nil] options:SDWebImageRetryFailed];
+    [_headImageView sd_setImageWithURL:[NSURL URLWithString:confereeModel.headUrl] placeholderImage:Bundle_IMAGE(@"blue") options:SDWebImageRetryFailed];
     
     NSString *video = @"";
     NSString *audio = @"";
     confereeModel.video_state ? (video = @"icon_shipin") : (video = @"icon_guanbishipin");
     confereeModel.audio_state ? (audio = @"icon_yinpin") : (audio = @"icon_guanbiyinpin");
-    _videoImageView.image = [UIImage imageNamed:video inBundle:Bundle compatibleWithTraitCollection:nil];
-    _audioImageView.image = [UIImage imageNamed:audio inBundle:Bundle compatibleWithTraitCollection:nil];
+    _videoImageView.image = Bundle_IMAGE(video);
+    _audioImageView.image = Bundle_IMAGE(audio);
     
     _nameLabel.text = confereeModel.nickName;
 }

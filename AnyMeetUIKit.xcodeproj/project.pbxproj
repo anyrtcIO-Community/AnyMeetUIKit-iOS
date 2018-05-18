@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		633E67DB20AD7E6C0019390C /* AnyMeetUIKit.pch in Headers */ = {isa = PBXBuildFile; fileRef = 633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */; };
-		633E684B20AD938F0019390C /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 633E684A20AD938F0019390C /* AnyMeetUIKit.bundle */; };
 		634920E320AD70F800F129F5 /* AMColorMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920D620AD70F800F129F5 /* AMColorMenuView.m */; };
 		634920E420AD70F800F129F5 /* AMDocToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920D720AD70F800F129F5 /* AMDocToolView.h */; };
 		634920E520AD70F800F129F5 /* AMPopverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920D920AD70F800F129F5 /* AMPopverView.m */; };
@@ -85,6 +84,9 @@
 		6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217A20AD74EF00F129F5 /* AMVideoView.m */; };
 		6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217B20AD74EF00F129F5 /* AMTopToolView.m */; };
 		6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */; };
+		63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */; };
+		63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */; };
+		63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */; };
 		6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81120A5335300D83DD1 /* AMApiManager.mm */; };
 		6593C81720A5335300D83DD1 /* AMNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81320A5335300D83DD1 /* AMNetManager.h */; };
@@ -107,7 +109,6 @@
 /* Begin PBXFileReference section */
 		157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKit.pch; sourceTree = "<group>"; };
-		633E684A20AD938F0019390C /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
 		634920D620AD70F800F129F5 /* AMColorMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMColorMenuView.m; sourceTree = "<group>"; };
 		634920D720AD70F800F129F5 /* AMDocToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDocToolView.h; sourceTree = "<group>"; };
 		634920D920AD70F800F129F5 /* AMPopverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPopverView.m; sourceTree = "<group>"; };
@@ -185,6 +186,9 @@
 		6349217A20AD74EF00F129F5 /* AMVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMVideoView.m; sourceTree = "<group>"; };
 		6349217B20AD74EF00F129F5 /* AMTopToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTopToolView.m; sourceTree = "<group>"; };
 		6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyMeetVideoController.m; sourceTree = "<group>"; };
+		63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
+		63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
+		63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKit.h; sourceTree = "<group>"; };
 		6593C7FE20A52F8D00D83DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -232,7 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				634920F420AD747A00F129F5 /* Helper */,
-				6349217120AD74EF00F129F5 /* Main */,
+				6349217120AD74EF00F129F5 /* Room */,
 				6349215020AD74DD00F129F5 /* Menu */,
 				634920D520AD70F800F129F5 /* DocShare */,
 			);
@@ -362,6 +366,8 @@
 		6349214720AD74AD00F129F5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */,
+				63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */,
 				6349214820AD74AD00F129F5 /* UIAlertController+Blocks.m */,
 				6349214920AD74AD00F129F5 /* UIViewController+Common.m */,
 				6349214A20AD74AD00F129F5 /* UIAlertController+Blocks.h */,
@@ -374,7 +380,6 @@
 			isa = PBXGroup;
 			children = (
 				6349215120AD74DD00F129F5 /* Message */,
-				6349215820AD74DD00F129F5 /* Document */,
 				6349215920AD74DD00F129F5 /* More */,
 				6349215C20AD74DD00F129F5 /* Conferee */,
 			);
@@ -392,13 +397,6 @@
 				6349215720AD74DD00F129F5 /* AMInformationCell.m */,
 			);
 			path = Message;
-			sourceTree = "<group>";
-		};
-		6349215820AD74DD00F129F5 /* Document */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Document;
 			sourceTree = "<group>";
 		};
 		6349215920AD74DD00F129F5 /* More */ = {
@@ -423,13 +421,13 @@
 			path = Conferee;
 			sourceTree = "<group>";
 		};
-		6349217120AD74EF00F129F5 /* Main */ = {
+		6349217120AD74EF00F129F5 /* Room */ = {
 			isa = PBXGroup;
 			children = (
-				6349218B20AD787000F129F5 /* View */,
 				6349218A20AD784500F129F5 /* ViewController */,
+				6349218B20AD787000F129F5 /* View */,
 			);
-			path = Main;
+			path = Room;
 			sourceTree = "<group>";
 		};
 		6349218A20AD784500F129F5 /* ViewController */ = {
@@ -486,7 +484,7 @@
 				65972F0D20A5681A005E5CEA /* AMLog.h */,
 				65972F0E20A5681A005E5CEA /* AMLog.mm */,
 				633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */,
-				633E684A20AD938F0019390C /* AnyMeetUIKit.bundle */,
+				63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */,
 			);
 			path = AnyMeetUIKit;
 			sourceTree = "<group>";
@@ -542,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6349218320AD74EF00F129F5 /* AMVideoController.h in Headers */,
+				63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */,
 				6349213920AD74A100F129F5 /* TZPhotoPreviewController.h in Headers */,
 				6349212520AD74A100F129F5 /* TZImageManager.h in Headers */,
 				6349213120AD74A100F129F5 /* TZAssetCell.h in Headers */,
@@ -649,7 +648,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				633E684B20AD938F0019390C /* AnyMeetUIKit.bundle in Resources */,
+				63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */,
 				6349213F20AD74A100F129F5 /* README.md in Resources */,
 				6349212120AD74A100F129F5 /* LICENSE in Resources */,
 				6349212E20AD74A100F129F5 /* TZImagePickerController.bundle in Resources */,
@@ -702,6 +701,7 @@
 				6349216720AD74DE00F129F5 /* AMInformationController.m in Sources */,
 				6349217020AD74DE00F129F5 /* AMConfereeModel.m in Sources */,
 				6349216C20AD74DE00F129F5 /* AMConfereeCell.m in Sources */,
+				63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */,
 				6349216920AD74DE00F129F5 /* AMMoreController.m in Sources */,
 				6349212D20AD74A100F129F5 /* TZPhotoPreviewController.m in Sources */,
 				6349213B20AD74A100F129F5 /* TZImagePickerController.m in Sources */,
