@@ -28,7 +28,7 @@ typedef void(GetInviteMembersBlock)(NSArray<Memberlist *> * memberlist,int code)
 
 +(AMApiManager*)shareInstance;
 
-//注册成功后，系统给予的用户Id
+//用户Id
 @property (nonatomic, strong,readonly) NSString *anyUserId;
 /**
  用户对接（调用成功后，其他接口才能使用）

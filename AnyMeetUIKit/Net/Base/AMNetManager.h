@@ -19,7 +19,7 @@ typedef void (^FailureBlock)(NSError *error);
 +(AMNetManager*)shareInstance;
 
 // 注册成功后，系统给予的用户Id
-@property (nonatomic, strong,readonly) NSString *anyUserId;
+@property (nonatomic, strong) NSString *anyUserId;
 
 // 配置请求信息
 - (void)configNetRequestParameter:(NSString*)strDeveloperId

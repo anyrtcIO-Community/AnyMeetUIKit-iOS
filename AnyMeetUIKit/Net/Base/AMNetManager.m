@@ -193,12 +193,11 @@ static AMNetManager *manager = NULL;
     NSString *requestStr = [self getRequestParameters:parameter];
     __weak typeof(self)weakSelf = self;
     [AMNetWork getWithUrlString:@"init_teameeting" parameters:requestStr success:^(NSDictionary *data) {
-        __strong typeof(self)strongSelf = weakSelf;
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([[data objectForKey:@"code"] integerValue] == 200) {
                 NSDictionary *userInfo = [data objectForKey:@"userinfo"];
                 if (userInfo) {
-                    strongSelf->_anyUserId = [NSString stringWithFormat:@"%@",[userInfo objectForKey:@"userid"]];
+                    weakSelf.anyUserId = [NSString stringWithFormat:@"%@",[userInfo objectForKey:@"u_anyrtc_openid"]];
                 }
             }
             

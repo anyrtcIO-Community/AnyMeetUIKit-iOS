@@ -59,7 +59,7 @@ static NSInteger const UIAlertControllerBlocksFirstOtherButtonIndex = 2;
     //paid上 不设置导致崩溃
     UIView *topView = [AMCommon topViewController].view;
     strongController.popoverPresentationController.sourceView = topView;
-    strongController.popoverPresentationController.sourceRect = CGRectMake(CGRectGetWidth(topView.frame)/2, 0, 0, 0);
+    strongController.popoverPresentationController.sourceRect = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-49,[UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     
     __weak UIAlertController *controller = strongController;
     

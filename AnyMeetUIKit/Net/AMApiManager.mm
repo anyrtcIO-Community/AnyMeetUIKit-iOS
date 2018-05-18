@@ -41,16 +41,20 @@ static AMApiManager *manager = NULL;
     });
     return manager;
 }
-
+- (void)chuanzhi:(NSDictionary*)dict {
+    NSDictionary *userInfo = [dict objectForKey:@"userinfo"];
+    if (userInfo) {
+        _anyUserId = [NSString stringWithFormat:@"%@",[userInfo objectForKey:@"u_anyrtc_openid"]];
+    }
+}
 - (void)registeredDockingMeeting:(AMUserModel*)userModel
                          success:(CompleteBlock)successBlock
                          failure:(FailBlock)failureBlock {
 
     __weak typeof(self)weakSelf = self;
     [[AMNetManager shareInstance] registeredDockingMeeting:userModel.userId withNickName:userModel.userName withHeadUrl:userModel.userHeadUrl success:^(NSDictionary *data) {
-        __strong typeof(self)strongSelf = weakSelf;
         if ([[data objectForKey:@"code"] intValue] == 200) {
-            strongSelf->_anyUserId = [AMNetManager shareInstance].anyUserId;
+            [weakSelf chuanzhi:data];
             if (successBlock) {
                 successBlock(200);
             }
