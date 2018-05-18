@@ -16,6 +16,17 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    [self.penButton setImage:Bundle_IMAGE(@"button_huabi_weixuanzhong") forState:UIControlStateNormal];
+    [self.penButton setImage:Bundle_IMAGE(@"button_huabi_xuanzhong") forState:UIControlStateSelected];
+    [self.lineButton setImage:Bundle_IMAGE(@"button_zhixian_weixuanzhong") forState:UIControlStateNormal];
+    [self.lineButton setImage:Bundle_IMAGE(@"button_zhixian_xuanzhong") forState:UIControlStateSelected];
+    [self.colorButton setImage:Bundle_IMAGE(@"button_secai_weixuanzhong") forState:UIControlStateNormal];
+    [self.colorButton setImage:Bundle_IMAGE(@"button_secai_xuanzhong") forState:UIControlStateSelected];
+    [self.revokeButton setImage:Bundle_IMAGE(@"button_chexiao_weixuanzhong") forState:UIControlStateNormal];
+    [self.revokeButton setImage:Bundle_IMAGE(@"button_chexiao_xuanzhong") forState:UIControlStateSelected];
+    [self.clearButton setImage:Bundle_IMAGE(@"button_cachu_weixuanzhong") forState:UIControlStateNormal];
+    [self.clearButton setImage:Bundle_IMAGE(@"button_cachu_xuanzhong") forState:UIControlStateSelected];
     //默认选中
     self.penButton.selected = YES;
 }

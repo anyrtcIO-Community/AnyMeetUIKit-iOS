@@ -45,7 +45,22 @@
     self.tipLabel.textColor = [AMCommon getColor:@"#FFFFFF"];
     self.tipLabel.text = [NSString stringWithFormat:@"画笔粗细:(%d)",(int)self.progressUISlider.value];
     
+    [self.redColor setImage:Bundle_IMAGE(@"red") forState:UIControlStateNormal];
+    [self.redColor setImage:Bundle_IMAGE(@"red_selected") forState:UIControlStateSelected];
+    [self.greenColor setImage:Bundle_IMAGE(@"green") forState:UIControlStateNormal];
+    [self.greenColor setImage:Bundle_IMAGE(@"green_selected") forState:UIControlStateSelected];
+    [self.blueColor setImage:Bundle_IMAGE(@"blue") forState:UIControlStateNormal];
+    [self.blueColor setImage:Bundle_IMAGE(@"blue_selected") forState:UIControlStateSelected];
+    [self.yellowColor setImage:Bundle_IMAGE(@"yellow") forState:UIControlStateNormal];
+    [self.yellowColor setImage:Bundle_IMAGE(@"yellow_selected") forState:UIControlStateSelected];
+    [self.blackColor setImage:Bundle_IMAGE(@"black") forState:UIControlStateNormal];
+    [self.blackColor setImage:Bundle_IMAGE(@"black_selected") forState:UIControlStateSelected];
+    [self.writeColor setImage:Bundle_IMAGE(@"white") forState:UIControlStateNormal];
+    [self.writeColor setImage:Bundle_IMAGE(@"white_selected") forState:UIControlStateSelected];
+    
     self.selectedColor = @"#4e91ff";
+    
+    
 }
 
 - (void)setSelectedColor:(NSString *)selectedColor {
