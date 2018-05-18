@@ -25,6 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (UIDevice.currentDevice.orientation == UIDeviceOrientationLandscapeLeft || UIDevice.currentDevice.orientation == UIDeviceOrientationLandscapeRight) {
+        self.isLandscape = YES;
+    }
+
     self.videoArr = [NSMutableArray arrayWithCapacity:6];
     //本地视图
     self.localView = [[UIView alloc]initWithFrame:self.view.bounds];
