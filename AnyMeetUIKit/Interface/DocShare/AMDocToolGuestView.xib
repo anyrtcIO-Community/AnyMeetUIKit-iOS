@@ -32,7 +32,7 @@
                 </button>
                 <button opaque="NO" tag="202" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olG-db-7uA">
                     <rect key="frame" x="178" y="19" width="70" height="22"/>
-                    <state key="normal" title="Button" image="button_secai_weixuanzhong"/>
+                    <state key="normal" image="button_secai_weixuanzhong"/>
                     <state key="selected" image="button_secai_xuanzhong"/>
                     <connections>
                         <action selector="doSomeEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="S1G-5Q-N7H"/>

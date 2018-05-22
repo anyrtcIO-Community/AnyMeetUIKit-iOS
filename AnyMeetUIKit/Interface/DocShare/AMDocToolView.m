@@ -24,9 +24,9 @@
     [self.colorButton setImage:Bundle_IMAGE(@"button_secai_weixuanzhong") forState:UIControlStateNormal];
     [self.colorButton setImage:Bundle_IMAGE(@"button_secai_xuanzhong") forState:UIControlStateSelected];
     [self.revokeButton setImage:Bundle_IMAGE(@"button_chexiao_weixuanzhong") forState:UIControlStateNormal];
-    [self.revokeButton setImage:Bundle_IMAGE(@"button_chexiao_xuanzhong") forState:UIControlStateSelected];
+    [self.revokeButton setImage:Bundle_IMAGE(@"button_chexiao_xuanzhong") forState:UIControlStateHighlighted];
     [self.clearButton setImage:Bundle_IMAGE(@"button_cachu_weixuanzhong") forState:UIControlStateNormal];
-    [self.clearButton setImage:Bundle_IMAGE(@"button_cachu_xuanzhong") forState:UIControlStateSelected];
+    [self.clearButton setImage:Bundle_IMAGE(@"button_cachu_xuanzhong") forState:UIControlStateHighlighted];
     //默认选中
     self.penButton.selected = YES;
 }

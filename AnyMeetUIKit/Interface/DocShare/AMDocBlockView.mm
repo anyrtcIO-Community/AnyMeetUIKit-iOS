@@ -73,11 +73,13 @@ extern NSString *GetVerifyUrl();
         option.strMeetingId = docItem.meetingId;
         option.userId = userModel.userId;
         option.isHost = docHost;
-        option.boardBgColor = [UIColor blackColor];
+        option.boardBgColor = [AMCommon getColor:@"#1C1C1C"];
         
         self.boardView = [[AnyBoardView alloc] initWithFrame:CGRectZero withOption:option withImageUrlArray:docItem.urlArray withDelegate:self];
         [self addSubview:self.boardView];
         [self sendSubviewToBack:self.boardView];
+        //默认画笔类型
+        self.drawType = JQDrawingTypeGraffiti;
         
         [self initUI];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hiddenOrShowTool:) name:@"Notification_Hidden_Or_Show_Tool" object:nil];
@@ -85,15 +87,14 @@ extern NSString *GetVerifyUrl();
     return self;
 }
 - (void)layoutSubviews {
-    NSLog(@"layoutSubviews");
-    
     CGRect localAspectRatio = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     CGSize defaultAspectRatio;
-    if (self.frame.size.width>self.frame.size.height) {
-        defaultAspectRatio = CGSizeMake(4, 3);
-    }else{
-        defaultAspectRatio = CGSizeMake(3, 4);
-    }
+//    if (self.frame.size.width>self.frame.size.height) {
+//        defaultAspectRatio = CGSizeMake(4, 3);
+//    }else{
+//        defaultAspectRatio = CGSizeMake(3, 4);
+//    }
+     defaultAspectRatio = CGSizeMake(4, 3);
     CGRect localVideoFrame = AVMakeRectWithAspectRatioInsideRect(defaultAspectRatio, localAspectRatio);
     if (!CGRectEqualToRect(localVideoFrame, self.boardView.frame)) {
          self.boardView.frame = localVideoFrame;
@@ -188,7 +189,13 @@ extern NSString *GetVerifyUrl();
         self.toolShowBlock();
     }
 }
-
+//设置画笔类型
+- (void)setDrawType:(JQDrawingType)drawType {
+    _drawType = drawType;
+    if (self.boardView) {
+        self.boardView.drawType = drawType;
+    }
+}
 #pragma mark - AnyBoardViewDelegate
 //文档初始化成功
 - (void)initBoardScuess {
@@ -211,7 +218,12 @@ extern NSString *GetVerifyUrl();
 }
 //文档是否可编辑
 - (void)onBoardEditable:(BOOL)editable {
-    
+    //如果别人设置不可编辑，本地一样可以编辑
+    if (!editable) {
+        if(self.tooButton.selected) {
+            [self.boardView setMyBoardCanEdit:YES];
+        }
+    }
 }
 //文档添加了一页
 - (void)onBoardAddScuess {
