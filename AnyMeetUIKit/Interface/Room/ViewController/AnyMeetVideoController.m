@@ -58,10 +58,25 @@
     //加入会议
     [self.meetKit joinRTC:self.meetModel.meetinginfo.meetingid andIsHoster:NO andUserId:self.userModel.userId andUserData:customStr];
 }
+#pragma mark- 离开会议
+- (void)leaveMeet{
+    [self.meetKit leaveRTC];
+    [self.navigationController popViewControllerAnimated:YES];
+    //多层级模态返回
+    if ([AMCommon topViewController] != self) {
+        UIViewController *rootVc = [AMCommon topViewController].presentingViewController;
+        while (rootVc.presentingViewController) {
+            rootVc = rootVc.presentingViewController;
+        }
+        [rootVc dismissViewControllerAnimated:YES completion:nil];
+    }
+}
 
 #pragma mark - AMTabBarDelegate
 
 - (void)tabBardidSelectItem:(UIButton *)button{
+    //延迟隐藏时间
+    [self hideControlDelay];
     switch (button.tag) {
         case 0:
             //语音
@@ -127,10 +142,11 @@
                 self.boardView = nil;
             }
         } else {
-            [self.meetKit leaveRTC];
-            [self.navigationController popViewControllerAnimated:YES];
+            [self leaveMeet];
         }
     } else {
+        //延迟隐藏时间
+        [self hideControlDelay];
         (button.tag == 200) ? ([self.meetKit setSpeakerOn:!button.selected]) : ([self.meetKit switchCamera]);
     }
 }
@@ -193,6 +209,12 @@
 
 - (void)onRTCJoinMeetFailed:(NSString*)strAnyRTCId withCode:(int)nCode{
     //加入会议室失败的回调
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:[AMCommon joinMeetingError:nCode] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *closeButton = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action){
+        [self leaveMeet];
+    }];
+    [alertController addAction:closeButton];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)onRTCLeaveMeet:(int)nCode{
@@ -354,16 +376,7 @@
         case 2://踢出
         {
             if (![[dic objectForKey:@"userid"] isEqualToString:self.userModel.userId]) {
-                [self.meetKit leaveRTC];
-                [self.navigationController popViewControllerAnimated:YES];
-                //多层级模态返回
-                if ([AMCommon topViewController] != self) {
-                    UIViewController *rootVc = [AMCommon topViewController].presentingViewController;
-                    while (rootVc.presentingViewController) {
-                        rootVc = rootVc.presentingViewController;
-                    }
-                    [rootVc dismissViewControllerAnimated:YES completion:nil];
-                }
+                [self leaveMeet];
             }
         }
             break;

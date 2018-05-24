@@ -205,5 +205,96 @@
     return dic;
     
 }
-
++ (NSString*)joinMeetingError:(int)nCode {
+    
+    switch (nCode) {
+        case 1:
+            return @"未知错误";
+            break;
+        case 2:
+            return @"SDK调用异常";
+            break;
+        case 3:
+            return @"SDK未初始化";
+            break;
+        case 4:
+            return @"参数非法";
+            break;
+        case 5:
+            return @"没有网络链接";
+            break;
+        case 6:
+            return @"没有找到摄像头设备";
+            break;
+        case 7:
+            return @"没有打开摄像头权限";
+            break;
+        case 8:
+            return @"没有音频录音权限";
+            break;
+        case 9:
+            return @" 浏览器不支持webrtc";
+            break;
+        case 100:
+            return @"网络错误";
+            break;
+        case 101:
+            return @"网络断开";
+            break;
+        case 102:
+            return @"直播出错";
+            break;
+        case 103:
+            return @"异常错误";
+            break;
+        case 201:
+            return @"服务不支持的错误请求";
+            break;
+        case 202:
+            return @"认证失败";
+            break;
+        case 203:
+            return @"此开发者信息不存在";
+            break;
+        case 204:
+            return @"服务器内部数据库错误";
+            break;
+        case 205:
+            return @"账号欠费";
+            break;
+        case 206:
+            return @"账号被锁定";
+            break;
+        case 207:
+            return @"强制离开";
+            break;
+        case 208:
+            return @"AnyRTC ID非法";
+            break;
+        case 209:
+            return @"服务未开通";
+            break;
+        case 210:
+            return @"Bundle ID不匹配";
+            break;
+        case 211:
+            return @"订阅的PubID已过期";
+            break;
+        case 212:
+            return @"没有RTC服务器";
+            break;
+        case 700:
+            return @"会议未开始";
+            break;
+        case 701:
+            return @"会议室已满";
+            break;
+        case 702:
+            return @"会议类型不匹配";
+            break;
+        default:
+            break;
+    }
+    return @"未知错误";
+}
 @end

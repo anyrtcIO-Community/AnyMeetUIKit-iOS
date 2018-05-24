@@ -36,6 +36,7 @@
 + (NSString *)getTimestamp;
 //间距
 + (NSDictionary *)setTextLineSpaceWithString:(NSString*)str withFont:(UIFont*)font withLineSpace:(CGFloat)lineSpace withTextlengthSpace:(NSNumber *)textlengthSpace paragraphSpacing:(CGFloat)paragraphSpacing;
-
+//获取错误信息
++ (NSString*)joinMeetingError:(int)nCode;
 @end
 
