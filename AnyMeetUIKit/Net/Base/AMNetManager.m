@@ -174,11 +174,14 @@ static AMNetManager *manager = NULL;
     NSString *signStr = [self signStr:jsonStr];
     
     NSString *endStr = [NSString stringWithFormat:@"%@%@%@",self.strAppKey,signStr,self.strAppToken];
+   
+    L_INFO(@"待签名:%@",endStr);
     NSString *md5Str = [self md5:endStr];
-    
+    L_INFO(@"MD5:%@",md5Str);
     // 组装参数
     NSMutableString *requestParameter = [[NSMutableString alloc] initWithString:signStr];
     [requestParameter appendString:[NSString stringWithFormat:@"&%@=%@",@"sign", md5Str]];
+    L_INFO(@"请求参数:%@",requestParameter);
     return requestParameter;
 }
 #pragma mark -　方法请求

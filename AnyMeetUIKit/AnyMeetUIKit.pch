@@ -38,6 +38,8 @@ static const CGFloat Video_Height = 120;
 //公共类
 #import "AMCommon.h"
 
+#import "AMLog.h"
+
 #import <AnyMeetUIKit/AnyMeetUIKit.h>
 
 #import "UIViewController+Common.h"
