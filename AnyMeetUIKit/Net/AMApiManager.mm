@@ -220,7 +220,7 @@ static AMApiManager *manager = NULL;
     if (self.anyUserId.length >0 && self.anyUserId) {
         [[AMNetManager shareInstance] getInviteMemberList:meetingId success:^(NSDictionary *data) {
             if ([[data objectForKey:@"code"] intValue]==200) {
-                NSArray *array = [Meetinglist mj_objectArrayWithKeyValuesArray:[data objectForKey:@"memberlist"]];
+                NSArray *array = [MeetingInfo mj_objectArrayWithKeyValuesArray:[data objectForKey:@"memberlist"]];
                 successBlock(array,200);
             }else{
                 successBlock(NULL,[[data objectForKey:@"code"] intValue]);
@@ -232,6 +232,28 @@ static AMApiManager *manager = NULL;
         //用户不存在
         if (successBlock) {
             successBlock(NULL,AM_No_User_Error);
+        }
+    }
+}
+
+-(void)updateMeetingLock:(NSString*)meetingId
+                withLock:(NSInteger)lock
+                 success:(CompleteBlock)successBlock
+                 failure:(FailBlock)failureBlock {
+    if (self.anyUserId.length >0 && self.anyUserId) {
+        [[AMNetManager shareInstance] updateMeetingLock:meetingId withLock:lock success:^(NSDictionary *data) {
+            if ([[data objectForKey:@"code"] intValue]==200) {
+                successBlock(200);
+            }else{
+                successBlock([[data objectForKey:@"code"] intValue]);
+            }
+        } failure:^(NSError *error) {
+            failureBlock(error);
+        }];
+    }else{
+        //用户不存在
+        if (successBlock) {
+            successBlock(AM_No_User_Error);
         }
     }
 }

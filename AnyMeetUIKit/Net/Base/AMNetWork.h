@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-//restful.api.teameeting.cn:8799
-#define JQNetWorkUrl @"http://restful.api.teameeting.cn:8799/teameeting/gateway/meeting"
+
+#define JQNetWorkUrl @"http://meeting.anyrtc.cc:8799/teameeting/gateway/meeting"
 //#define JQNetWorkUrl @"http://192.168.1.111:8799/teameeting/gateway/meeting"
 
 typedef void (^SuccessBlock)(NSDictionary *data);

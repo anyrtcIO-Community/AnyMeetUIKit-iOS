@@ -24,14 +24,14 @@
                 NSString *value = [[parameters objectForKey:key] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
                 [mutableUrl appendString:[NSString stringWithFormat:@"%@=%@&", key, value]];
             }
-            L_INFO(@"请求:%@",[mutableUrl substringToIndex:mutableUrl.length - 1]);
+           // L_INFO(@"请求:%@",[mutableUrl substringToIndex:mutableUrl.length - 1]);
              urlEnCode = [[mutableUrl substringToIndex:mutableUrl.length - 1] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         }
        
     }else{
         [mutableUrl appendString:@"?"];
         [mutableUrl appendString:parameters];
-        L_INFO(@"请求:%@",mutableUrl);
+       // L_INFO(@"请求:%@",mutableUrl);
         urlEnCode = [mutableUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     }
    

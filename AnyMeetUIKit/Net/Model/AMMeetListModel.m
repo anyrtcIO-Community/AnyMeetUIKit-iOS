@@ -8,14 +8,25 @@
 
 #import "AMMeetListModel.h"
 
-@implementation Meetinglist
+@implementation MeetingInfo
 
 @end
 
 @implementation AMMeetListModel
 
 + (NSDictionary *)objectClassInArray{
-    return @{@"meetinglist" : [Meetinglist class]};
+    return @{@"meetinglist" : [MeetingInfo class]};
 }
 
+@end
+
+@implementation Memberlist
+
+@end
+
+@implementation AMMeetInfoModel
+
++ (NSDictionary *)objectClassInArray{
+    return @{@"meetinginfo" : [MeetingInfo class],@"memberlist" :[Memberlist class]};
+}
 @end

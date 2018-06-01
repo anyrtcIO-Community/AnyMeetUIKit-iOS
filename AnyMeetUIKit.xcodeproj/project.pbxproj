@@ -104,10 +104,8 @@
 		65972F1020A5681A005E5CEA /* AMLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65972F0E20A5681A005E5CEA /* AMLog.mm */; };
 		65972F1320A57159005E5CEA /* AMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65972F1120A57159005E5CEA /* AMUserModel.m */; };
 		65972F1420A57159005E5CEA /* AMUserModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F1220A57159005E5CEA /* AMUserModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65972F1920A5772E005E5CEA /* AMMeetInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65972F1520A5772E005E5CEA /* AMMeetInfoModel.m */; };
 		65972F1A20A5772E005E5CEA /* AMMeetListModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F1620A5772E005E5CEA /* AMMeetListModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65972F1B20A5772E005E5CEA /* AMMeetListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65972F1720A5772E005E5CEA /* AMMeetListModel.m */; };
-		65972F1C20A5772E005E5CEA /* AMMeetInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F1820A5772E005E5CEA /* AMMeetInfoModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E8B002AF9C682AEFAE20FD8 /* Pods_AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -213,10 +211,8 @@
 		65972F0E20A5681A005E5CEA /* AMLog.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AMLog.mm; sourceTree = "<group>"; };
 		65972F1120A57159005E5CEA /* AMUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMUserModel.m; sourceTree = "<group>"; };
 		65972F1220A57159005E5CEA /* AMUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMUserModel.h; sourceTree = "<group>"; };
-		65972F1520A5772E005E5CEA /* AMMeetInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMeetInfoModel.m; sourceTree = "<group>"; };
 		65972F1620A5772E005E5CEA /* AMMeetListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMeetListModel.h; sourceTree = "<group>"; };
 		65972F1720A5772E005E5CEA /* AMMeetListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMeetListModel.m; sourceTree = "<group>"; };
-		65972F1820A5772E005E5CEA /* AMMeetInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMeetInfoModel.h; sourceTree = "<group>"; };
 		90EF4D576BF63003CC24540C /* Pods-AnyMeetUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyMeetUIKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnyMeetUIKit/Pods-AnyMeetUIKit.debug.xcconfig"; sourceTree = "<group>"; };
 		C156BAF614A3C731528F9CB2 /* Pods-AnyMeetUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyMeetUIKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnyMeetUIKit/Pods-AnyMeetUIKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -527,8 +523,6 @@
 		6593C81E20A536FF00D83DD1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				65972F1820A5772E005E5CEA /* AMMeetInfoModel.h */,
-				65972F1520A5772E005E5CEA /* AMMeetInfoModel.m */,
 				65972F1620A5772E005E5CEA /* AMMeetListModel.h */,
 				65972F1720A5772E005E5CEA /* AMMeetListModel.m */,
 				65972F1220A57159005E5CEA /* AMUserModel.h */,
@@ -587,7 +581,6 @@
 				6349213020AD74A100F129F5 /* TZGifPhotoPreviewController.h in Headers */,
 				6349213620AD74A100F129F5 /* NSBundle+TZImagePicker.h in Headers */,
 				6349213720AD74A100F129F5 /* TZAssetModel.h in Headers */,
-				65972F1C20A5772E005E5CEA /* AMMeetInfoModel.h in Headers */,
 				6349213A20AD74A100F129F5 /* UIView+Layout.h in Headers */,
 				65972F1A20A5772E005E5CEA /* AMMeetListModel.h in Headers */,
 				6349213820AD74A100F129F5 /* TZVideoPlayerController.h in Headers */,
@@ -711,7 +704,6 @@
 				6349216E20AD74DE00F129F5 /* AMConfereeController.m in Sources */,
 				6349217D20AD74EF00F129F5 /* AMVideoController.m in Sources */,
 				6349212420AD74A100F129F5 /* TZImageCropManager.m in Sources */,
-				65972F1920A5772E005E5CEA /* AMMeetInfoModel.m in Sources */,
 				6349212620AD74A100F129F5 /* TZAssetCell.m in Sources */,
 				6349214020AD74A100F129F5 /* Base64Generater.m in Sources */,
 				6349216820AD74DE00F129F5 /* AMInformationCell.m in Sources */,

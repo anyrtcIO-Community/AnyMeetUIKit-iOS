@@ -84,6 +84,11 @@ typedef void (^FailureBlock)(NSError *error);
 - (void)getInviteMemberList:(NSString*)meetingId
                     success:(SuccessBlock)successBlock
                     failure:(FailureBlock)failureBlock;
+//上锁
+-(void)updateMeetingLock:(NSString*)meetingId
+                withLock:(NSInteger)lock
+                 success:(SuccessBlock)successBlock
+                 failure:(FailureBlock)failureBlock;
 //获取错误码
 - (NSString *)getErrorInfoWithCode:(int)nCode;
 

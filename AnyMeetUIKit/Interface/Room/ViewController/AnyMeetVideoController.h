@@ -15,7 +15,7 @@ typedef void(^GotoUploadPicsBlock)(NSArray *picArray);
 
 @interface AnyMeetVideoController : AMVideoController
 
-@property (nonatomic, strong) AMMeetInfoModel *meetModel;
+@property (nonatomic, strong) MeetingInfo *meetModel;
 
 @property (nonatomic, strong) AMUserModel *userModel;
 

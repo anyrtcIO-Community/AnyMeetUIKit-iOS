@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "AMApiCommon.h"
 #import "AMUserModel.h"
-#import "AMMeetInfoModel.h"
 #import "AMMeetListModel.h"
 
 //数据回调
@@ -150,6 +149,18 @@ typedef void(GetInviteMembersBlock)(NSArray<Memberlist *> * memberlist,int code)
                     failure:(FailBlock)failureBlock;
 
 
+/**
+ 上锁功能
+
+ @param meetingId 会议ID
+ @param lock 会议室是否加锁（0/1：开放/加锁）
+ @param successBlock 数据回到
+ @param failureBlock 出错回调
+ */
+-(void)updateMeetingLock:(NSString*)meetingId
+                withLock:(NSInteger)lock
+                 success:(CompleteBlock)successBlock
+                 failure:(FailBlock)failureBlock;
 /**
  获取错误码
 

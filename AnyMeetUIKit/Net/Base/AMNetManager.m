@@ -175,14 +175,20 @@ static AMNetManager *manager = NULL;
     
     NSString *endStr = [NSString stringWithFormat:@"%@%@%@",self.strAppKey,signStr,self.strAppToken];
    
-    L_INFO(@"待签名:%@",endStr);
+    //L_INFO(@"待签名:%@",endStr);
     NSString *md5Str = [self md5:endStr];
-    L_INFO(@"MD5:%@",md5Str);
+    //L_INFO(@"MD5:%@",md5Str);
     // 组装参数
     NSMutableString *requestParameter = [[NSMutableString alloc] initWithString:signStr];
     [requestParameter appendString:[NSString stringWithFormat:@"&%@=%@",@"sign", md5Str]];
-    L_INFO(@"请求参数:%@",requestParameter);
+   // L_INFO(@"请求参数:%@",requestParameter);
     return requestParameter;
+}
+- (void)chuanzhi:(NSDictionary*)dict {
+    NSDictionary *userInfo = [dict objectForKey:@"userinfo"];
+    if (userInfo) {
+        _anyUserId = [NSString stringWithFormat:@"%@",[userInfo objectForKey:@"u_anyrtc_openid"]];
+    }
 }
 #pragma mark -　方法请求
 - (void)registeredDockingMeeting:(NSString*)userId
@@ -198,10 +204,7 @@ static AMNetManager *manager = NULL;
     [AMNetWork getWithUrlString:@"init_teameeting" parameters:requestStr success:^(NSDictionary *data) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([[data objectForKey:@"code"] integerValue] == 200) {
-                NSDictionary *userInfo = [data objectForKey:@"userinfo"];
-                if (userInfo) {
-                    weakSelf.anyUserId = [NSString stringWithFormat:@"%@",[userInfo objectForKey:@"u_anyrtc_openid"]];
-                }
+                [weakSelf chuanzhi:data];
             }
             
             if (successBlock) {
@@ -450,6 +453,30 @@ static AMNetManager *manager = NULL;
     NSString *requestStr = [self getRequestParameters:parameter];
     
     [AMNetWork getWithUrlString:@"get_meeting_member_list" parameters:requestStr success:^(NSDictionary *data) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (successBlock) {
+                successBlock(data);
+            }
+        });
+        
+    } failure:^(NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (failureBlock) {
+                failureBlock(error);
+            }
+        });
+    }];
+}
+-(void)updateMeetingLock:(NSString*)meetingId
+                withLock:(NSInteger)lock
+                 success:(SuccessBlock)successBlock
+                 failure:(FailureBlock)failureBlock {
+    
+    NSDictionary *parameter = [[NSDictionary alloc] initWithObjectsAndKeys:meetingId?meetingId:@"",@"meetingid",self.anyUserId,@"userid",[NSNumber numberWithInteger:lock],@"is_lock", nil];
+    
+    NSString *requestStr = [self getRequestParameters:parameter];
+    
+    [AMNetWork getWithUrlString:@"update_meeting_lock" parameters:requestStr success:^(NSDictionary *data) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (successBlock) {
                 successBlock(data);

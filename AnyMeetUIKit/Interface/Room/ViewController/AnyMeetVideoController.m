@@ -56,7 +56,7 @@
     NSDictionary *customDict = [NSDictionary dictionaryWithObjectsAndKeys:self.userModel.userName,@"nickName",nil];
     NSString *customStr = [AMCommon fromDicToJSONStr:customDict];
     //加入会议
-    [self.meetKit joinRTC:self.meetModel.meetinginfo.meetingid andIsHoster:NO andUserId:self.userModel.userId andUserData:customStr];
+    [self.meetKit joinRTC:self.meetModel.meetingid andIsHoster:NO andUserId:self.userModel.userId andUserData:customStr];
 }
 #pragma mark- 离开会议
 - (void)leaveMeet{
@@ -114,7 +114,7 @@
             confereeVc.memberArr = self.memberArr;
             confereeVc.userModel = self.userModel;
             confereeVc.isLandscape = self.isLandscape;
-            ([self.meetModel.meetinginfo.m_userid isEqualToString:self.userModel.userId]) ? confereeVc.isHoster = YES : 0;
+            ([self.meetModel.m_userid isEqualToString:self.userModel.userId]) ? confereeVc.isHoster = YES : 0;
             [self presentViewController:confereeVc animated:YES completion:nil];
         }
             break;
@@ -156,7 +156,7 @@
     //fileId如果没有传入过来，给一个随机的
     fileId = fileId?fileId:[AMCommon randomString:12];
     if (picArray.count != 0) {
-        NSDictionary *fileDic = [[NSDictionary alloc]initWithObjectsAndKeys:fileId,@"fileid",self.meetModel.meetinginfo.meetingid,@"meetid",picArray,@"picArray", nil];
+        NSDictionary *fileDic = [[NSDictionary alloc]initWithObjectsAndKeys:fileId,@"fileid",self.meetModel.meetingid,@"meetid",picArray,@"picArray", nil];
         [self.meetKit openUserShareInfo:[AMCommon fromDicToJSONStr:fileDic]];
         
         //先置空
@@ -168,7 +168,7 @@
         }
         AMDocItem *docItem = [[AMDocItem alloc] init];
         docItem.fildId = fileId;
-        docItem.meetingId = self.meetModel.meetinginfo.meetingid;
+        docItem.meetingId = self.meetModel.meetingid;
         docItem.urlArray = [picArray copy];
         
         self.boardView = [[AMDocBlockView alloc] initWithDoc:self.userModel withHost:YES withDocItem:docItem];
@@ -203,8 +203,12 @@
     [self.meetKit sendUserMessage:self.userModel.userName andUserHeader:nil andContent:[dic mj_JSONString]];
     
     [self playRemindMusic];
-    
-    self.topBar.titleLabel.text = self.meetModel.meetinginfo.meetingid;
+    //会议号分割
+    if (self.meetModel.meetingid.length>=8) {
+        self.topBar.titleLabel.text = [NSString stringWithFormat:@"%@ %@",[self.meetModel.meetingid substringToIndex:4],[self.meetModel.meetingid substringFromIndex:4]];
+    }else{
+        self.topBar.titleLabel.text = self.meetModel.meetingid;
+    }
 }
 
 - (void)onRTCJoinMeetFailed:(NSString*)strAnyRTCId withCode:(int)nCode{
