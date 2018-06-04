@@ -44,7 +44,8 @@ static AMApiManager *manager = NULL;
 - (void)chuanzhi:(NSDictionary*)dict {
     NSDictionary *userInfo = [dict objectForKey:@"userinfo"];
     if (userInfo) {
-        _anyUserId = [NSString stringWithFormat:@"%@",[userInfo objectForKey:@"u_anyrtc_openid"]];
+        _userId = [NSString stringWithFormat:@"%@",[userInfo objectForKey:@"u_anyrtc_openid"]];
+        _anyUserId = [NSString stringWithFormat:@"%@",[userInfo objectForKey:@"userid"]];
     }
 }
 - (void)registeredDockingMeeting:(AMUserModel*)userModel
@@ -76,8 +77,8 @@ static AMApiManager *manager = NULL;
     withDefaultPersonList:(NSArray*)personList
                   success:(CompleteBlock)successBlock
                   failure:(FailBlock)failureBlock {
-    if (self.anyUserId.length >0 && self.anyUserId) {
-        [[AMNetManager shareInstance] createMeetingRoom:self.anyUserId withMeetName:meetingName withMeetType:type withMeetStartTime:startTime withPassWord:passWord withLimitType:limitType withDefaultPersonList:personList success:^(NSDictionary *data) {
+    if (self.userId.length >0 && self.userId) {
+        [[AMNetManager shareInstance] createMeetingRoom:self.userId withMeetName:meetingName withMeetType:type withMeetStartTime:startTime withPassWord:passWord withLimitType:limitType withDefaultPersonList:personList success:^(NSDictionary *data) {
             if ([[data objectForKey:@"code"] intValue]==200) {
                 successBlock(200);
             }else{
@@ -97,8 +98,8 @@ static AMApiManager *manager = NULL;
 - (void)deleteMeetingRoom:(NSString*)meetingId
                   success:(CompleteBlock)successBlock
                   failure:(FailBlock)failureBlock {
-    if (self.anyUserId.length >0 && self.anyUserId) {
-        [[AMNetManager shareInstance] deleteMeetingRoom:self.anyUserId withMeetingId:meetingId success:^(NSDictionary *data) {
+    if (self.userId.length >0 && self.userId) {
+        [[AMNetManager shareInstance] deleteMeetingRoom:self.userId withMeetingId:meetingId success:^(NSDictionary *data) {
             if ([[data objectForKey:@"code"] intValue]==200) {
                 successBlock(200);
             }else{
@@ -117,8 +118,8 @@ static AMApiManager *manager = NULL;
 - (void)getMeetingInfo:(NSString*)meetingId
                success:(GetMeetInfoBlock)successBlock
                failure:(FailBlock)failureBlock {
-    if (self.anyUserId.length >0 && self.anyUserId) {
-        [[AMNetManager shareInstance] getMeetingInfo:self.anyUserId withMeetingId:meetingId success:^(NSDictionary *data) {
+    if (self.userId.length >0 && self.userId) {
+        [[AMNetManager shareInstance] getMeetingInfo:self.userId withMeetingId:meetingId success:^(NSDictionary *data) {
             AMMeetInfoModel *model = [AMMeetInfoModel mj_objectWithKeyValues:data];
             successBlock(model,model.code);
         } failure:^(NSError *error) {
@@ -136,8 +137,8 @@ static AMApiManager *manager = NULL;
                        success:(CompleteBlock)successBlock
                        failure:(FailBlock)failureBlock {
     
-    if (self.anyUserId.length >0 && self.anyUserId) {
-        [[AMNetManager shareInstance] updateMeetingStartTime:self.anyUserId withMeetingId:meetingId withUpdateStartTime:startTime success:^(NSDictionary *data) {
+    if (self.userId.length >0 && self.userId) {
+        [[AMNetManager shareInstance] updateMeetingStartTime:self.userId withMeetingId:meetingId withUpdateStartTime:startTime success:^(NSDictionary *data) {
             if ([[data objectForKey:@"code"] intValue]==200) {
                 successBlock(200);
             }else{
@@ -157,8 +158,8 @@ static AMApiManager *manager = NULL;
                          withPageSize:(int)pageSize
                               success:(GetMeetListBlock)successBlock
                               failure:(FailBlock)failureBlock {
-    if (self.anyUserId.length >0 && self.anyUserId) {
-        [[AMNetManager shareInstance] getUserMeetingList:self.anyUserId withPageNum:pageNum withPageSize:pageSize success:^(NSDictionary *data) {
+    if (self.userId.length >0 && self.userId) {
+        [[AMNetManager shareInstance] getUserMeetingList:self.userId withPageNum:pageNum withPageSize:pageSize success:^(NSDictionary *data) {
             AMMeetListModel *model = [AMMeetListModel mj_objectWithKeyValues:data];
             successBlock(model,model.code);
         } failure:^(NSError *error) {
@@ -175,8 +176,8 @@ static AMApiManager *manager = NULL;
        withInvitePersonList:(NSArray*)personList
                     success:(CompleteBlock)successBlock
                     failure:(FailBlock)failureBlock {
-    if (self.anyUserId.length >0 && self.anyUserId) {
-        [[AMNetManager shareInstance] inviteMeetingMember:self.anyUserId withMeetingId:meetingId withInvitePersonList:personList success:^(NSDictionary *data) {
+    if (self.userId.length >0 && self.userId) {
+        [[AMNetManager shareInstance] inviteMeetingMember:self.userId withMeetingId:meetingId withInvitePersonList:personList success:^(NSDictionary *data) {
             if ([[data objectForKey:@"code"] intValue]==200) {
                 successBlock(200);
             }else{
@@ -196,8 +197,8 @@ static AMApiManager *manager = NULL;
        withDeletePersonList:(NSArray*)personList
                     success:(CompleteBlock)successBlock
                     failure:(FailBlock)failureBlock {
-    if (self.anyUserId.length >0 && self.anyUserId) {
-        [[AMNetManager shareInstance] deleteMeetingMember:self.anyUserId withMeetingId:meetingId withDeletePersonList:personList success:^(NSDictionary *data) {
+    if (self.userId.length >0 && self.userId) {
+        [[AMNetManager shareInstance] deleteMeetingMember:self.userId withMeetingId:meetingId withDeletePersonList:personList success:^(NSDictionary *data) {
             if ([[data objectForKey:@"code"] intValue]==200) {
                 successBlock(200);
             }else{
@@ -217,7 +218,7 @@ static AMApiManager *manager = NULL;
 - (void)getInviteMemberList:(NSString*)meetingId
                     success:(GetInviteMembersBlock)successBlock
                     failure:(FailBlock)failureBlock {
-    if (self.anyUserId.length >0 && self.anyUserId) {
+    if (self.userId.length >0 && self.userId) {
         [[AMNetManager shareInstance] getInviteMemberList:meetingId success:^(NSDictionary *data) {
             if ([[data objectForKey:@"code"] intValue]==200) {
                 NSArray *array = [MeetingInfo mj_objectArrayWithKeyValuesArray:[data objectForKey:@"memberlist"]];
@@ -240,7 +241,7 @@ static AMApiManager *manager = NULL;
                 withLock:(NSInteger)lock
                  success:(CompleteBlock)successBlock
                  failure:(FailBlock)failureBlock {
-    if (self.anyUserId.length >0 && self.anyUserId) {
+    if (self.userId.length >0 && self.userId) {
         [[AMNetManager shareInstance] updateMeetingLock:meetingId withLock:lock success:^(NSDictionary *data) {
             if ([[data objectForKey:@"code"] intValue]==200) {
                 successBlock(200);
