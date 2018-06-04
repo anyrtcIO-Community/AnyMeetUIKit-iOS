@@ -397,11 +397,11 @@
 		6349215120AD74DD00F129F5 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				6349215220AD74DD00F129F5 /* AMInformationModel.m */,
 				6349215320AD74DD00F129F5 /* AMInformationController.h */,
-				6349215420AD74DD00F129F5 /* AMInformationCell.h */,
-				6349215520AD74DD00F129F5 /* AMInformationModel.h */,
 				6349215620AD74DD00F129F5 /* AMInformationController.m */,
+				6349215520AD74DD00F129F5 /* AMInformationModel.h */,
+				6349215220AD74DD00F129F5 /* AMInformationModel.m */,
+				6349215420AD74DD00F129F5 /* AMInformationCell.h */,
 				6349215720AD74DD00F129F5 /* AMInformationCell.m */,
 			);
 			path = Message;
@@ -410,8 +410,8 @@
 		6349215920AD74DD00F129F5 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				6349215A20AD74DD00F129F5 /* AMMoreController.m */,
 				6349215B20AD74DD00F129F5 /* AMMoreController.h */,
+				6349215A20AD74DD00F129F5 /* AMMoreController.m */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -420,10 +420,10 @@
 			isa = PBXGroup;
 			children = (
 				6349215D20AD74DD00F129F5 /* AMConfereeController.h */,
-				6349215E20AD74DD00F129F5 /* AMConfereeCell.m */,
-				6349215F20AD74DD00F129F5 /* AMConfereeModel.h */,
 				6349216020AD74DD00F129F5 /* AMConfereeController.m */,
 				6349216120AD74DD00F129F5 /* AMConfereeCell.h */,
+				6349215E20AD74DD00F129F5 /* AMConfereeCell.m */,
+				6349215F20AD74DD00F129F5 /* AMConfereeModel.h */,
 				6349216220AD74DD00F129F5 /* AMConfereeModel.m */,
 			);
 			path = Conferee;
@@ -864,9 +864,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90EF4D576BF63003CC24540C /* Pods-AnyMeetUIKit.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -914,6 +915,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

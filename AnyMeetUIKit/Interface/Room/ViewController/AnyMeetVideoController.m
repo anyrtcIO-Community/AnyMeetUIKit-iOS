@@ -122,6 +122,8 @@
             //更多
         {
             AMMoreController *moreVc = [[AMMoreController alloc]init];
+            moreVc.meetModel = self.meetModel;
+            moreVc.userModel = self.userModel;
             moreVc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
             [self presentViewController:moreVc animated:NO completion:nil];
         }

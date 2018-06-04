@@ -12,6 +12,7 @@
 #import "AMInformationModel.h"
 #import "AMConfereeModel.h"
 #import "AMVideoView.h"
+#import <AVFoundation/AVFoundation.h>
 
 typedef NS_ENUM(NSInteger,AMSharedType) {
     AMSharedTypeNone = 0,
@@ -20,7 +21,7 @@ typedef NS_ENUM(NSInteger,AMSharedType) {
     AMSharedTypeMySelfDoc = 3
 };
 
-@interface AMVideoController : UIViewController<AMTabBarDelegate,AMTopToolDelegate>
+@interface AMVideoController : UIViewController<AMTabBarDelegate,AMTopToolDelegate,AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) UIView *localView;
 

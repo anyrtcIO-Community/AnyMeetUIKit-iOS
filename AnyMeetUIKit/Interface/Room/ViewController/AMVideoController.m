@@ -7,7 +7,6 @@
 //
 
 #import "AMVideoController.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface AMVideoController()
 
@@ -360,12 +359,14 @@
 - (void)playRemindMusic{
     self.player = nil;
     NSError *errors = nil;
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:&errors];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&errors];
     
-    NSString *earth = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"AnyMeetUIKit.bundle"] stringByAppendingPathComponent:@"ding_ding.mp3"];
-    NSURL *tempUrl = [NSURL fileURLWithPath:earth];
+    NSString *audioFile = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"AnyMeetUIKit.bundle/ding.mp3"];
+    
+    NSURL *tempUrl = [NSURL fileURLWithPath:[audioFile stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSError *error = nil;
     self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:tempUrl error:&error];
+    self.player.delegate = self;
     self.player.numberOfLoops = 0;
     [self.player prepareToPlay];
     [self.player play];

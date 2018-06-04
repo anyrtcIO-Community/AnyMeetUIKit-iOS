@@ -10,4 +10,8 @@
 
 @interface AMMoreController : UIViewController
 
+@property (nonatomic, strong) MeetingInfo *meetModel;
+
+@property (nonatomic, strong) AMUserModel *userModel;
+
 @end

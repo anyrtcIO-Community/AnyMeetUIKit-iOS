@@ -48,45 +48,56 @@
         //.....
         make.top.equalTo(@(30));
     }];
-//
-//    //锁
-//    UISwitch *lockSwitch = [[UISwitch alloc] init];
-//    lockSwitch.on = YES;
-//    [bottomView addSubview:lockSwitch];
-//    [lockSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
-//    [lockSwitch mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.right.equalTo(@(-20));
-//        make.bottom.equalTo(voiceSwitch.mas_top).offset(-30);
-//        make.top.equalTo(bottomView).offset(30);
-//    }];
-//
-//    UILabel *lockLabel = [[UILabel alloc]init];
-//    lockLabel.font = [UIFont systemFontOfSize:17];
-//    lockLabel.text = @"会议加锁";
-//    lockLabel.textColor = [AMCommon getColor:@"#4C5362"];
-//    [bottomView addSubview:lockLabel];
-//    [lockLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(@(20));
-//        make.top.equalTo(@(30));
-//        make.right.equalTo(lockSwitch.mas_left).equalTo(@(20));
-//        make.centerY.equalTo(lockSwitch.mas_centerY).offset(-10);
-//    }];
-//
-//    UILabel *tipLabel = [[UILabel alloc]init];
-//    tipLabel.font = [UIFont systemFontOfSize:12];
-//    tipLabel.text = @"会议一旦加锁，将不能有参与者进入会议";
-//    tipLabel.textColor = [AMCommon getColor:@"#999999"];
-//    [bottomView addSubview:tipLabel];
-//    [tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(@(20));
-//        make.right.equalTo(lockSwitch.mas_left).equalTo(@(-20));
-//        make.centerY.equalTo(lockSwitch.mas_centerY).offset(10);
-//    }];
+
+    if ([AMApiManager.shareInstance.anyUserId isEqualToString:self.meetModel.m_userid]) {
+        //锁
+        UISwitch *lockSwitch = [[UISwitch alloc] init];
+        lockSwitch.tag = 100;
+        lockSwitch.on = self.meetModel.m_is_lock;
+        [bottomView addSubview:lockSwitch];
+        [lockSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
+        [lockSwitch mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(@(-20));
+            make.bottom.equalTo(voiceSwitch.mas_top).offset(-30);
+            make.top.equalTo(bottomView).offset(30);
+        }];
+        
+        UILabel *lockLabel = [[UILabel alloc]init];
+        lockLabel.font = [UIFont systemFontOfSize:17];
+        lockLabel.text = @"会议加锁";
+        lockLabel.textColor = [AMCommon getColor:@"#4C5362"];
+        [bottomView addSubview:lockLabel];
+        [lockLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(@(20));
+            make.top.equalTo(@(30));
+            make.right.equalTo(lockSwitch.mas_left).equalTo(@(20));
+            make.centerY.equalTo(lockSwitch.mas_centerY).offset(-10);
+        }];
+        
+        UILabel *tipLabel = [[UILabel alloc]init];
+        tipLabel.font = [UIFont systemFontOfSize:12];
+        tipLabel.text = @"会议一旦加锁，将不能有参与者进入会议";
+        tipLabel.textColor = [AMCommon getColor:@"#999999"];
+        [bottomView addSubview:tipLabel];
+        [tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(@(20));
+            make.right.equalTo(lockSwitch.mas_left).equalTo(@(-20));
+            make.centerY.equalTo(lockSwitch.mas_centerY).offset(10);
+        }];
+    }
 }
 
 - (void)switchAction:(UISwitch *)sender{
-    [NSUserDefaults.standardUserDefaults setObject:[NSNumber numberWithBool:sender.isOn] forKey:Music_Tip];
-    [NSUserDefaults.standardUserDefaults synchronize];
+    if (sender.tag == 100) {
+        [[AMApiManager shareInstance] updateMeetingLock:self.meetModel.meetingid withLock:sender.isOn success:^(int code) {
+        
+        } failure:^(NSError *error) {
+            
+        }];
+    } else {
+        [NSUserDefaults.standardUserDefaults setObject:[NSNumber numberWithBool:sender.isOn] forKey:Music_Tip];
+        [NSUserDefaults.standardUserDefaults synchronize];
+    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
