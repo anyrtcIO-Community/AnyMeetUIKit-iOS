@@ -8,5 +8,13 @@ pod 'MJExtension'
 pod 'SDWebImage'
 pod 'MBProgressHUD'
 
+target 'anyRTCMeeting' do
+    
+pod 'AnyMeetUIKit', '~> 2.0.5'
+pod 'WechatOpenSDK'
+pod 'AFNetworking', :inhibit_warnings => true
+pod 'XHToast', '~> 1.4.0'
+end
+
 use_frameworks!
 end

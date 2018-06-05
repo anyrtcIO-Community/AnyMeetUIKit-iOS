@@ -1,6 +1,28 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - AnyBoardEngine (1.0.4):
     - Socket.IO-Client-Swift (~> 13.1.3)
+  - AnyMeetUIKit (2.0.5):
+    - AnyBoardEngine (~> 1.0.4)
+    - Masonry (~> 1.1.0)
+    - MBProgressHUD (~> 1.1.0)
+    - MJExtension (~> 3.0.13)
+    - RTMeetEngine (~> 0.0.5)
+    - SDWebImage (~> 4.3.3)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.13)
@@ -11,18 +33,26 @@ PODS:
   - Socket.IO-Client-Swift (13.1.3):
     - Starscream (~> 3.0.2)
   - Starscream (3.0.5)
+  - WechatOpenSDK (1.8.2)
+  - XHToast (1.4.0)
 
 DEPENDENCIES:
+  - AFNetworking
   - AnyBoardEngine
+  - AnyMeetUIKit (~> 2.0.5)
   - Masonry
   - MBProgressHUD
   - MJExtension
   - RTMeetEngine
   - SDWebImage
+  - WechatOpenSDK
+  - XHToast (~> 1.4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
     - AnyBoardEngine
+    - AnyMeetUIKit
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -30,9 +60,13 @@ SPEC REPOS:
     - SDWebImage
     - Socket.IO-Client-Swift
     - Starscream
+    - WechatOpenSDK
+    - XHToast
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   AnyBoardEngine: 5229019ec525a1f328cce9739e2f7a112f04f963
+  AnyMeetUIKit: f53776222f986abc172540b42ea255f1690a9441
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
@@ -40,7 +74,9 @@ SPEC CHECKSUMS:
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   Socket.IO-Client-Swift: d30d6fd08a38ad2a182b090936a043bf512ab2de
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
+  XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
 
-PODFILE CHECKSUM: 024f386445ffdc0dddd41167070158d8a2b082c0
+PODFILE CHECKSUM: 7fd8ee0927e7449bbb22f1148f5e0af66e93a2d7
 
 COCOAPODS: 1.5.0

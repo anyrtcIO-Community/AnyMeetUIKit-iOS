@@ -1,0 +1,71 @@
+//
+//  anyRTCMeeting.pch
+//  anyRTCMeeting
+//
+//  Created by jh on 2018/5/31.
+//  Copyright © 2018年 anyRTC. All rights reserved.
+//
+
+#ifndef anyRTCMeeting_pch
+#define anyRTCMeeting_pch
+
+#import <UIKit/UIKit.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//账号信息
+static NSString *developerID = @"XXX";
+static NSString *token = @"XXX";
+static NSString *key = @"XXX";
+static NSString *appID = @"XXX";
+
+static NSString *verifyUrl = @"www.baidu.com";
+
+//微信
+static NSString *weixinAppID = @"wxecda1a30ecb4f0df";
+static NSString *weixinAppSecret = @"e86d7692b87e10c206dc051e671f1a75";
+
+// MARK: - 宏
+
+//弱指针
+#define WEAKSELF __weak typeof(self)weakSelf =self
+
+#define ArrangeMeet_SUCESS @"ArrangeMeet_SUCESS"
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+// MARK: - AnyMeetUIKit
+
+#import <AnyMeetUIKit/AnyMeetUIKit.h>
+
+
+// MARK: - lib
+
+#import "MJExtension/MJExtension.h"
+
+#import <WXApi.h>
+
+#import <XHToast/XHToast.h>
+
+#import <Masonry/Masonry.h>
+
+#import <MBProgressHUD/MBProgressHUD.h>
+
+#import "UIButton+ImageTitleSpacing.h"
+
+// MARK: - other
+
+#import "AMNetWorkTool.h"
+
+#import "AMUser.h"
+
+#import "AMUserManager.h"
+
+#import "AMFunctionView.h"
+
+#import "AMHomeCell.h"
+
+#import "AMCommons.h"
+
+#endif /* anyRTCMeeting_pch */
