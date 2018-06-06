@@ -83,6 +83,20 @@
 #else
 - (void)setLocalVideoCapturer:(NSView*) render;
 #endif
+/**
+ 设置前置摄像头镜像是否打开
+ 
+ @param bEnable YES为打开，NO为关闭
+ 说明：默认打开(目前只支持美颜相机)
+ */
+- (void)setFontCameraMirrorEnable:(BOOL)bEnable;
+
+/**
+ 设置滤镜（使用美颜相机模式，默认开启美颜）
+ 
+ @param eFilter 滤镜模式
+ */
+- (void)setCameraFilter:(AnyCameraDeviceFilter)eFilter;
 
 #pragma mark RTC function for line
 /**

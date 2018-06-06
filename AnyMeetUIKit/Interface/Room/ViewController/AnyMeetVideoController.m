@@ -44,7 +44,7 @@
     //配置
     RTMeetOption *option = [RTMeetOption defaultOption];
     option.videoLayOut = RTC_V_1X3;
-    option.videoScreenOrientation = RTMPC_SCRN_Auto;
+    option.videoScreenOrientation = RTC_SCRN_Auto;
     option.videoMode = RTCMeet_Videos_SD;
     //实例化会议对象
     self.meetKit = [[RTMeetKit alloc] initWithDelegate:self andOption:option];
