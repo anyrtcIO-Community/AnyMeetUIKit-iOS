@@ -29,7 +29,7 @@
 @property (nonatomic , copy) NSString              * m_create_at;
 // 会议名称
 @property (nonatomic , copy) NSString              * m_name;
-// 会议权限类型：1:开发；2:密码；3:制定人员
+// 会议权限类型：1:开发；2:密码；3:指定人员
 @property (nonatomic , assign) int                 m_limit_type;
 // anyRTC号
 @property (nonatomic , copy) NSString              * m_anyrtcid;

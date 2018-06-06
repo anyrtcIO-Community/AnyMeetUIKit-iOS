@@ -54,7 +54,7 @@ typedef NS_OPTIONS(NSUInteger, LOG_MODE_MASK) {
 ///-----------------------------------
 
 @property LOG_MODE_MASK logModes;
-@property NSMutableArray *prefixes;
+@property(strong,nonatomic) NSMutableArray *prefixes;
 
 ///-----------------------------------
 /// @name Methods

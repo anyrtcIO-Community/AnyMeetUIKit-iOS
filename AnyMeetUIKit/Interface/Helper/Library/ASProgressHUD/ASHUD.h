@@ -26,7 +26,7 @@
 
 + (ASHUD *)showSwitchingHUDInView:(UIView *)view;
 
-- (void)setSwitchingProgressBlock:(void (^)())progress;
+- (void)setSwitchingProgressBlock:(void (^)(void))progress;
 
 - (void)setSwitchingCustomModeWithContent:(NSString *)content icon:(NSString *)icon;
 
