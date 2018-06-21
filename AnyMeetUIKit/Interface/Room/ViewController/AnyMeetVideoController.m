@@ -53,7 +53,7 @@
     //本地视频采集窗口
     [self.meetKit setLocalVideoCapturer:self.localView];
     
-    NSDictionary *customDict = [NSDictionary dictionaryWithObjectsAndKeys:self.userModel.userName,@"nickName",nil];
+    NSDictionary *customDict = [NSDictionary dictionaryWithObjectsAndKeys:self.userModel.userName,@"nickName",self.userModel.userId,@"userId",self.userModel.userHeadUrl,@"headUrl",[NSNumber numberWithInt:1],@"devType",nil];
     NSString *customStr = [AMCommon fromDicToJSONStr:customDict];
     //加入会议
     [self.meetKit joinRTC:self.meetModel.meetingid andIsHoster:NO andUserId:self.userModel.userId andUserData:customStr];
