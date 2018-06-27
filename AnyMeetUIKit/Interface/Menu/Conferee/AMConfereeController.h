@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) AMUserModel *userModel;
 
+@property (nonatomic, strong) MeetingInfo *meetModel;
+
 @property (nonatomic, assign) BOOL isHoster;
 
 @property (nonatomic, assign) BOOL isLandscape;

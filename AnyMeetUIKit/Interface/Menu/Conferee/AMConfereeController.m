@@ -64,10 +64,11 @@
             
         } tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
             if (buttonIndex != 4 && buttonIndex != 0) {
-                (buttonIndex == 2) ? ([self showEmailPicker]) : ([self showSMSPicker]);
+                (buttonIndex == 2) ? ([self showEmailPicker:self.meetModel]) : ([self showSMSPicker:self.meetModel]);
             } else {
                 UIPasteboard * pastboard = [UIPasteboard generalPasteboard];
-                pastboard.string = @"AnyMeetUIKit";
+                pastboard.string = [NSString stringWithFormat:@"https://www.anyrtc.io/meetPlus/share/%@",self.meetModel.meetingid];
+                [ASHUD showHUDWithCompleteStyleInView:self.view content:@"会议网址复制成功" icon:nil];
             }
         }];
     }

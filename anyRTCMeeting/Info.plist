@@ -28,6 +28,16 @@
 				<string>wxecda1a30ecb4f0df</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>meetingplus</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>meetingplus</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

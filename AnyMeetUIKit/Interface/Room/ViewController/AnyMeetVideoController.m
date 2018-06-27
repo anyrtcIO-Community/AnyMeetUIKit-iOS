@@ -111,10 +111,11 @@
             AMConfereeController *confereeVc = [[AMConfereeController alloc]init];
             confereeVc.meetKit = self.meetKit;
             confereeVc.infoArr = self.infoArr;
+            confereeVc.meetModel = self.meetModel;
             confereeVc.memberArr = self.memberArr;
             confereeVc.userModel = self.userModel;
             confereeVc.isLandscape = self.isLandscape;
-            ([self.meetModel.m_userid isEqualToString:self.userModel.userId]) ? confereeVc.isHoster = YES : 0;
+            ([[AMApiManager shareInstance].userId isEqualToString:self.userModel.userId]) ? confereeVc.isHoster = YES : 0;
             [self presentViewController:confereeVc animated:YES completion:nil];
         }
             break;
@@ -375,13 +376,36 @@
             BOOL type = (BOOL)[[dic objectForKey:@"type"] intValue];
             BOOL state = (BOOL)[[dic objectForKey:@"state"] intValue];
             if ([userId isEqualToString:self.userModel.userId]) {
-                type ? ([self.meetKit setLocalVideoEnable:state]) : ([self.meetKit setLocalAudioEnable:state]);
+                if (type) {
+                    [self.meetKit setLocalVideoEnable:state];
+                    [self.tabbar.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        if ([obj isKindOfClass:[UIButton class]]) {
+                            UIButton *button = (UIButton *)obj;
+                            if (button.tag == 1) {
+                                button.selected = !state;
+                                *stop = YES;
+                            }
+                        }
+                    }];
+                } else {
+                    [self.meetKit setLocalAudioEnable:state];
+                    [self.tabbar.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        if ([obj isKindOfClass:[UIButton class]]) {
+                            UIButton *button = (UIButton *)obj;
+                            if (button.tag == 0) {
+                                button.selected = !state;
+                                *stop = YES;
+                            }
+                        }
+                    }];
+                }
             }
         }
             break;
         case 2://踢出
         {
-            if (![[dic objectForKey:@"userid"] isEqualToString:self.userModel.userId]) {
+            if ([[dic objectForKey:@"userid"] isEqualToString:self.userModel.userId]) {
+                [ASHUD showHUDWithCompleteStyleInView:self.view content:@"你已被主持人移除会议房间" icon:nil];
                 [self leaveMeet];
             }
         }

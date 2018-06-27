@@ -95,7 +95,6 @@
 		63D1162020AEB70D00BC0A36 /* AMDocToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D1161C20AEB6E700BC0A36 /* AMDocToolView.xib */; };
 		63F0267E20C67EE0007D25AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F0267C20C67EE0007D25AB /* Main.storyboard */; };
 		63F0268020C67EE1007D25AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F0267F20C67EE1007D25AB /* Assets.xcassets */; };
-		63F0268320C67EE1007D25AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F0268120C67EE1007D25AB /* LaunchScreen.storyboard */; };
 		63F0268620C67EE1007D25AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F0268520C67EE1007D25AB /* main.m */; };
 		63F0269020C67EE1007D25AB /* anyRTCMeetingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F0268F20C67EE1007D25AB /* anyRTCMeetingTests.m */; };
 		63F0269B20C67EE1007D25AB /* anyRTCMeetingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F0269A20C67EE1007D25AB /* anyRTCMeetingUITests.m */; };
@@ -263,7 +262,6 @@
 		63F0267420C67EE0007D25AB /* anyRTCMeeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = anyRTCMeeting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F0267D20C67EE0007D25AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63F0267F20C67EE1007D25AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		63F0268220C67EE1007D25AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63F0268420C67EE1007D25AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63F0268520C67EE1007D25AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63F0268B20C67EE1007D25AB /* anyRTCMeetingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = anyRTCMeetingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -619,7 +617,6 @@
 				63F026DE20C680DA007D25AB /* Base */,
 				63F0267C20C67EE0007D25AB /* Main.storyboard */,
 				63F0267F20C67EE1007D25AB /* Assets.xcassets */,
-				63F0268120C67EE1007D25AB /* LaunchScreen.storyboard */,
 				63F0268420C67EE1007D25AB /* Info.plist */,
 				63F0268520C67EE1007D25AB /* main.m */,
 				63F026E220C680EA007D25AB /* anyRTCMeeting.pch */,
@@ -999,7 +996,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63F0268320C67EE1007D25AB /* LaunchScreen.storyboard in Resources */,
 				63F0268020C67EE1007D25AB /* Assets.xcassets in Resources */,
 				63F0267E20C67EE0007D25AB /* Main.storyboard in Resources */,
 			);
@@ -1226,14 +1222,6 @@
 				63F0267D20C67EE0007D25AB /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		63F0268120C67EE1007D25AB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63F0268220C67EE1007D25AB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

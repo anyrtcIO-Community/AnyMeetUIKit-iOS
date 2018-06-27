@@ -30,6 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"安排会议";
+    self.padding.constant = - SCREEN_HEIGHT;
     
     UIButton *backButton = [AMCommons produceButton:@"" image:@"return_back"];
     [backButton addTarget:self action:@selector(popToPrevious) forControlEvents:UIControlEventTouchUpInside];

@@ -42,8 +42,19 @@
     
     WEAKSELF;
     [[AMApiManager shareInstance] getMeetingInfo:self.meetIdTextField.text success:^(AMMeetInfoModel *model, int code) {
-        
-        (code == 200) ? ([weakSelf joinMeetingRoom:model.meetinginfo]) : ([XHToast showCenterWithText:[[AMApiManager shareInstance] getErrorInfoWithCode:code]]);
+        if (code == 200) {
+            if ([model.meetinginfo.m_userid isEqualToString:AMApiManager.shareInstance.anyUserId]) {
+                [weakSelf joinMeetingRoom:model.meetinginfo];
+            } else {
+                if (model.meetinginfo.m_is_lock) {
+                    [XHToast showCenterWithText:@"会议已上锁"];
+                } else {
+                    [weakSelf joinMeetingRoom:model.meetinginfo];
+                }
+            }
+        } else {
+            [XHToast showCenterWithText:[[AMApiManager shareInstance] getErrorInfoWithCode:code]];
+        }
         
     } failure:^(NSError *error) {
         
@@ -51,24 +62,21 @@
 }
 
 - (void)joinMeetingRoom:(MeetingInfo *) model{
-    NSLog(@"--------%@---------%@",AMApiManager.shareInstance.anyUserId,model.m_userid);
-    if (!model.m_is_lock || [model.m_userid isEqualToString:AMApiManager.shareInstance.anyUserId]) {
-        AMUserModel *userModel = [[AMUserModel alloc] init];
-        AMUser *user = AMUserManager.fetchUserInfo;
-        userModel.userId = user.openid;
-        userModel.userHeadUrl = user.headimgurl;
-        userModel.userName = user.nickname;
-        
-        AnyMeetVideoController *meetVc = [[AnyMeetVideoController alloc]init];
-        meetVc.userModel = userModel;
-        meetVc.meetModel = model;
-        __weak typeof(self)weakSelf = self;
-        __weak AnyMeetVideoController *tempVideoController = meetVc;
-        meetVc.uploadBlock = ^(NSArray *picArray) {
-            [weakSelf uploadPics:picArray withController:tempVideoController];
-        };
-        [self.navigationController pushViewController:meetVc animated:YES];
-    }
+    AMUserModel *userModel = [[AMUserModel alloc] init];
+    AMUser *user = AMUserManager.fetchUserInfo;
+    userModel.userId = user.openid;
+    userModel.userHeadUrl = user.headimgurl;
+    userModel.userName = user.nickname;
+    
+    AnyMeetVideoController *meetVc = [[AnyMeetVideoController alloc]init];
+    meetVc.userModel = userModel;
+    meetVc.meetModel = model;
+    __weak typeof(self)weakSelf = self;
+    __weak AnyMeetVideoController *tempVideoController = meetVc;
+    meetVc.uploadBlock = ^(NSArray *picArray) {
+        [weakSelf uploadPics:picArray withController:tempVideoController];
+    };
+    [self.navigationController pushViewController:meetVc animated:YES];
 }
 
 - (void)uploadPics:(NSArray*)picArray withController:(AnyMeetVideoController*)controller {

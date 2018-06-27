@@ -28,7 +28,10 @@ typedef void(GetInviteMembersBlock)(NSArray<Memberlist *> * memberlist,int code)
 +(AMApiManager*)shareInstance;
 
 //用户Id
+@property (nonatomic, strong,readonly) NSString *userId;
+//用户在anyRTC下的UserId
 @property (nonatomic, strong,readonly) NSString *anyUserId;
+
 /**
  用户对接（调用成功后，其他接口才能使用）
 
