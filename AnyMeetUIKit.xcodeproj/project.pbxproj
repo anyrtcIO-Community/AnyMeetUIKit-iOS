@@ -113,6 +113,8 @@
 		653395DB20AEC5BB00BA13B7 /* AMApiCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 653395D620AEC5BB00BA13B7 /* AMApiCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		653395DC20AEC5BB00BA13B7 /* AMNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 653395D720AEC5BB00BA13B7 /* AMNetManager.m */; };
 		653395DD20AEC5BB00BA13B7 /* AMNetWork.h in Headers */ = {isa = PBXBuildFile; fileRef = 653395D820AEC5BB00BA13B7 /* AMNetWork.h */; };
+		6545F89020DB97D000AB5A8B /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */; };
+		6545F89120DB97D000AB5A8B /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81120A5335300D83DD1 /* AMApiManager.mm */; };
 		6593C81920A5335300D83DD1 /* AMApiManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81520A5335300D83DD1 /* AMApiManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -143,7 +145,28 @@
 			remoteGlobalIDString = 63F0267320C67EE0007D25AB;
 			remoteInfo = anyRTCMeeting;
 		};
+		6545F89220DB97D000AB5A8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6593C7F120A52F8D00D83DD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6593C7F920A52F8D00D83DD1;
+			remoteInfo = AnyMeetUIKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6545F89420DB97D000AB5A8B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6545F89120DB97D000AB5A8B /* AnyMeetUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */,
+				6545F89020DB97D000AB5A8B /* AnyMeetUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,18 +361,10 @@
 		63134B0920DB94F200778937 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				63134B0A20DB94F200778937 /* Model */,
 				63134B0B20DB94F200778937 /* View */,
 				63134B1020DB94F200778937 /* ViewController */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		63134B0A20DB94F200778937 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		63134B0B20DB94F200778937 /* View */ = {
@@ -865,10 +881,12 @@
 				63F0267120C67EE0007D25AB /* Frameworks */,
 				63F0267220C67EE0007D25AB /* Resources */,
 				988D0AD360BA78B4E5934D87 /* [CP] Embed Pods Frameworks */,
+				6545F89420DB97D000AB5A8B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6545F89320DB97D000AB5A8B /* PBXTargetDependency */,
 			);
 			name = anyRTCMeeting;
 			productName = anyRTCMeeting;
@@ -1194,6 +1212,11 @@
 			target = 63F0267320C67EE0007D25AB /* anyRTCMeeting */;
 			targetProxy = 63F0269720C67EE1007D25AB /* PBXContainerItemProxy */;
 		};
+		6545F89320DB97D000AB5A8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6593C7F920A52F8D00D83DD1 /* AnyMeetUIKit */;
+			targetProxy = 6545F89220DB97D000AB5A8B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1226,7 +1249,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1248,7 +1271,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
