@@ -42,19 +42,21 @@
 }
 
 //发送短信
--(void)showSMSPicker{
+-(void)showSMSPicker:(MeetingInfo *)model{
     Class messageClass = (NSClassFromString(@"MFMessageComposeViewController"));
     if (messageClass != nil) {
         if ([messageClass canSendText]) {
             MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
             picker.messageComposeDelegate = self;
-            NSString *smsBody = @"AnyMeetUIKit";
+            NSString *smsBody = [NSString stringWithFormat:@"让我们在会议中见吧，会议ID:%@；会议网址👉https://www.anyrtc.io/meetPlus/share/%@",model.meetingid,model.meetingid];
             
             picker.body=smsBody;
             
-            [self presentViewController:picker animated:YES completion:nil];        } else {
-                NSLog(@"设备不支持短信功能");
-            }
+            [self presentViewController:picker animated:YES completion:nil];
+            
+        } else {
+            [ASHUD showHUDWithCompleteStyleInView:self.view content:@"设备不支持短信功能" icon:nil];
+        }
     }
 }
 
@@ -65,9 +67,9 @@
 }
 
 //发送邮件
-- (void)showEmailPicker{
+- (void)showEmailPicker:(MeetingInfo *)model{
     if (![MFMailComposeViewController canSendMail]) {
-        //-----设备未开启邮件服务--------
+        [ASHUD showHUDWithCompleteStyleInView:self.view content:@"设备未开启邮件服务" icon:nil];
         return;
     }
     // 创建邮件发送界面
@@ -75,9 +77,14 @@
     // 设置邮件代理
     [mailCompose setMailComposeDelegate:self];
     // 设置邮件主题
-    [mailCompose setSubject:@"Teameeting"];
+    [mailCompose setSubject:@"快来一起开会吧"];
     // 是否为HTML格式
-    [mailCompose setMessageBody:@"AnyMeetUIKit" isHTML:NO];
+    [mailCompose setMessageBody:@"" isHTML:NO];
+    
+    NSString *htmlStr = [NSString stringWithFormat:@"<html><body><p>会议ID：%@</p><p>会议网址：https://www.anyrtc.io/meetPlus/share/%@</p></body></html>",model.meetingid,model.meetingid];
+    
+    // 如使用HTML格式，则为以下代码
+    [mailCompose setMessageBody:htmlStr isHTML:YES];
     
     // 弹出邮件发送视图
     [self presentViewController:mailCompose animated:YES completion:nil];

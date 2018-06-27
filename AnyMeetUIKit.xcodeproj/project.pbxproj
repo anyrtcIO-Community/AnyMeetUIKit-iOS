@@ -87,6 +87,7 @@
 		6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217A20AD74EF00F129F5 /* AMVideoView.m */; };
 		6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217B20AD74EF00F129F5 /* AMTopToolView.m */; };
 		6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */; };
+		6398CF0520E3928700DC2D7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6398CF0420E3928700DC2D7B /* LaunchScreen.storyboard */; };
 		63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */; };
 		63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */; };
 		63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */; };
@@ -95,7 +96,6 @@
 		63D1162020AEB70D00BC0A36 /* AMDocToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D1161C20AEB6E700BC0A36 /* AMDocToolView.xib */; };
 		63F0267E20C67EE0007D25AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F0267C20C67EE0007D25AB /* Main.storyboard */; };
 		63F0268020C67EE1007D25AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F0267F20C67EE1007D25AB /* Assets.xcassets */; };
-		63F0268320C67EE1007D25AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F0268120C67EE1007D25AB /* LaunchScreen.storyboard */; };
 		63F0268620C67EE1007D25AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F0268520C67EE1007D25AB /* main.m */; };
 		63F0269020C67EE1007D25AB /* anyRTCMeetingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F0268F20C67EE1007D25AB /* anyRTCMeetingTests.m */; };
 		63F0269B20C67EE1007D25AB /* anyRTCMeetingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F0269A20C67EE1007D25AB /* anyRTCMeetingUITests.m */; };
@@ -144,6 +144,19 @@
 			remoteInfo = anyRTCMeeting;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6318509820E3783500F030A9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +244,7 @@
 		6349217A20AD74EF00F129F5 /* AMVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMVideoView.m; sourceTree = "<group>"; };
 		6349217B20AD74EF00F129F5 /* AMTopToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTopToolView.m; sourceTree = "<group>"; };
 		6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyMeetVideoController.m; sourceTree = "<group>"; };
+		6398CF0420E3928700DC2D7B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
 		63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
@@ -240,7 +254,6 @@
 		63F0267420C67EE0007D25AB /* anyRTCMeeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = anyRTCMeeting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F0267D20C67EE0007D25AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63F0267F20C67EE1007D25AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		63F0268220C67EE1007D25AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63F0268420C67EE1007D25AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63F0268520C67EE1007D25AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63F0268B20C67EE1007D25AB /* anyRTCMeetingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = anyRTCMeetingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,26 +350,18 @@
 		63134B0920DB94F200778937 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				63134B0A20DB94F200778937 /* Model */,
 				63134B0B20DB94F200778937 /* View */,
 				63134B1020DB94F200778937 /* ViewController */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		63134B0A20DB94F200778937 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		63134B0B20DB94F200778937 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				63134B0E20DB94F200778937 /* AMHomeCell.h */,
 				63134B0C20DB94F200778937 /* AMHomeCell.m */,
 				63134B0D20DB94F200778937 /* AMFunctionView.h */,
-				63134B0E20DB94F200778937 /* AMHomeCell.h */,
 				63134B0F20DB94F200778937 /* AMFunctionView.m */,
 			);
 			path = View;
@@ -603,7 +608,7 @@
 				63F026DE20C680DA007D25AB /* Base */,
 				63F0267C20C67EE0007D25AB /* Main.storyboard */,
 				63F0267F20C67EE1007D25AB /* Assets.xcassets */,
-				63F0268120C67EE1007D25AB /* LaunchScreen.storyboard */,
+				6398CF0420E3928700DC2D7B /* LaunchScreen.storyboard */,
 				63F0268420C67EE1007D25AB /* Info.plist */,
 				63F0268520C67EE1007D25AB /* main.m */,
 				63F026E220C680EA007D25AB /* anyRTCMeeting.pch */,
@@ -674,8 +679,8 @@
 			isa = PBXGroup;
 			children = (
 				63F026F420C685D5007D25AB /* AMUser.h */,
-				63F026F520C685D5007D25AB /* AMUserManager.h */,
 				63F026F620C685D5007D25AB /* AMUser.m */,
+				63F026F520C685D5007D25AB /* AMUserManager.h */,
 				63F026F720C685D5007D25AB /* AMUserManager.m */,
 			);
 			path = User;
@@ -693,8 +698,8 @@
 		63F026FF20C685D5007D25AB /* Arrange */ = {
 			isa = PBXGroup;
 			children = (
-				63F0270020C685D5007D25AB /* AMArrangeController.m */,
 				63F0270120C685D5007D25AB /* AMArrangeController.h */,
+				63F0270020C685D5007D25AB /* AMArrangeController.m */,
 			);
 			path = Arrange;
 			sourceTree = "<group>";
@@ -865,6 +870,7 @@
 				63F0267120C67EE0007D25AB /* Frameworks */,
 				63F0267220C67EE0007D25AB /* Resources */,
 				988D0AD360BA78B4E5934D87 /* [CP] Embed Pods Frameworks */,
+				6318509820E3783500F030A9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -981,7 +987,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63F0268320C67EE1007D25AB /* LaunchScreen.storyboard in Resources */,
+				6398CF0520E3928700DC2D7B /* LaunchScreen.storyboard in Resources */,
 				63F0268020C67EE1007D25AB /* Assets.xcassets in Resources */,
 				63F0267E20C67EE0007D25AB /* Main.storyboard in Resources */,
 			);
@@ -1205,14 +1211,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		63F0268120C67EE1007D25AB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63F0268220C67EE1007D25AB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1224,13 +1222,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/anyRTCMeeting",
+					"$(PROJECT_DIR)/anyRTCMeeting/Main",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeeting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1246,13 +1246,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/anyRTCMeeting",
+					"$(PROJECT_DIR)/anyRTCMeeting/Main",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeeting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1268,11 +1270,7 @@
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				INFOPLIST_FILE = anyRTCMeetingTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeetingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1288,11 +1286,7 @@
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				INFOPLIST_FILE = anyRTCMeetingTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeetingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1307,11 +1301,7 @@
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				INFOPLIST_FILE = anyRTCMeetingUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeetingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1326,11 +1316,7 @@
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				INFOPLIST_FILE = anyRTCMeetingUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeetingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1470,11 +1456,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AnyMeetUIKit/Net/lib";
 				INFOPLIST_FILE = AnyMeetUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnyMeetUIKit/Net/lib",
@@ -1518,11 +1500,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AnyMeetUIKit/Net/lib";
 				INFOPLIST_FILE = AnyMeetUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnyMeetUIKit/Net/lib",

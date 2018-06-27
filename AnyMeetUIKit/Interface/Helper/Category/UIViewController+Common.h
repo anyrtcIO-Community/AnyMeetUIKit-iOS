@@ -17,9 +17,9 @@ MFMessageComposeViewControllerDelegate>
 - (void)customNavigationBar:(NSString *)title;
 
 //发短信
--(void)showSMSPicker;
+-(void)showSMSPicker:(MeetingInfo *)model;
 
 //发邮件
-- (void)showEmailPicker;
+- (void)showEmailPicker:(MeetingInfo *)model;
 
 @end
