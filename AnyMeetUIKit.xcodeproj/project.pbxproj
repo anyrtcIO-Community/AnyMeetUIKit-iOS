@@ -117,6 +117,8 @@
 		653395DB20AEC5BB00BA13B7 /* AMApiCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 653395D620AEC5BB00BA13B7 /* AMApiCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		653395DC20AEC5BB00BA13B7 /* AMNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 653395D720AEC5BB00BA13B7 /* AMNetManager.m */; };
 		653395DD20AEC5BB00BA13B7 /* AMNetWork.h in Headers */ = {isa = PBXBuildFile; fileRef = 653395D820AEC5BB00BA13B7 /* AMNetWork.h */; };
+		6545F89020DB97D000AB5A8B /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */; };
+		6545F89120DB97D000AB5A8B /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81120A5335300D83DD1 /* AMApiManager.mm */; };
 		6593C81920A5335300D83DD1 /* AMApiManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81520A5335300D83DD1 /* AMApiManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -147,16 +149,27 @@
 			remoteGlobalIDString = 63F0267320C67EE0007D25AB;
 			remoteInfo = anyRTCMeeting;
 		};
+		6545F89220DB97D000AB5A8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6593C7F120A52F8D00D83DD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6593C7F920A52F8D00D83DD1;
+			remoteInfo = AnyMeetUIKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6318509820E3783500F030A9 /* Embed Frameworks */ = {
+		6545F89420DB97D000AB5A8B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+<<<<<<< HEAD
 				63166D8E20E48EE700DE52A5 /* AnyMeetUIKit.framework in Embed Frameworks */,
+=======
+				6545F89120DB97D000AB5A8B /* AnyMeetUIKit.framework in Embed Frameworks */,
+>>>>>>> origin/master
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,8 +331,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */,
+<<<<<<< HEAD
 				63166D8C20E48ECD00DE52A5 /* AnyMeetUIKit.framework in Frameworks */,
 				63166D8D20E48EE700DE52A5 /* AnyMeetUIKit.framework in Frameworks */,
+=======
+				6545F89020DB97D000AB5A8B /* AnyMeetUIKit.framework in Frameworks */,
+>>>>>>> origin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,9 +386,9 @@
 		63134B0B20DB94F200778937 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				63134B0E20DB94F200778937 /* AMHomeCell.h */,
 				63134B0C20DB94F200778937 /* AMHomeCell.m */,
 				63134B0D20DB94F200778937 /* AMFunctionView.h */,
+				63134B0E20DB94F200778937 /* AMHomeCell.h */,
 				63134B0F20DB94F200778937 /* AMFunctionView.m */,
 			);
 			path = View;
@@ -700,8 +717,8 @@
 			isa = PBXGroup;
 			children = (
 				63F026F420C685D5007D25AB /* AMUser.h */,
-				63F026F620C685D5007D25AB /* AMUser.m */,
 				63F026F520C685D5007D25AB /* AMUserManager.h */,
+				63F026F620C685D5007D25AB /* AMUser.m */,
 				63F026F720C685D5007D25AB /* AMUserManager.m */,
 			);
 			path = User;
@@ -719,8 +736,8 @@
 		63F026FF20C685D5007D25AB /* Arrange */ = {
 			isa = PBXGroup;
 			children = (
-				63F0270120C685D5007D25AB /* AMArrangeController.h */,
 				63F0270020C685D5007D25AB /* AMArrangeController.m */,
+				63F0270120C685D5007D25AB /* AMArrangeController.h */,
 			);
 			path = Arrange;
 			sourceTree = "<group>";
@@ -891,11 +908,12 @@
 				63F0267120C67EE0007D25AB /* Frameworks */,
 				63F0267220C67EE0007D25AB /* Resources */,
 				988D0AD360BA78B4E5934D87 /* [CP] Embed Pods Frameworks */,
-				6318509820E3783500F030A9 /* Embed Frameworks */,
+				6545F89420DB97D000AB5A8B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6545F89320DB97D000AB5A8B /* PBXTargetDependency */,
 			);
 			name = anyRTCMeeting;
 			productName = anyRTCMeeting;
@@ -1008,7 +1026,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				63161D3020E601DD00849114 /* Images.xcassets in Resources */,
+=======
+>>>>>>> origin/master
 				63F0268020C67EE1007D25AB /* Assets.xcassets in Resources */,
 				63F0267E20C67EE0007D25AB /* Main.storyboard in Resources */,
 			);
@@ -1220,6 +1241,11 @@
 			target = 63F0267320C67EE0007D25AB /* anyRTCMeeting */;
 			targetProxy = 63F0269720C67EE1007D25AB /* PBXContainerItemProxy */;
 		};
+		6545F89320DB97D000AB5A8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6593C7F920A52F8D00D83DD1 /* AnyMeetUIKit */;
+			targetProxy = 6545F89220DB97D000AB5A8B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1244,11 +1270,6 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/anyRTCMeeting",
-					"$(PROJECT_DIR)/anyRTCMeeting/Main",
-				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1275,11 +1296,6 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/anyRTCMeeting",
-					"$(PROJECT_DIR)/anyRTCMeeting/Main",
-				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
