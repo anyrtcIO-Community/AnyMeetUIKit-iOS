@@ -22,7 +22,7 @@
     
     //配置开发者信息
     [AnyMeetUIKitConfig initEngineWithAnyRTCInfo:developerID andAppId:appID andKey:key andToke:token andVerifyUrl:verifyUrl];
-    
+    [NSThread sleepForTimeInterval:1];
     NSString *identify;
     UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     AMUserManager.isLogin ? (identify = @"AMMeet_HomeID") : (identify = @"AMMeet_SIgnInID");
@@ -63,6 +63,13 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window  NS_AVAILABLE_IOS(6_0) __TVOS_PROHIBITED {
+    if (self.allowRotation) {
+        return UIInterfaceOrientationMaskAll;
+    }
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 

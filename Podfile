@@ -10,7 +10,7 @@ pod 'MBProgressHUD'
 
 target 'anyRTCMeeting' do
     
-pod 'AnyMeetUIKit', '~> 2.0.6'
+#pod 'AnyMeetUIKit', '~> 2.0.7'
 pod 'WechatOpenSDK'
 pod 'AFNetworking', :inhibit_warnings => true
 pod 'XHToast', '~> 1.4.0'

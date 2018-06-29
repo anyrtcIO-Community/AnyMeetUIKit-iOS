@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) UIRefreshControl *refreshControls;
 
+@property (strong, nonatomic) UIView *footerView;
+
 @end
 
 @implementation AMHomeViewController
@@ -25,6 +27,14 @@
     WEAKSELF;
     self.dateArr = [NSMutableArray arrayWithCapacity:20];
     self.listArr = [NSMutableArray arrayWithCapacity:20];
+    
+    UIButton *exitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    exitButton.frame = CGRectMake(0, 0, 30, 30);
+    exitButton.titleLabel.font = [UIFont systemFontOfSize:17];
+    [exitButton setTitle:@"退出登录" forState:UIControlStateNormal];
+    [exitButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [exitButton addTarget:self action:@selector(exit) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:exitButton];
     
     AMFunctionView *functionView = [[AMFunctionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH * 0.4)];
     functionView.delegate = self;
@@ -36,6 +46,12 @@
     }];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getMeetingList) name:ArrangeMeet_SUCESS object:nil];
+}
+
+- (void)exit{
+    [AMUserManager deleteAccountInformation];
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIApplication.sharedApplication.keyWindow.rootViewController = [board instantiateViewControllerWithIdentifier:@"AMMeet_SIgnInID"];
 }
 
 - (void)addRefreshControl{
@@ -109,6 +125,7 @@
 // MARK: - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    self.listArr.count == 0 ? (self.tableView.tableFooterView = self.footerView) : (self.tableView.tableFooterView = nil);
     return self.listArr.count;
 }
 
@@ -157,6 +174,8 @@
     meetVc.userModel = userModel;
     meetVc.meetModel = model;
     
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.allowRotation = YES;
     WEAKSELF;
     __weak AnyMeetVideoController *tempVideoController = meetVc;
     meetVc.uploadBlock = ^(NSArray *picArray) {
@@ -177,7 +196,27 @@
     MeetingInfo *model = (MeetingInfo *)arr[indexPath.row];
     
     UITableViewRowAction *action0 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"分享会议" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-    
+        [UIAlertController showActionSheetInViewController:self withTitle:@"邀请参会" message:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@[@"发送邮件",@"发送短信",@"复制链接"] popoverPresentationControllerBlock:^(UIPopoverPresentationController * _Nonnull popover) {
+            
+        } tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+            switch (buttonIndex) {
+                case 2:
+                    [self showEmailPicker:model];
+                    break;
+                case 3:
+                    [self showSMSPicker:model];
+                    break;
+                case 4:
+                {
+                    UIPasteboard * pastboard = [UIPasteboard generalPasteboard];
+                    pastboard.string = [NSString stringWithFormat:@"https://www.anyrtc.io/meetPlus/share/%@",model.meetingid];
+                    [XHToast showCenterWithText:@"会议网址复制成功"];
+                }
+                    break;
+                default:
+                    break;
+            }
+        }];
     }];
     action0.backgroundColor = [UIColor grayColor];
     WEAKSELF;
@@ -204,9 +243,29 @@
     }
 }
 
+- (UIView *)footerView{
+    if (!_footerView) {
+        _footerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - (SCREEN_WIDTH * 0.4 + 100))];
+        _footerView.backgroundColor = [AMCommons getColor:@"#EBEBEB"];
+        
+        UIButton *recordButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        recordButton.frame = CGRectMake(0, 0, 150, 150);
+        recordButton.titleLabel.font = [UIFont systemFontOfSize:13];
+        [recordButton setTitleColor:[AMCommons getColor:@"#bbbbbb"] forState:UIControlStateNormal];
+        [recordButton setTitle:@"你还没有安排会议" forState:UIControlStateNormal];
+        [recordButton setImage:[UIImage imageNamed:@"img_wujilu"] forState:UIControlStateNormal];
+        recordButton.center = _footerView.center;
+        [recordButton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:20];
+        [_footerView addSubview:recordButton];
+    }
+    return _footerView;
+}
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.allowRotation = NO;
 }
 
 - (void)dealloc{

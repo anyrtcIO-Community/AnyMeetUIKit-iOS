@@ -56,7 +56,6 @@
 
 - (void)updateInfoModel:(AMInformationModel *)infoModel userId:(NSString *)userId{
     CGFloat messageX = CGRectGetWidth(UIScreen.mainScreen.bounds)/2.0;
-    NSLog(@"%@",Bundle);
     [_iconImageView sd_setImageWithURL:[NSURL URLWithString:infoModel.t_msg_u_icon] placeholderImage:Bundle_IMAGE(@"blue") options:SDWebImageRetryFailed];
     _nameLabel.text = infoModel.t_msg_u_name;
     //富文本

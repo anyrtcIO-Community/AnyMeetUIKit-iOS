@@ -15,6 +15,12 @@
 //微信授权登录
 + (void)sendAuthRequest;
 
+//保存用户信息
++ (BOOL)saveAccountInformation:(AMUser *)user;
+
+//删除用户信息
++ (BOOL)deleteAccountInformation;
+
 //获取用户信息
 + (AMUser *)fetchUserInfo;
 

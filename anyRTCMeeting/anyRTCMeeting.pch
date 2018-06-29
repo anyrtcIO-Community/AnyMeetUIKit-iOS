@@ -68,4 +68,10 @@ static NSString *weixinAppSecret = @"e86d7692b87e10c206dc051e671f1a75";
 
 #import "AMCommons.h"
 
+#import "UIAlertController+Blocks.h"
+
+#import "UIViewController+Common.h"
+
+#import "AppDelegate.h"
+
 #endif /* anyRTCMeeting_pch */

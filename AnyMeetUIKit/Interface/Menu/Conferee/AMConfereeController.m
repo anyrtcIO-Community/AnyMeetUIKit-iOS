@@ -63,12 +63,22 @@
         [UIAlertController showActionSheetInViewController:self withTitle:@"邀请参会" message:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@[@"发送邮件",@"发送短信",@"复制链接"] popoverPresentationControllerBlock:^(UIPopoverPresentationController * _Nonnull popover) {
             
         } tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
-            if (buttonIndex != 4 && buttonIndex != 0) {
-                (buttonIndex == 2) ? ([self showEmailPicker:self.meetModel]) : ([self showSMSPicker:self.meetModel]);
-            } else {
-                UIPasteboard * pastboard = [UIPasteboard generalPasteboard];
-                pastboard.string = [NSString stringWithFormat:@"https://www.anyrtc.io/meetPlus/share/%@",self.meetModel.meetingid];
-                [ASHUD showHUDWithCompleteStyleInView:self.view content:@"会议网址复制成功" icon:nil];
+            switch (buttonIndex) {
+                case 2:
+                    [self showEmailPicker:self.meetModel];
+                    break;
+                case 3:
+                    [self showSMSPicker:self.meetModel];
+                    break;
+                case 4:
+                {
+                    UIPasteboard * pastboard = [UIPasteboard generalPasteboard];
+                    pastboard.string = [NSString stringWithFormat:@"https://www.anyrtc.io/meetPlus/share/%@",self.meetModel.meetingid];
+                    [ASHUD showHUDWithCompleteStyleInView:self.view content:@"会议网址复制成功" icon:nil];
+                }
+                    break;
+                default:
+                    break;
             }
         }];
     }

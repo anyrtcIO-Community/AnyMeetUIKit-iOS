@@ -62,6 +62,9 @@
 }
 
 - (void)joinMeetingRoom:(MeetingInfo *) model{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.allowRotation = YES;
+    
     AMUserModel *userModel = [[AMUserModel alloc] init];
     AMUser *user = AMUserManager.fetchUserInfo;
     userModel.userId = user.openid;
@@ -93,6 +96,8 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = NO;
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.allowRotation = NO;
 }
 
 @end

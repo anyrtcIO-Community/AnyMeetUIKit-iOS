@@ -16,6 +16,9 @@
 //得到从1970年到现在的秒数
 +(long)getSecondsSince1970;
 
+//随机字符串
++ (NSString*)randomString:(int)len;
+
 //时间格式  time 添加的时间
 + (NSString *)getCurrentTime:(NSInteger)time formate:(NSString *)formate;
 
@@ -24,6 +27,9 @@
 
 //纯数字
 + (BOOL)validateNumber:(NSString*)number;
+
+//获取uuid（卸载、升级,标识唯一）
++ (NSString *)getUUID;
 
 + (UIButton *)produceButton:(NSString *)title image:(NSString *)image;
 

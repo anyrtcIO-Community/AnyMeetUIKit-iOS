@@ -30,6 +30,8 @@
     
     _headImageView = [[UIImageView alloc]init];
     _headImageView.contentMode = UIViewContentModeScaleAspectFill;
+    _headImageView.layer.cornerRadius = 22.5;
+    _headImageView.layer.masksToBounds = YES;
     _headImageView.image = Bundle_IMAGE(@"blue");
     [self.contentView addSubview:_headImageView];
     [_headImageView mas_makeConstraints:^(MASConstraintMaker *make) {

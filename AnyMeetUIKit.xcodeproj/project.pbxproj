@@ -10,6 +10,11 @@
 		63134B1320DB94F200778937 /* AMHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63134B0C20DB94F200778937 /* AMHomeCell.m */; };
 		63134B1420DB94F200778937 /* AMFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63134B0F20DB94F200778937 /* AMFunctionView.m */; };
 		63134B1520DB94F200778937 /* AMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63134B1220DB94F200778937 /* AMHomeViewController.m */; };
+		63161D3020E601DD00849114 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63161D2F20E601DD00849114 /* Images.xcassets */; };
+		63166D8A20E481E200DE52A5 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 63166D8920E481E200DE52A5 /* SSKeychain.m */; };
+		63166D8C20E48ECD00DE52A5 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */; };
+		63166D8D20E48EE700DE52A5 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */; };
+		63166D8E20E48EE700DE52A5 /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		633E67DB20AD7E6C0019390C /* AnyMeetUIKit.pch in Headers */ = {isa = PBXBuildFile; fileRef = 633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */; };
 		634920E320AD70F800F129F5 /* AMColorMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920D620AD70F800F129F5 /* AMColorMenuView.m */; };
 		634920E420AD70F800F129F5 /* AMDocToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920D720AD70F800F129F5 /* AMDocToolView.h */; };
@@ -87,7 +92,6 @@
 		6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217A20AD74EF00F129F5 /* AMVideoView.m */; };
 		6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217B20AD74EF00F129F5 /* AMTopToolView.m */; };
 		6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */; };
-		6398CF0520E3928700DC2D7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6398CF0420E3928700DC2D7B /* LaunchScreen.storyboard */; };
 		63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */; };
 		63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */; };
 		63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */; };
@@ -152,6 +156,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				63166D8E20E48EE700DE52A5 /* AnyMeetUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +171,10 @@
 		63134B0F20DB94F200778937 /* AMFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMFunctionView.m; sourceTree = "<group>"; };
 		63134B1120DB94F200778937 /* AMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMHomeViewController.h; sourceTree = "<group>"; };
 		63134B1220DB94F200778937 /* AMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMHomeViewController.m; sourceTree = "<group>"; };
+		63161D2F20E601DD00849114 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		63166D8820E481E200DE52A5 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		63166D8920E481E200DE52A5 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnyMeetUIKit.framework; sourceTree = "<group>"; };
 		633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKit.pch; sourceTree = "<group>"; };
 		634920D620AD70F800F129F5 /* AMColorMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMColorMenuView.m; sourceTree = "<group>"; };
 		634920D720AD70F800F129F5 /* AMDocToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDocToolView.h; sourceTree = "<group>"; };
@@ -244,7 +253,6 @@
 		6349217A20AD74EF00F129F5 /* AMVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMVideoView.m; sourceTree = "<group>"; };
 		6349217B20AD74EF00F129F5 /* AMTopToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTopToolView.m; sourceTree = "<group>"; };
 		6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyMeetVideoController.m; sourceTree = "<group>"; };
-		6398CF0420E3928700DC2D7B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
 		63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
@@ -310,6 +318,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */,
+				63166D8C20E48ECD00DE52A5 /* AnyMeetUIKit.framework in Frameworks */,
+				63166D8D20E48EE700DE52A5 /* AnyMeetUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +384,15 @@
 				63134B1220DB94F200778937 /* AMHomeViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		63166D8720E481E200DE52A5 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				63166D8820E481E200DE52A5 /* SSKeychain.h */,
+				63166D8920E481E200DE52A5 /* SSKeychain.m */,
+			);
+			path = SSKeychain;
 			sourceTree = "<group>";
 		};
 		634920D420AD702900F129F5 /* Interface */ = {
@@ -604,14 +623,15 @@
 		63F0267520C67EE0007D25AB /* anyRTCMeeting */ = {
 			isa = PBXGroup;
 			children = (
+				63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */,
 				63F026D320C680DA007D25AB /* Main */,
 				63F026DE20C680DA007D25AB /* Base */,
 				63F0267C20C67EE0007D25AB /* Main.storyboard */,
 				63F0267F20C67EE1007D25AB /* Assets.xcassets */,
-				6398CF0420E3928700DC2D7B /* LaunchScreen.storyboard */,
 				63F0268420C67EE1007D25AB /* Info.plist */,
 				63F0268520C67EE1007D25AB /* main.m */,
 				63F026E220C680EA007D25AB /* anyRTCMeeting.pch */,
+				63161D2F20E601DD00849114 /* Images.xcassets */,
 			);
 			path = anyRTCMeeting;
 			sourceTree = "<group>";
@@ -660,6 +680,7 @@
 			children = (
 				63F0271020C6863F007D25AB /* AMCommons.h */,
 				63F0271120C6863F007D25AB /* AMCommons.m */,
+				63166D8720E481E200DE52A5 /* SSKeychain */,
 				63F026F020C685D5007D25AB /* NetWork */,
 				63F026F320C685D5007D25AB /* User */,
 			);
@@ -987,7 +1008,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6398CF0520E3928700DC2D7B /* LaunchScreen.storyboard in Resources */,
+				63161D3020E601DD00849114 /* Images.xcassets in Resources */,
 				63F0268020C67EE1007D25AB /* Assets.xcassets in Resources */,
 				63F0267E20C67EE0007D25AB /* Main.storyboard in Resources */,
 			);
@@ -1058,7 +1079,6 @@
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${PODS_ROOT}/AnyMeetUIKit/AnyMeetUIKit/AnyMeetUIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XHToast/XHToast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1072,7 +1092,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnyMeetUIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XHToast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1110,6 +1129,7 @@
 				63F0270D20C685D5007D25AB /* AMJoinViewController.m in Sources */,
 				63F0270A20C685D5007D25AB /* AMUserManager.m in Sources */,
 				63F0268620C67EE1007D25AB /* main.m in Sources */,
+				63166D8A20E481E200DE52A5 /* SSKeychain.m in Sources */,
 				63F0270E20C685D5007D25AB /* AMArrangeController.m in Sources */,
 				63134B1320DB94F200778937 /* AMHomeCell.m in Sources */,
 				63F0270920C685D5007D25AB /* AMUser.m in Sources */,
@@ -1219,7 +1239,9 @@
 			baseConfigurationReference = 66866F4893F2B7BB31A8E3AD /* Pods-AnyMeetUIKit-anyRTCMeeting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1230,9 +1252,14 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeeting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6865629f-9f13-487f-adec-6b946dd0cb43";
+				PROVISIONING_PROFILE_SPECIFIER = MeetingPlus_Distribution;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
@@ -1243,7 +1270,9 @@
 			baseConfigurationReference = B15D7F2E9E331B4560424375 /* Pods-AnyMeetUIKit-anyRTCMeeting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1254,9 +1283,14 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeeting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6865629f-9f13-487f-adec-6b946dd0cb43";
+				PROVISIONING_PROFILE_SPECIFIER = MeetingPlus_Distribution;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
@@ -1270,7 +1304,11 @@
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				INFOPLIST_FILE = anyRTCMeetingTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeetingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1286,7 +1324,11 @@
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				INFOPLIST_FILE = anyRTCMeetingTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeetingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1301,7 +1343,11 @@
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				INFOPLIST_FILE = anyRTCMeetingUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeetingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1316,7 +1362,11 @@
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				INFOPLIST_FILE = anyRTCMeetingUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeetingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1456,7 +1506,11 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AnyMeetUIKit/Net/lib";
 				INFOPLIST_FILE = AnyMeetUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnyMeetUIKit/Net/lib",
@@ -1500,7 +1554,11 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AnyMeetUIKit/Net/lib";
 				INFOPLIST_FILE = AnyMeetUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnyMeetUIKit/Net/lib",

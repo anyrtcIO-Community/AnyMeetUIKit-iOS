@@ -152,7 +152,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
-  install_framework "${PODS_ROOT}/AnyMeetUIKit/AnyMeetUIKit/AnyMeetUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XHToast/XHToast.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -165,7 +164,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
-  install_framework "${PODS_ROOT}/AnyMeetUIKit/AnyMeetUIKit/AnyMeetUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XHToast/XHToast.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

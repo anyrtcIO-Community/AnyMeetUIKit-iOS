@@ -51,10 +51,7 @@
     [AMNetWorkTool.shareInstance getWithURLString:url parameters:nil success:^(NSDictionary *dictionary) {
         if (dictionary != nil) {
             AMUser *user = [AMUser mj_objectWithKeyValues:dictionary];
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            NSString *documentsDirectory = [paths objectAtIndex:0];
-            NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"userAccount.data"];
-            if ([NSKeyedArchiver archiveRootObject:user toFile:filePath]) {
+            if ([AMUserManager saveAccountInformation:user]) {
                 UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                 UIApplication.sharedApplication.keyWindow.rootViewController = [board instantiateViewControllerWithIdentifier:@"AMMeet_HomeID"];
             }
@@ -62,6 +59,24 @@
     } failure:^(NSError *error) {
         
     }];
+}
+
++ (BOOL)saveAccountInformation:(AMUser *)user{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"userAccount.data"];
+    return [NSKeyedArchiver archiveRootObject:user toFile:filePath];
+}
+
++ (BOOL)deleteAccountInformation{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"userAccount.data"];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:filePath]) {
+        return  [manager removeItemAtPath:filePath error:nil];
+    }
+    return  NO;
 }
 
 + (AMUser *)fetchUserInfo{

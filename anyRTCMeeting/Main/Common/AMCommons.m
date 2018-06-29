@@ -7,6 +7,11 @@
 //
 
 #import "AMCommons.h"
+#import "SSKeychain.h"
+
+#define kService [NSBundle mainBundle].bundleIdentifier
+
+#define kAccount @"com.dync.anyRTCMeeting"
 
 @implementation AMCommons
 
@@ -72,6 +77,20 @@
     return currentDateStr;
 }
 
+//随机字符串
++ (NSString*)randomString:(int)len {
+    char* charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    char* temp = malloc(len + 1);
+    for (int i = 0; i < len; i++) {
+        int randomPoz = (int) floor(arc4random() % strlen(charSet));
+        temp[i] = charSet[randomPoz];
+    }
+    temp[len] = '\0';
+    NSMutableString* randomString = [[NSMutableString alloc] initWithUTF8String:temp];
+    free(temp);
+    return randomString;
+}
+
 //纯数字
 + (BOOL)validateNumber:(NSString*)number{
     BOOL res = YES;
@@ -87,6 +106,23 @@
         i++;
     }
     return res;
+}
+
+//获取uuid（卸载、升级,标识唯一）
++ (NSString *)getUUID{
+    
+    CFUUIDRef puuid  =  CFUUIDCreate( nil );
+    CFStringRef uuidString = CFUUIDCreateString( nil, puuid );
+    NSString * result  =  (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));    CFRelease(puuid);
+    CFRelease(uuidString);
+    //SSKeyChains
+    if(![SSKeychain passwordForService:kService account:kAccount]){
+        [SSKeychain setPassword:result forService:kService account:kAccount];
+        
+    }
+    NSString *devicenumber = [SSKeychain passwordForService:kService account:kAccount];
+    
+    return devicenumber.length > 0 ? devicenumber : @"" ;
 }
 
 + (UIButton *)produceButton:(NSString *)title image:(NSString *)image{

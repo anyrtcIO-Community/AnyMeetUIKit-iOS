@@ -22,7 +22,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_img_sign in" translatesAutoresizingMaskIntoConstraints="NO" id="tVP-7E-Coh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyg-u1-bgP">
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyg-u1-bgP">
                                 <rect key="frame" x="20" y="488.5" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.69019607843137254" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -31,8 +31,24 @@
                                 <state key="normal" title="  微信登录" image="微信(1)">
                                     <color key="titleColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doSomethingEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7i-zs-9ts"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIA-0L-T1S">
+                                <rect key="frame" x="116" y="627" width="143" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="41m-uk-6Xs"/>
+                                </constraints>
+                                <state key="normal" title="官网：www.anyrtc.io">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doSomethingEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ab7-SS-mYl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,14 +56,19 @@
                         <constraints>
                             <constraint firstItem="tVP-7E-Coh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4WU-ns-uod"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tyg-u1-bgP" secondAttribute="trailing" constant="20" id="J6D-xe-s6t"/>
+                            <constraint firstItem="mIA-0L-T1S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KQg-wK-HEv"/>
                             <constraint firstItem="tyg-u1-bgP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="180" id="PaD-z1-dcC"/>
                             <constraint firstItem="tVP-7E-Coh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SNC-S6-CPd"/>
                             <constraint firstItem="tyg-u1-bgP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pZc-Ds-VXx"/>
                             <constraint firstItem="tVP-7E-Coh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="r5S-Tu-FoF"/>
                             <constraint firstItem="tVP-7E-Coh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rNc-qi-fzG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mIA-0L-T1S" secondAttribute="bottom" constant="10" id="uQJ-lD-bjt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="tyg-u1-bgP" id="56f-O7-uEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
