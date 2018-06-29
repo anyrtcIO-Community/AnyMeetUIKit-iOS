@@ -13,7 +13,6 @@
 		63161D3020E601DD00849114 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63161D2F20E601DD00849114 /* Images.xcassets */; };
 		63166D8A20E481E200DE52A5 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 63166D8920E481E200DE52A5 /* SSKeychain.m */; };
 		63166D8C20E48ECD00DE52A5 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */; };
-		63166D8D20E48EE700DE52A5 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */; };
 		63166D8E20E48EE700DE52A5 /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		633E67DB20AD7E6C0019390C /* AnyMeetUIKit.pch in Headers */ = {isa = PBXBuildFile; fileRef = 633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */; };
 		634920E320AD70F800F129F5 /* AMColorMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920D620AD70F800F129F5 /* AMColorMenuView.m */; };
@@ -117,8 +116,6 @@
 		653395DB20AEC5BB00BA13B7 /* AMApiCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 653395D620AEC5BB00BA13B7 /* AMApiCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		653395DC20AEC5BB00BA13B7 /* AMNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 653395D720AEC5BB00BA13B7 /* AMNetManager.m */; };
 		653395DD20AEC5BB00BA13B7 /* AMNetWork.h in Headers */ = {isa = PBXBuildFile; fileRef = 653395D820AEC5BB00BA13B7 /* AMNetWork.h */; };
-		6545F89020DB97D000AB5A8B /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */; };
-		6545F89120DB97D000AB5A8B /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6593C7FF20A52F8D00D83DD1 /* AnyMeetUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C7FD20A52F8D00D83DD1 /* AnyMeetUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6593C81120A5335300D83DD1 /* AMApiManager.mm */; };
 		6593C81920A5335300D83DD1 /* AMApiManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6593C81520A5335300D83DD1 /* AMApiManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -165,11 +162,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-<<<<<<< HEAD
 				63166D8E20E48EE700DE52A5 /* AnyMeetUIKit.framework in Embed Frameworks */,
-=======
-				6545F89120DB97D000AB5A8B /* AnyMeetUIKit.framework in Embed Frameworks */,
->>>>>>> origin/master
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,12 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */,
-<<<<<<< HEAD
 				63166D8C20E48ECD00DE52A5 /* AnyMeetUIKit.framework in Frameworks */,
-				63166D8D20E48EE700DE52A5 /* AnyMeetUIKit.framework in Frameworks */,
-=======
-				6545F89020DB97D000AB5A8B /* AnyMeetUIKit.framework in Frameworks */,
->>>>>>> origin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,10 +1014,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				63161D3020E601DD00849114 /* Images.xcassets in Resources */,
-=======
->>>>>>> origin/master
 				63F0268020C67EE1007D25AB /* Assets.xcassets in Resources */,
 				63F0267E20C67EE0007D25AB /* Main.storyboard in Resources */,
 			);
@@ -1266,8 +1251,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
@@ -1279,8 +1264,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeeting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6865629f-9f13-487f-adec-6b946dd0cb43";
-				PROVISIONING_PROFILE_SPECIFIER = MeetingPlus_Distribution;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
@@ -1292,8 +1277,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
@@ -1305,8 +1290,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.anyRTCMeeting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6865629f-9f13-487f-adec-6b946dd0cb43";
-				PROVISIONING_PROFILE_SPECIFIER = MeetingPlus_Distribution;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
