@@ -724,8 +724,8 @@
 		63F026FF20C685D5007D25AB /* Arrange */ = {
 			isa = PBXGroup;
 			children = (
-				63F0270020C685D5007D25AB /* AMArrangeController.m */,
 				63F0270120C685D5007D25AB /* AMArrangeController.h */,
+				63F0270020C685D5007D25AB /* AMArrangeController.m */,
 			);
 			path = Arrange;
 			sourceTree = "<group>";
