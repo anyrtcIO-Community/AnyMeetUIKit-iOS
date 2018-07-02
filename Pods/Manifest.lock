@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - AnyBoardEngine (1.0.5):
+  - AnyBoardEngine (1.0.7):
     - Socket.IO-Client-Swift (~> 13.1.3)
   - AnyMeetUIKit (2.0.6):
     - AnyBoardEngine (~> 1.0.4)
@@ -25,7 +25,7 @@ PODS:
     - SDWebImage (~> 4.3.3)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
-  - MJExtension (3.0.15)
+  - MJExtension (3.0.15.1)
   - RTMeetEngine (0.0.9)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
@@ -39,7 +39,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - AnyBoardEngine
-  - AnyMeetUIKit (~> 2.0.5)
+  - AnyMeetUIKit (~> 2.0.6)
   - Masonry
   - MBProgressHUD
   - MJExtension
@@ -65,11 +65,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AnyBoardEngine: d95c2a41b40e64d8abdba58885361c521c42f86d
+  AnyBoardEngine: e64a2bc436f319a1a65472acedbce72097b2d565
   AnyMeetUIKit: cd5471319af2f37f922eb68a8c18262ffbc83ebe
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  MJExtension: 3f039575db1b135a20699ad298713b26acec1528
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   RTMeetEngine: 4fa2382c6aa809c7d5eadb375670af0047cc4d61
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   Socket.IO-Client-Swift: d30d6fd08a38ad2a182b090936a043bf512ab2de

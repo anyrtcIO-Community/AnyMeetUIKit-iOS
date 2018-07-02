@@ -89,6 +89,10 @@ typedef NS_ENUM(NSInteger, JQDrawingType) {
 - (void)addBoardBack:(NSString*)imageUrl;
 //删除当前页
 - (BOOL)deleteCurrentBoard;
+//获取屏幕当前图片
+- (UIImage*)getCurrentSnapShotImage;
+//获取所有的图片
+- (NSArray*)getAllSnapShotImages;
 //销毁画板（主持人），其他端会收到画板被摧毁的回调
 - (void)destroyBoard;
 //离开画板
