@@ -28,6 +28,6 @@
 + (BOOL)isLogin;
 
 //用户对接
-+ (void)registeredDockingMeeting:(void (^)(void))sucess;
++ (void)registeredDockingMeeting:(void (^)(void))sucess fail:(void (^)(void))fail;
 
 @end

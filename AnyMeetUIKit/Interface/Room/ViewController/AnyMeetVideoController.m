@@ -61,7 +61,6 @@
 #pragma mark- 离开会议
 - (void)leaveMeet{
     [self.meetKit leaveRTC];
-    [self.navigationController popViewControllerAnimated:YES];
     //多层级模态返回
     if ([AMCommon topViewController] != self) {
         UIViewController *rootVc = [AMCommon topViewController].presentingViewController;
@@ -70,6 +69,7 @@
         }
         [rootVc dismissViewControllerAnimated:YES completion:nil];
     }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - AMTabBarDelegate
@@ -198,7 +198,11 @@
 #pragma mark - RTMeetKitDelegate
 - (void)onRTCJoinMeetOK:(NSString*)strAnyRTCId{
     //加入会议成功的回调
+    self.tabbar = [[AMTabbarView alloc]init];
+    self.tabbar.delegate = self;
+    [self.tabbar addObserver:self forKeyPath:@"isHide" options:NSKeyValueObservingOptionNew context:nil];
     [self.view addSubview:self.tabbar];
+    
     [self hideControlDelay];
     
     //进会

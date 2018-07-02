@@ -387,15 +387,6 @@
     return _horizontalScrollView;
 }
 
-- (AMTabbarView *)tabbar{
-    if (!_tabbar) {
-        _tabbar = [[AMTabbarView alloc]init];
-        _tabbar.delegate = self;
-        [_tabbar addObserver:self forKeyPath:@"isHide" options:NSKeyValueObservingOptionNew context:nil];
-    }
-    return _tabbar;
-}
-
 - (AVAudioPlayer *)player{
     AVAudioPlayer *_player = objc_getAssociatedObject(self, &"player");
     if (!_player) {
@@ -424,7 +415,9 @@
 }
 
 - (void)dealloc{
-    [self.tabbar removeObserver:self forKeyPath:@"isHide"];
+    if (self.tabbar) {
+        [self.tabbar removeObserver:self forKeyPath:@"isHide"];
+    }
 }
 
 @end

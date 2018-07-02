@@ -90,7 +90,7 @@
     return AMUserManager.fetchUserInfo != nil;
 }
 
-+ (void)registeredDockingMeeting:(void (^)(void))sucess{
++ (void)registeredDockingMeeting:(void (^)(void))sucess fail:(void (^)(void))fail{
     AMUserModel *model = [[AMUserModel alloc] init];
     AMUser *user = self.fetchUserInfo;
     model.userId = user.openid;
@@ -104,7 +104,9 @@
             }
         }
     } failure:^(NSError *error) {
-    
+        if (fail) {
+            fail();
+        }
     }];
 }
 

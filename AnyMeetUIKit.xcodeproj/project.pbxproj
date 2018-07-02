@@ -12,8 +12,6 @@
 		63134B1520DB94F200778937 /* AMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63134B1220DB94F200778937 /* AMHomeViewController.m */; };
 		63161D3020E601DD00849114 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63161D2F20E601DD00849114 /* Images.xcassets */; };
 		63166D8A20E481E200DE52A5 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 63166D8920E481E200DE52A5 /* SSKeychain.m */; };
-		63166D8C20E48ECD00DE52A5 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */; };
-		63166D8E20E48EE700DE52A5 /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		633E67DB20AD7E6C0019390C /* AnyMeetUIKit.pch in Headers */ = {isa = PBXBuildFile; fileRef = 633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */; };
 		634920E320AD70F800F129F5 /* AMColorMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920D620AD70F800F129F5 /* AMColorMenuView.m */; };
 		634920E420AD70F800F129F5 /* AMDocToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920D720AD70F800F129F5 /* AMDocToolView.h */; };
@@ -91,6 +89,9 @@
 		6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217A20AD74EF00F129F5 /* AMVideoView.m */; };
 		6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217B20AD74EF00F129F5 /* AMTopToolView.m */; };
 		6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */; };
+		638716A620E9FAD9003A204C /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */; };
+		638716A720E9FAE1003A204C /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */; };
+		638716A820E9FAE1003A204C /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */; };
 		63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */; };
 		63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */; };
@@ -162,7 +163,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				63166D8E20E48EE700DE52A5 /* AnyMeetUIKit.framework in Embed Frameworks */,
+				638716A820E9FAE1003A204C /* AnyMeetUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +181,6 @@
 		63161D2F20E601DD00849114 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63166D8820E481E200DE52A5 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		63166D8920E481E200DE52A5 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
-		63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnyMeetUIKit.framework; sourceTree = "<group>"; };
 		633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyMeetUIKit.pch; sourceTree = "<group>"; };
 		634920D620AD70F800F129F5 /* AMColorMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMColorMenuView.m; sourceTree = "<group>"; };
 		634920D720AD70F800F129F5 /* AMDocToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDocToolView.h; sourceTree = "<group>"; };
@@ -259,6 +259,7 @@
 		6349217A20AD74EF00F129F5 /* AMVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMVideoView.m; sourceTree = "<group>"; };
 		6349217B20AD74EF00F129F5 /* AMTopToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTopToolView.m; sourceTree = "<group>"; };
 		6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyMeetVideoController.m; sourceTree = "<group>"; };
+		638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnyMeetUIKit.framework; sourceTree = "<group>"; };
 		63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
 		63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
@@ -324,7 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */,
-				63166D8C20E48ECD00DE52A5 /* AnyMeetUIKit.framework in Frameworks */,
+				638716A620E9FAD9003A204C /* AnyMeetUIKit.framework in Frameworks */,
+				638716A720E9FAE1003A204C /* AnyMeetUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,7 +630,7 @@
 		63F0267520C67EE0007D25AB /* anyRTCMeeting */ = {
 			isa = PBXGroup;
 			children = (
-				63166D8B20E48ECC00DE52A5 /* AnyMeetUIKit.framework */,
+				638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */,
 				63F026D320C680DA007D25AB /* Main */,
 				63F026DE20C680DA007D25AB /* Base */,
 				63F0267C20C67EE0007D25AB /* Main.storyboard */,
@@ -1255,6 +1257,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/anyRTCMeeting",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1281,6 +1287,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/anyRTCMeeting",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/anyRTCMeeting/anyRTCMeeting.pch";
 				INFOPLIST_FILE = anyRTCMeeting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

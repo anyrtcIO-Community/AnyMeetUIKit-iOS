@@ -76,9 +76,11 @@
             [XHToast showCenterWithText:@"安排会议成功"];
             [[NSNotificationCenter defaultCenter] postNotificationName:ArrangeMeet_SUCESS object:nil];
             [weakSelf.navigationController popViewControllerAnimated:YES];
+        } else {
+            [XHToast showCenterWithText:[[AMApiManager shareInstance] getErrorInfoWithCode:code]];
         }
     } failure:^(NSError *error) {
-        
+        [XHToast showCenterWithText:@"网络异常"];
     }];
 }
 
