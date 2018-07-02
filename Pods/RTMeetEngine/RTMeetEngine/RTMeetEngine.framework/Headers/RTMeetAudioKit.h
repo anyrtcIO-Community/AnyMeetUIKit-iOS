@@ -62,6 +62,9 @@
  说明：相当于析构函数
  */
 - (void)leaveRTC;
+#pragma mark - 视频流信息监测
+- (void)setNetworkStatus:(BOOL)bEnable;
+- (BOOL)networkStatusEnabled;
 
 #pragma mark - 消息
 /**

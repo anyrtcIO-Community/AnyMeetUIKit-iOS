@@ -50,6 +50,20 @@
 - (void)setLocalVideoEnable:(bool)bEnable;
 
 /**
+ 获取本地音频传输是否打开
+
+ @return 音频传输与否
+ */
+- (BOOL)localAudioEnabled;
+
+/**
+ 获取本地视频传输是否打开
+
+ @return 视频传输与否
+ */
+- (BOOL)localVideoEnabled;
+
+/**
  切换前后摄像头
  说明:切换本地前后摄像头。
  */
@@ -161,6 +175,23 @@
  */
 
 - (BOOL)sendUserMessage:(NSString*)strUserName andUserHeader:(NSString*)strUserHeaderUrl andContent:(NSString*)strContent;
+
+#pragma mark - 视频流信息监测
+
+/**
+ 设置视频网络状态是否打开
+
+ @param bEnable YES:打开;NO:关闭
+ 说明:默认关闭
+ */
+- (void)setNetworkStatus:(BOOL)bEnable;
+
+/**
+ 获取当前视频网络状态是否打开
+
+ @return 获取网络视频状态
+ */
+- (BOOL)networkStatusEnabled;
 
 #pragma mark - 白板功能模块
 

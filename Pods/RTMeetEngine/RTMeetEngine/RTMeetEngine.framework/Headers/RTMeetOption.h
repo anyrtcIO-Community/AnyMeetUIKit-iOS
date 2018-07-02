@@ -55,6 +55,10 @@ typedef NS_ENUM(NSInteger,AnyMeetingType) {
 @property (nonatomic, assign) RTCScreenOrientation videoScreenOrientation;
 
 /**
+ 自动旋转(这里只支持 left 变 right  portrait 变 portraitUpsideDown)
+ */
+@property (nonatomic, assign) BOOL autorotate;
+/**
  设置显示模板。人数上限默认为4个，根据个人需要联系客服开通更多人会议。
  说明：默认：RTC_V_1X3
  　　　RTC_V_1X3为小型会议模式，视频窗口比例默认为３：４，根据设置videoMode而定；
