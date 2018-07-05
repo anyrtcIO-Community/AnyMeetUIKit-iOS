@@ -17,7 +17,7 @@
 pod 'AnyMeetUIKit'
 ```
 ## 扫码体验
-![scan](/image/scan.png)
+![scan](/scan.png)
 
 ## 支持的系统平台
 **iOS** 8.0及以上
