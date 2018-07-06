@@ -16,6 +16,9 @@
 ```
 pod 'AnyMeetUIKit'
 ```
+## 效果
+![effect](/effect.gif)
+
 ## 扫码体验
 ![scan](/scan.png)
 
