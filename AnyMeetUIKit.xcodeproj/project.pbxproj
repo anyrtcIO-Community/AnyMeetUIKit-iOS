@@ -60,9 +60,9 @@
 		6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217A20AD74EF00F129F5 /* AMVideoView.m */; };
 		6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217B20AD74EF00F129F5 /* AMTopToolView.m */; };
 		6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */; };
-		637A8D5120F5B04600AB22F9 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */; };
-		637A8D5220F5B05000AB22F9 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */; };
-		637A8D5320F5B05000AB22F9 /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63CC36D320F5F25200A60BA6 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CC36D220F5F25200A60BA6 /* AnyMeetUIKit.framework */; };
+		63CC36D420F5F25C00A60BA6 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CC36D220F5F25200A60BA6 /* AnyMeetUIKit.framework */; };
+		63CC36D520F5F25C00A60BA6 /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63CC36D220F5F25200A60BA6 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */; };
 		63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */; };
 		63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */; };
@@ -134,7 +134,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				637A8D5320F5B05000AB22F9 /* AnyMeetUIKit.framework in Embed Frameworks */,
+				63CC36D520F5F25C00A60BA6 /* AnyMeetUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,7 +201,7 @@
 		6349217A20AD74EF00F129F5 /* AMVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMVideoView.m; sourceTree = "<group>"; };
 		6349217B20AD74EF00F129F5 /* AMTopToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTopToolView.m; sourceTree = "<group>"; };
 		6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyMeetVideoController.m; sourceTree = "<group>"; };
-		637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnyMeetUIKit.framework; sourceTree = "<group>"; };
+		63CC36D220F5F25200A60BA6 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnyMeetUIKit.framework; sourceTree = "<group>"; };
 		63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
 		63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
@@ -267,8 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */,
-				637A8D5120F5B04600AB22F9 /* AnyMeetUIKit.framework in Frameworks */,
-				637A8D5220F5B05000AB22F9 /* AnyMeetUIKit.framework in Frameworks */,
+				63CC36D320F5F25200A60BA6 /* AnyMeetUIKit.framework in Frameworks */,
+				63CC36D420F5F25C00A60BA6 /* AnyMeetUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,9 +318,9 @@
 		63134B0B20DB94F200778937 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				63134B0E20DB94F200778937 /* AMHomeCell.h */,
 				63134B0C20DB94F200778937 /* AMHomeCell.m */,
 				63134B0D20DB94F200778937 /* AMFunctionView.h */,
-				63134B0E20DB94F200778937 /* AMHomeCell.h */,
 				63134B0F20DB94F200778937 /* AMFunctionView.m */,
 			);
 			path = View;
@@ -517,7 +517,7 @@
 		63F0267520C67EE0007D25AB /* anyRTCMeeting */ = {
 			isa = PBXGroup;
 			children = (
-				637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */,
+				63CC36D220F5F25200A60BA6 /* AnyMeetUIKit.framework */,
 				63F026D320C680DA007D25AB /* Main */,
 				63F026DE20C680DA007D25AB /* Base */,
 				63F0267C20C67EE0007D25AB /* Main.storyboard */,
