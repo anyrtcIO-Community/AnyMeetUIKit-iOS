@@ -7,6 +7,7 @@ pod 'Masonry'
 pod 'MJExtension'
 pod 'SDWebImage'
 pod 'MBProgressHUD'
+pod 'TZImagePickerController'
 
 target 'anyRTCMeeting' do
     

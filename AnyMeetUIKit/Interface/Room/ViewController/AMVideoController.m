@@ -24,10 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if (UIDevice.currentDevice.orientation == UIDeviceOrientationLandscapeLeft || UIDevice.currentDevice.orientation == UIDeviceOrientationLandscapeRight) {
-        self.isLandscape = YES;
-    }
-
     self.videoArr = [NSMutableArray arrayWithCapacity:6];
     //本地视图
     self.localView = [[UIView alloc]initWithFrame:self.view.bounds];
@@ -360,16 +356,17 @@
     self.player = nil;
     NSError *errors = nil;
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&errors];
-    
-    NSString *audioFile = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"AnyMeetUIKit.bundle/ding.mp3"];
-    
-    NSURL *tempUrl = [NSURL fileURLWithPath:[audioFile stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    NSError *error = nil;
-    self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:tempUrl error:&error];
-    self.player.delegate = self;
-    self.player.numberOfLoops = 0;
-    [self.player prepareToPlay];
-    [self.player play];
+    //获取音频路径
+    NSArray *arr = [[NSBundle bundleForClass:self.class] pathsForResourcesOfType:@"mp3" inDirectory:@"/AnyMeetUIKit.bundle"];
+    if (arr.count == 1) {
+        NSURL *tempUrl = [NSURL fileURLWithPath:arr[0]];
+        NSError *error = nil;
+        self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:tempUrl error:&error];
+        self.player.delegate = self;
+        self.player.numberOfLoops = 0;
+        [self.player prepareToPlay];
+        [self.player play];
+    }
 }
 
 // MARK: - 懒加载

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 anyRTC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface AMJoinViewController : UIViewController
+@interface AMJoinViewController : BaseViewController
 
 @end

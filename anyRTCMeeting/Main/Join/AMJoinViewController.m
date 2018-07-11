@@ -19,27 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"加入会议";
-    
-    UIButton *backButton = [AMCommons produceButton:@"" image:@"return_back"];
-    [backButton addTarget:self action:@selector(popToPrevious) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
-    
     UIButton *leftButton = [AMCommons produceButton:@"" image:@"icon_会议名称"];
     self.meetIdTextField.leftView = leftButton;
     self.meetIdTextField.leftViewMode = UITextFieldViewModeAlways;
 }
 
-- (void)popToPrevious{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (IBAction)doSomethingEvent:(id)sender {
-    //获取会议详情
+    [AMCommons hideKeyBoard];
     if (self.meetIdTextField.text.length != 8 || ![AMCommons validateNumber:self.meetIdTextField.text]) {
         [XHToast showCenterWithText:@"会议号ID错误"];
         return;
     }
     
+    //获取会议详情
     WEAKSELF;
     [[AMApiManager shareInstance] getMeetingInfo:self.meetIdTextField.text success:^(AMMeetInfoModel *model, int code) {
         if (code == 200) {

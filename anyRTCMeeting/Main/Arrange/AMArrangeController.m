@@ -32,10 +32,6 @@
     self.title = @"安排会议";
     self.padding.constant = - SCREEN_HEIGHT;
     
-    UIButton *backButton = [AMCommons produceButton:@"" image:@"return_back"];
-    [backButton addTarget:self action:@selector(popToPrevious) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
-    
     UIButton *leftButton = [AMCommons produceButton:@"" image:@"icon_会议名称"];
     self.meetNameTextField.leftView = leftButton;
     self.meetNameTextField.leftViewMode = UITextFieldViewModeAlways;
@@ -54,12 +50,9 @@
     selectDateFormatter.dateFormat = @"YYYY-MM-dd HH:mm:ss";
 }
 
-- (void)popToPrevious{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 //安排会议
 - (IBAction)arrangeMeeting:(id)sender {
+    [AMCommons hideKeyBoard];
     if (self.meetNameTextField.text.length == 0) {
         [XHToast showCenterWithText:@"会议名称不能为空"];
         return;

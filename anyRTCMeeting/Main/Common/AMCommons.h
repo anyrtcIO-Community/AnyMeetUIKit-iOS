@@ -31,6 +31,9 @@
 //获取uuid（卸载、升级,标识唯一）
 + (NSString *)getUUID;
 
+//隐藏界面上所有键盘
++ (void)hideKeyBoard;
+
 + (UIButton *)produceButton:(NSString *)title image:(NSString *)image;
 
 @end

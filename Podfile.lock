@@ -26,6 +26,7 @@ PODS:
   - Socket.IO-Client-Swift (13.1.3):
     - Starscream (~> 3.0.2)
   - Starscream (3.0.5)
+  - TZImagePickerController (2.1.6)
   - WechatOpenSDK (1.8.2)
   - XHToast (1.4.0)
 
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - MJExtension
   - RTMeetEngine
   - SDWebImage
+  - TZImagePickerController
   - WechatOpenSDK
   - XHToast (~> 1.4.0)
 
@@ -51,6 +53,7 @@ SPEC REPOS:
     - SDWebImage
     - Socket.IO-Client-Swift
     - Starscream
+    - TZImagePickerController
     - WechatOpenSDK
     - XHToast
 
@@ -64,9 +67,10 @@ SPEC CHECKSUMS:
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   Socket.IO-Client-Swift: d30d6fd08a38ad2a182b090936a043bf512ab2de
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
+  TZImagePickerController: bc25e933c9d970a622d052f0d4de16202bbcd863
   WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
 
-PODFILE CHECKSUM: a866497053e73b7b81859d4bb315f4167ce44f9e
+PODFILE CHECKSUM: 08f7e07f4883fbf624c954a8566c183d3ff1f109
 
 COCOAPODS: 1.5.0

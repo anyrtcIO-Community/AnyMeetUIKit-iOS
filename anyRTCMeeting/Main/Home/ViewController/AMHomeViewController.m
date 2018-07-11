@@ -46,7 +46,9 @@
     } fail:^{
         [XHToast showCenterWithText:@"用户对接失败"];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [weakSelf exit];
+            [AMUserManager deleteAccountInformation];
+            UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UIApplication.sharedApplication.keyWindow.rootViewController = [board instantiateViewControllerWithIdentifier:@"AMMeet_SIgnInID"];
         });
     }];
     
@@ -54,9 +56,13 @@
 }
 
 - (void)exit{
-    [AMUserManager deleteAccountInformation];
-    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIApplication.sharedApplication.keyWindow.rootViewController = [board instantiateViewControllerWithIdentifier:@"AMMeet_SIgnInID"];
+    [UIAlertController showAlertInViewController:self withTitle:@"确认退出登录？" message:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@[@"退出"] tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+        if (buttonIndex == 2) {
+            [AMUserManager deleteAccountInformation];
+            UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UIApplication.sharedApplication.keyWindow.rootViewController = [board instantiateViewControllerWithIdentifier:@"AMMeet_SIgnInID"];
+        }
+    }];
 }
 
 - (void)addRefreshControl{

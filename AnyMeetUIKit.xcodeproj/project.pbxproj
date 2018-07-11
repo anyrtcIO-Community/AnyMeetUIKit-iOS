@@ -10,6 +10,7 @@
 		63134B1320DB94F200778937 /* AMHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63134B0C20DB94F200778937 /* AMHomeCell.m */; };
 		63134B1420DB94F200778937 /* AMFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63134B0F20DB94F200778937 /* AMFunctionView.m */; };
 		63134B1520DB94F200778937 /* AMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63134B1220DB94F200778937 /* AMHomeViewController.m */; };
+		6315269520F2F68A00D20243 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6315269420F2F68A00D20243 /* BaseViewController.m */; };
 		63161D3020E601DD00849114 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63161D2F20E601DD00849114 /* Images.xcassets */; };
 		63166D8A20E481E200DE52A5 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 63166D8920E481E200DE52A5 /* SSKeychain.m */; };
 		633E67DB20AD7E6C0019390C /* AnyMeetUIKit.pch in Headers */ = {isa = PBXBuildFile; fileRef = 633E67DA20AD7E6C0019390C /* AnyMeetUIKit.pch */; };
@@ -24,36 +25,6 @@
 		634920ED20AD70F800F129F5 /* AMDocBlockView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 634920E120AD70F800F129F5 /* AMDocBlockView.mm */; };
 		634920F120AD719600F129F5 /* AMCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920EF20AD719600F129F5 /* AMCommon.h */; };
 		634920F220AD719600F129F5 /* AMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920F020AD719600F129F5 /* AMCommon.m */; };
-		6349212120AD74A100F129F5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 634920F720AD74A000F129F5 /* LICENSE */; };
-		6349212220AD74A100F129F5 /* TZPhotoPreviewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920FA20AD74A000F129F5 /* TZPhotoPreviewCell.h */; };
-		6349212320AD74A100F129F5 /* TZPhotoPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920FB20AD74A000F129F5 /* TZPhotoPickerController.h */; };
-		6349212420AD74A100F129F5 /* TZImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920FC20AD74A000F129F5 /* TZImageCropManager.m */; };
-		6349212520AD74A100F129F5 /* TZImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 634920FD20AD74A000F129F5 /* TZImageManager.h */; };
-		6349212620AD74A100F129F5 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920FE20AD74A000F129F5 /* TZAssetCell.m */; };
-		6349212720AD74A100F129F5 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634920FF20AD74A000F129F5 /* TZVideoPlayerController.m */; };
-		6349212820AD74A100F129F5 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210020AD74A000F129F5 /* TZAssetModel.m */; };
-		6349212920AD74A100F129F5 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210120AD74A000F129F5 /* NSBundle+TZImagePicker.m */; };
-		6349212A20AD74A100F129F5 /* TZLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210220AD74A000F129F5 /* TZLocationManager.h */; };
-		6349212B20AD74A100F129F5 /* TZImagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210320AD74A000F129F5 /* TZImagePickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6349212C20AD74A100F129F5 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210420AD74A000F129F5 /* UIView+Layout.m */; };
-		6349212D20AD74A100F129F5 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210520AD74A000F129F5 /* TZPhotoPreviewController.m */; };
-		6349212E20AD74A100F129F5 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6349210620AD74A000F129F5 /* TZImagePickerController.bundle */; };
-		6349212F20AD74A100F129F5 /* TZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210720AD74A000F129F5 /* TZProgressView.m */; };
-		6349213020AD74A100F129F5 /* TZGifPhotoPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210820AD74A000F129F5 /* TZGifPhotoPreviewController.h */; };
-		6349213120AD74A100F129F5 /* TZAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210920AD74A100F129F5 /* TZAssetCell.h */; };
-		6349213220AD74A100F129F5 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210A20AD74A100F129F5 /* TZImageManager.m */; };
-		6349213420AD74A100F129F5 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210C20AD74A100F129F5 /* TZPhotoPickerController.m */; };
-		6349213520AD74A100F129F5 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349210D20AD74A100F129F5 /* TZPhotoPreviewCell.m */; };
-		6349213620AD74A100F129F5 /* NSBundle+TZImagePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210E20AD74A100F129F5 /* NSBundle+TZImagePicker.h */; };
-		6349213720AD74A100F129F5 /* TZAssetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349210F20AD74A100F129F5 /* TZAssetModel.h */; };
-		6349213820AD74A100F129F5 /* TZVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211020AD74A100F129F5 /* TZVideoPlayerController.h */; };
-		6349213920AD74A100F129F5 /* TZPhotoPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211120AD74A100F129F5 /* TZPhotoPreviewController.h */; };
-		6349213A20AD74A100F129F5 /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211220AD74A100F129F5 /* UIView+Layout.h */; };
-		6349213B20AD74A100F129F5 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349211320AD74A100F129F5 /* TZImagePickerController.m */; };
-		6349213C20AD74A100F129F5 /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349211420AD74A100F129F5 /* TZLocationManager.m */; };
-		6349213D20AD74A100F129F5 /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349211520AD74A100F129F5 /* TZGifPhotoPreviewController.m */; };
-		6349213E20AD74A100F129F5 /* TZProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211620AD74A100F129F5 /* TZProgressView.h */; };
-		6349213F20AD74A100F129F5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6349211720AD74A100F129F5 /* README.md */; };
 		6349214020AD74A100F129F5 /* Base64Generater.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349211920AD74A100F129F5 /* Base64Generater.m */; };
 		6349214120AD74A100F129F5 /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211A20AD74A100F129F5 /* GTMBase64.h */; };
 		6349214220AD74A100F129F5 /* Base64Generater.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349211B20AD74A100F129F5 /* Base64Generater.h */; };
@@ -89,9 +60,9 @@
 		6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217A20AD74EF00F129F5 /* AMVideoView.m */; };
 		6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217B20AD74EF00F129F5 /* AMTopToolView.m */; };
 		6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */; };
-		638716A620E9FAD9003A204C /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */; };
-		638716A720E9FAE1003A204C /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */; };
-		638716A820E9FAE1003A204C /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		637A8D5120F5B04600AB22F9 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */; };
+		637A8D5220F5B05000AB22F9 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */; };
+		637A8D5320F5B05000AB22F9 /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */; };
 		63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */; };
 		63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */; };
@@ -163,7 +134,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				638716A820E9FAE1003A204C /* AnyMeetUIKit.framework in Embed Frameworks */,
+				637A8D5320F5B05000AB22F9 /* AnyMeetUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +149,8 @@
 		63134B0F20DB94F200778937 /* AMFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMFunctionView.m; sourceTree = "<group>"; };
 		63134B1120DB94F200778937 /* AMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMHomeViewController.h; sourceTree = "<group>"; };
 		63134B1220DB94F200778937 /* AMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMHomeViewController.m; sourceTree = "<group>"; };
+		6315269320F2F68A00D20243 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		6315269420F2F68A00D20243 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		63161D2F20E601DD00849114 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63166D8820E481E200DE52A5 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		63166D8920E481E200DE52A5 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
@@ -193,37 +166,6 @@
 		634920E120AD70F800F129F5 /* AMDocBlockView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AMDocBlockView.mm; sourceTree = "<group>"; };
 		634920EF20AD719600F129F5 /* AMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCommon.h; sourceTree = "<group>"; };
 		634920F020AD719600F129F5 /* AMCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCommon.m; sourceTree = "<group>"; };
-		634920F720AD74A000F129F5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		634920FA20AD74A000F129F5 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
-		634920FB20AD74A000F129F5 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
-		634920FC20AD74A000F129F5 /* TZImageCropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageCropManager.m; sourceTree = "<group>"; };
-		634920FD20AD74A000F129F5 /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
-		634920FE20AD74A000F129F5 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
-		634920FF20AD74A000F129F5 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
-		6349210020AD74A000F129F5 /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
-		6349210120AD74A000F129F5 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
-		6349210220AD74A000F129F5 /* TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZLocationManager.h; sourceTree = "<group>"; };
-		6349210320AD74A000F129F5 /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
-		6349210420AD74A000F129F5 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
-		6349210520AD74A000F129F5 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
-		6349210620AD74A000F129F5 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
-		6349210720AD74A000F129F5 /* TZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZProgressView.m; sourceTree = "<group>"; };
-		6349210820AD74A000F129F5 /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
-		6349210920AD74A100F129F5 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
-		6349210A20AD74A100F129F5 /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
-		6349210B20AD74A100F129F5 /* TZImageCropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageCropManager.h; sourceTree = "<group>"; };
-		6349210C20AD74A100F129F5 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
-		6349210D20AD74A100F129F5 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
-		6349210E20AD74A100F129F5 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
-		6349210F20AD74A100F129F5 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
-		6349211020AD74A100F129F5 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
-		6349211120AD74A100F129F5 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
-		6349211220AD74A100F129F5 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
-		6349211320AD74A100F129F5 /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
-		6349211420AD74A100F129F5 /* TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZLocationManager.m; sourceTree = "<group>"; };
-		6349211520AD74A100F129F5 /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
-		6349211620AD74A100F129F5 /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
-		6349211720AD74A100F129F5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6349211920AD74A100F129F5 /* Base64Generater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Generater.m; sourceTree = "<group>"; };
 		6349211A20AD74A100F129F5 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		6349211B20AD74A100F129F5 /* Base64Generater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Generater.h; sourceTree = "<group>"; };
@@ -259,7 +201,7 @@
 		6349217A20AD74EF00F129F5 /* AMVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMVideoView.m; sourceTree = "<group>"; };
 		6349217B20AD74EF00F129F5 /* AMTopToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTopToolView.m; sourceTree = "<group>"; };
 		6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyMeetVideoController.m; sourceTree = "<group>"; };
-		638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnyMeetUIKit.framework; sourceTree = "<group>"; };
+		637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnyMeetUIKit.framework; sourceTree = "<group>"; };
 		63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
 		63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
@@ -325,8 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */,
-				638716A620E9FAD9003A204C /* AnyMeetUIKit.framework in Frameworks */,
-				638716A720E9FAE1003A204C /* AnyMeetUIKit.framework in Frameworks */,
+				637A8D5120F5B04600AB22F9 /* AnyMeetUIKit.framework in Frameworks */,
+				637A8D5220F5B05000AB22F9 /* AnyMeetUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,65 +396,10 @@
 		634920F520AD74A000F129F5 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				634920F620AD74A000F129F5 /* TZImagePickerController */,
 				6349211820AD74A100F129F5 /* Base64Util */,
 				6349211E20AD74A100F129F5 /* ASProgressHUD */,
 			);
 			path = Library;
-			sourceTree = "<group>";
-		};
-		634920F620AD74A000F129F5 /* TZImagePickerController */ = {
-			isa = PBXGroup;
-			children = (
-				634920F720AD74A000F129F5 /* LICENSE */,
-				634920F820AD74A000F129F5 /* TZImagePickerController */,
-				6349211720AD74A100F129F5 /* README.md */,
-			);
-			path = TZImagePickerController;
-			sourceTree = "<group>";
-		};
-		634920F820AD74A000F129F5 /* TZImagePickerController */ = {
-			isa = PBXGroup;
-			children = (
-				634920F920AD74A000F129F5 /* TZImagePickerController */,
-			);
-			path = TZImagePickerController;
-			sourceTree = "<group>";
-		};
-		634920F920AD74A000F129F5 /* TZImagePickerController */ = {
-			isa = PBXGroup;
-			children = (
-				634920FA20AD74A000F129F5 /* TZPhotoPreviewCell.h */,
-				634920FB20AD74A000F129F5 /* TZPhotoPickerController.h */,
-				634920FC20AD74A000F129F5 /* TZImageCropManager.m */,
-				634920FD20AD74A000F129F5 /* TZImageManager.h */,
-				634920FE20AD74A000F129F5 /* TZAssetCell.m */,
-				634920FF20AD74A000F129F5 /* TZVideoPlayerController.m */,
-				6349210020AD74A000F129F5 /* TZAssetModel.m */,
-				6349210120AD74A000F129F5 /* NSBundle+TZImagePicker.m */,
-				6349210220AD74A000F129F5 /* TZLocationManager.h */,
-				6349210320AD74A000F129F5 /* TZImagePickerController.h */,
-				6349210420AD74A000F129F5 /* UIView+Layout.m */,
-				6349210520AD74A000F129F5 /* TZPhotoPreviewController.m */,
-				6349210620AD74A000F129F5 /* TZImagePickerController.bundle */,
-				6349210720AD74A000F129F5 /* TZProgressView.m */,
-				6349210820AD74A000F129F5 /* TZGifPhotoPreviewController.h */,
-				6349210920AD74A100F129F5 /* TZAssetCell.h */,
-				6349210A20AD74A100F129F5 /* TZImageManager.m */,
-				6349210B20AD74A100F129F5 /* TZImageCropManager.h */,
-				6349210C20AD74A100F129F5 /* TZPhotoPickerController.m */,
-				6349210D20AD74A100F129F5 /* TZPhotoPreviewCell.m */,
-				6349210E20AD74A100F129F5 /* NSBundle+TZImagePicker.h */,
-				6349210F20AD74A100F129F5 /* TZAssetModel.h */,
-				6349211020AD74A100F129F5 /* TZVideoPlayerController.h */,
-				6349211120AD74A100F129F5 /* TZPhotoPreviewController.h */,
-				6349211220AD74A100F129F5 /* UIView+Layout.h */,
-				6349211320AD74A100F129F5 /* TZImagePickerController.m */,
-				6349211420AD74A100F129F5 /* TZLocationManager.m */,
-				6349211520AD74A100F129F5 /* TZGifPhotoPreviewController.m */,
-				6349211620AD74A100F129F5 /* TZProgressView.h */,
-			);
-			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
 		6349211820AD74A100F129F5 /* Base64Util */ = {
@@ -541,10 +428,10 @@
 			children = (
 				63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */,
 				63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */,
-				6349214820AD74AD00F129F5 /* UIAlertController+Blocks.m */,
+				6349214B20AD74AD00F129F5 /* UIViewController+Common.h */,
 				6349214920AD74AD00F129F5 /* UIViewController+Common.m */,
 				6349214A20AD74AD00F129F5 /* UIAlertController+Blocks.h */,
-				6349214B20AD74AD00F129F5 /* UIViewController+Common.h */,
+				6349214820AD74AD00F129F5 /* UIAlertController+Blocks.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -630,7 +517,7 @@
 		63F0267520C67EE0007D25AB /* anyRTCMeeting */ = {
 			isa = PBXGroup;
 			children = (
-				638716A520E9FAD9003A204C /* AnyMeetUIKit.framework */,
+				637A8D5020F5B04600AB22F9 /* AnyMeetUIKit.framework */,
 				63F026D320C680DA007D25AB /* Main */,
 				63F026DE20C680DA007D25AB /* Base */,
 				63F0267C20C67EE0007D25AB /* Main.storyboard */,
@@ -678,6 +565,8 @@
 			children = (
 				63F026DF20C680DA007D25AB /* AppDelegate.h */,
 				63F026E020C680DA007D25AB /* AppDelegate.m */,
+				6315269320F2F68A00D20243 /* BaseViewController.h */,
+				6315269420F2F68A00D20243 /* BaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -707,8 +596,8 @@
 			isa = PBXGroup;
 			children = (
 				63F026F420C685D5007D25AB /* AMUser.h */,
-				63F026F520C685D5007D25AB /* AMUserManager.h */,
 				63F026F620C685D5007D25AB /* AMUser.m */,
+				63F026F520C685D5007D25AB /* AMUserManager.h */,
 				63F026F720C685D5007D25AB /* AMUserManager.m */,
 			);
 			path = User;
@@ -838,18 +727,13 @@
 				6349218320AD74EF00F129F5 /* AMVideoController.h in Headers */,
 				63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */,
 				653395DD20AEC5BB00BA13B7 /* AMNetWork.h in Headers */,
-				6349213920AD74A100F129F5 /* TZPhotoPreviewController.h in Headers */,
-				6349212520AD74A100F129F5 /* TZImageManager.h in Headers */,
-				6349213120AD74A100F129F5 /* TZAssetCell.h in Headers */,
 				6349216420AD74DE00F129F5 /* AMInformationController.h in Headers */,
-				6349212B20AD74A100F129F5 /* TZImagePickerController.h in Headers */,
 				6349214F20AD74AD00F129F5 /* UIViewController+Common.h in Headers */,
 				6349218020AD74EF00F129F5 /* AnyMeetVideoController.h in Headers */,
 				653395DA20AEC5BB00BA13B7 /* AMNetManager.h in Headers */,
 				634920E420AD70F800F129F5 /* AMDocToolView.h in Headers */,
 				6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */,
 				6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */,
-				6349212A20AD74A100F129F5 /* TZLocationManager.h in Headers */,
 				6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */,
 				6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */,
 				6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */,
@@ -863,20 +747,12 @@
 				634920F120AD719600F129F5 /* AMCommon.h in Headers */,
 				6349214220AD74A100F129F5 /* Base64Generater.h in Headers */,
 				633E67DB20AD7E6C0019390C /* AnyMeetUIKit.pch in Headers */,
-				6349212220AD74A100F129F5 /* TZPhotoPreviewCell.h in Headers */,
-				6349213E20AD74A100F129F5 /* TZProgressView.h in Headers */,
 				634920E920AD70F800F129F5 /* AMDocBlockView.h in Headers */,
-				6349213020AD74A100F129F5 /* TZGifPhotoPreviewController.h in Headers */,
-				6349213620AD74A100F129F5 /* NSBundle+TZImagePicker.h in Headers */,
-				6349213720AD74A100F129F5 /* TZAssetModel.h in Headers */,
-				6349213A20AD74A100F129F5 /* UIView+Layout.h in Headers */,
 				65972F1A20A5772E005E5CEA /* AMMeetListModel.h in Headers */,
-				6349213820AD74A100F129F5 /* TZVideoPlayerController.h in Headers */,
 				634920E720AD70F800F129F5 /* AMPopverView.h in Headers */,
 				65972F1420A57159005E5CEA /* AMUserModel.h in Headers */,
 				6349216A20AD74DE00F129F5 /* AMMoreController.h in Headers */,
 				6349216B20AD74DE00F129F5 /* AMConfereeController.h in Headers */,
-				6349212320AD74A100F129F5 /* TZPhotoPickerController.h in Headers */,
 				6349214120AD74A100F129F5 /* GTMBase64.h in Headers */,
 				6593C81C20A534A600D83DD1 /* AnyMeetUIKitConfig.h in Headers */,
 				634920EC20AD70F800F129F5 /* AMColorMenuView.h in Headers */,
@@ -1044,9 +920,6 @@
 				63D1162020AEB70D00BC0A36 /* AMDocToolView.xib in Resources */,
 				63D1161E20AEB70600BC0A36 /* AMColorMenuView.xib in Resources */,
 				63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */,
-				6349213F20AD74A100F129F5 /* README.md in Resources */,
-				6349212120AD74A100F129F5 /* LICENSE in Resources */,
-				6349212E20AD74A100F129F5 /* TZImagePickerController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1086,6 +959,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/XHToast/XHToast.framework",
 			);
@@ -1099,6 +973,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XHToast.framework",
 			);
@@ -1137,6 +1012,7 @@
 				63F0270D20C685D5007D25AB /* AMJoinViewController.m in Sources */,
 				63F0270A20C685D5007D25AB /* AMUserManager.m in Sources */,
 				63F0268620C67EE1007D25AB /* main.m in Sources */,
+				6315269520F2F68A00D20243 /* BaseViewController.m in Sources */,
 				63166D8A20E481E200DE52A5 /* SSKeychain.m in Sources */,
 				63F0270E20C685D5007D25AB /* AMArrangeController.m in Sources */,
 				63134B1320DB94F200778937 /* AMHomeCell.m in Sources */,
@@ -1170,41 +1046,27 @@
 			files = (
 				634920EA20AD70F800F129F5 /* AMDocToolView.m in Sources */,
 				634920ED20AD70F800F129F5 /* AMDocBlockView.mm in Sources */,
-				6349212F20AD74A100F129F5 /* TZProgressView.m in Sources */,
 				6349216320AD74DE00F129F5 /* AMInformationModel.m in Sources */,
-				6349213220AD74A100F129F5 /* TZImageManager.m in Sources */,
 				634920E320AD70F800F129F5 /* AMColorMenuView.m in Sources */,
 				653395D920AEC5BB00BA13B7 /* AMNetWork.m in Sources */,
 				6349216E20AD74DE00F129F5 /* AMConfereeController.m in Sources */,
 				6349217D20AD74EF00F129F5 /* AMVideoController.m in Sources */,
-				6349212420AD74A100F129F5 /* TZImageCropManager.m in Sources */,
-				6349212620AD74A100F129F5 /* TZAssetCell.m in Sources */,
 				6349214020AD74A100F129F5 /* Base64Generater.m in Sources */,
 				6349216820AD74DE00F129F5 /* AMInformationCell.m in Sources */,
-				6349213C20AD74A100F129F5 /* TZLocationManager.m in Sources */,
 				65972F1020A5681A005E5CEA /* AMLog.mm in Sources */,
 				6349216720AD74DE00F129F5 /* AMInformationController.m in Sources */,
 				6349217020AD74DE00F129F5 /* AMConfereeModel.m in Sources */,
 				6349216C20AD74DE00F129F5 /* AMConfereeCell.m in Sources */,
 				63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */,
 				6349216920AD74DE00F129F5 /* AMMoreController.m in Sources */,
-				6349212D20AD74A100F129F5 /* TZPhotoPreviewController.m in Sources */,
-				6349213B20AD74A100F129F5 /* TZImagePickerController.m in Sources */,
 				6349214D20AD74AD00F129F5 /* UIViewController+Common.m in Sources */,
 				6593C81D20A534A600D83DD1 /* AnyMeetUIKitConfig.mm in Sources */,
-				6349212C20AD74A100F129F5 /* UIView+Layout.m in Sources */,
 				6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */,
-				6349212920AD74A100F129F5 /* NSBundle+TZImagePicker.m in Sources */,
-				6349213520AD74A100F129F5 /* TZPhotoPreviewCell.m in Sources */,
-				6349212720AD74A100F129F5 /* TZVideoPlayerController.m in Sources */,
 				65972F1320A57159005E5CEA /* AMUserModel.m in Sources */,
 				6349214620AD74A100F129F5 /* ASHUD.m in Sources */,
 				65972F1B20A5772E005E5CEA /* AMMeetListModel.m in Sources */,
 				634920E520AD70F800F129F5 /* AMPopverView.m in Sources */,
 				6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */,
-				6349212820AD74A100F129F5 /* TZAssetModel.m in Sources */,
-				6349213420AD74A100F129F5 /* TZPhotoPickerController.m in Sources */,
-				6349213D20AD74A100F129F5 /* TZGifPhotoPreviewController.m in Sources */,
 				6349217E20AD74EF00F129F5 /* AMTabbarView.m in Sources */,
 				6593C81620A5335300D83DD1 /* AMApiManager.mm in Sources */,
 				6349214420AD74A100F129F5 /* GTMBase64.m in Sources */,

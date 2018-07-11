@@ -163,6 +163,8 @@
                     break;
             }
         }];
+    } else {
+        [ASHUD showHUDWithCompleteStyleInView:self.view content:@"当前会议主持人享有操作权限" icon:@""];
     }
 }
 

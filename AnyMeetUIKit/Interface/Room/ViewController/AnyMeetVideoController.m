@@ -49,7 +49,7 @@
     //实例化会议对象
     self.meetKit = [[RTMeetKit alloc] initWithDelegate:self andOption:option];
     self.meetKit.delegate = self;
-    
+    [self.meetKit setLocalAudioEnable:YES];
     //本地视频采集窗口
     [self.meetKit setLocalVideoCapturer:self.localView];
     
@@ -69,6 +69,11 @@
         }
         [rootVc dismissViewControllerAnimated:YES completion:nil];
     }
+    
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationUnknown] forKey:@"orientation"];
+    NSNumber *value = [NSNumber numberWithInt:UIDeviceOrientationPortrait];
+    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -115,7 +120,7 @@
             confereeVc.memberArr = self.memberArr;
             confereeVc.userModel = self.userModel;
             confereeVc.isLandscape = self.isLandscape;
-            ([[AMApiManager shareInstance].userId isEqualToString:self.userModel.userId]) ? confereeVc.isHoster = YES : 0;
+            ([[AMApiManager shareInstance].anyUserId isEqualToString:self.meetModel.m_userid]) ? confereeVc.isHoster = YES : 0;
             [self presentViewController:confereeVc animated:YES completion:nil];
         }
             break;
@@ -209,7 +214,6 @@
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:4],@"mType",self.userModel.userId,@"userid",self.userModel.userName,@"name",nil];
     [self.meetKit sendUserMessage:self.userModel.userName andUserHeader:nil andContent:[dic mj_JSONString]];
     
-    [self playRemindMusic];
     //会议号分割
     if (self.meetModel.meetingid.length>=8) {
         self.topBar.titleLabel.text = [NSString stringWithFormat:@"%@ %@",[self.meetModel.meetingid substringToIndex:4],[self.meetModel.meetingid substringFromIndex:4]];

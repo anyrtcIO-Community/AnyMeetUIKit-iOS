@@ -89,8 +89,11 @@
 
 - (void)switchAction:(UISwitch *)sender{
     if (sender.tag == 100) {
+        __weak typeof(self)weakSelf = self;
         [[AMApiManager shareInstance] updateMeetingLock:self.meetModel.meetingid withLock:sender.isOn success:^(int code) {
-        
+            if (code == 200) {
+                weakSelf.meetModel.m_is_lock = sender.isOn;
+            }
         } failure:^(NSError *error) {
             
         }];
