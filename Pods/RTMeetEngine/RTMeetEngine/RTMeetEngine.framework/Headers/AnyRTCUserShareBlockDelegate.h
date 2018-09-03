@@ -12,6 +12,7 @@
 
 @protocol AnyRTCUserShareBlockDelegate <NSObject>
 
+@optional
 /**
  判断是否可以开启共享
  */

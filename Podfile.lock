@@ -19,7 +19,7 @@ PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.15.1)
-  - RTMeetEngine (1.0.3)
+  - RTMeetEngine (1.1.0)
   - SDWebImage (4.4.1):
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
@@ -36,7 +36,7 @@ DEPENDENCIES:
   - Masonry
   - MBProgressHUD
   - MJExtension
-  - RTMeetEngine
+  - RTMeetEngine (~> 1.1.0)
   - SDWebImage
   - TZImagePickerController
   - WechatOpenSDK
@@ -63,7 +63,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
-  RTMeetEngine: c56fa6ab02890801ae2aef6a7ed42b6816c85030
+  RTMeetEngine: bf9e60358209f104fd27c3698acea6279225ed38
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   Socket.IO-Client-Swift: d30d6fd08a38ad2a182b090936a043bf512ab2de
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
@@ -71,6 +71,6 @@ SPEC CHECKSUMS:
   WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
 
-PODFILE CHECKSUM: 08f7e07f4883fbf624c954a8566c183d3ff1f109
+PODFILE CHECKSUM: c3dd1ccc3d4b55f8a817a758a9c9185ea300dbeb
 
 COCOAPODS: 1.5.0

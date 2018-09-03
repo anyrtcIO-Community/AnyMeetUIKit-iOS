@@ -87,8 +87,8 @@
  视频窗口大小的回调
 
  @param videoView 视频窗口
- @param size 视频的大小
- 说明：与会者或者自己视频窗口大小变化的回调。一般处理视频窗口第一针视频显示
+ @param size 视频的分辨率
+ 说明：与会者或者自己视频窗口大小变化的回调。一般处理视频窗口第一针视频显示:美颜相机没有该回调
  */
 #if TARGET_OS_IPHONE
 -(void) onRTCViewChanged:(UIView*)videoView didChangeVideoSize:(CGSize)size;
@@ -149,6 +149,13 @@
  @param strRTCPeerId RTC服务生成的标识Id (用于标识与会者，每次加入会议随机生成)；
  */
 - (void)onRtcTalkOnlyOff:(NSString*)strRTCPeerId;
+
+/**
+ 检测服务链接与否
+
+ @param bOk YES/NO 成功／失败
+ */
+- (void)onRTCCheckConnectionRealtime:(BOOL)bOk;
 
 @end
 

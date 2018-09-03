@@ -12,8 +12,10 @@
 #import <Foundation/Foundation.h>
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+typedef UIView VIEW_CLASS;
 #else
 #import <AppKit/AppKit.h>
+typedef NSView VIEW_CLASS;
 #endif
 #import "RTMeetKitDelegate.h"
 #import "RTCCommon.h"
@@ -30,7 +32,7 @@
  @param delegate RTC相关回调代理
  @return 会议对象
  */
-- (instancetype)initWithDelegate:(id<RTMeetKitDelegate>)delegate andOption:(RTMeetOption *)option;
+- (instancetype)initWithDelegate:(id <RTMeetKitDelegate>)delegate andOption:(RTMeetOption *)option;
 
 #pragma mark Common function
 /**
@@ -89,26 +91,37 @@
  设置本地视频采集窗口
  
  @param render 视频显示对象
- @param bFront 是否用前置摄像头
  说明：该方法用于本地视频采集。
  */
-#if TARGET_OS_IPHONE
-- (void)setLocalVideoCapturer:(UIView*)render;
-#else
-- (void)setLocalVideoCapturer:(NSView*) render;
-#endif
-/**
- 设置前置摄像头镜像是否打开
- 
- @param bEnable YES为打开，NO为关闭
- 说明：默认打开(目前只支持美颜相机)
- */
-- (void)setFontCameraMirrorEnable:(BOOL)bEnable;
+
+- (void)setLocalVideoCapturer:(VIEW_CLASS*)render;
 
 /**
- 设置滤镜（使用美颜相机模式，默认开启美颜）
+ 设置本地显示模式
+ 
+ @param eVideoRenderMode 显示模式
+ 说明：默认：AnyRTCVideoRenderScaleAspectFill，等比例填充视图模式
+ */
+- (void)updateLocalVideoRenderModel:(AnyRTCVideoRenderMode)eVideoRenderMode;
+
+/**
+ 重置音频录音和播放
+ 说明:使用AVplayer播放后调用该方法
+ */
+- (void)doRestartAudioRecord;
+/**
+ 设置本地前置摄像头镜像是否打开
+ 
+ @param bEnable YES为打开，NO为关闭
+ @return 镜像成功与否
+ */
+- (BOOL)setFontCameraMirrorEnable:(BOOL)bEnable;
+
+/**
+ 设置滤镜（默认开启美颜）
  
  @param eFilter 滤镜模式
+ 说明:只有使用美颜相机模式才有用
  */
 - (void)setCameraFilter:(AnyCameraDeviceFilter)eFilter;
 
@@ -119,7 +132,7 @@
  @param strAnyRTCId strAnyRTCId 会议号（可以在AnyRTC 平台获得，也可以根据自己平台，分配唯一的一个ID号）
  @param isHoster 是否是主持人
  @param strUserId 播在开发者自己平台的id，可选
- @param strUserData 播在开发者自己平台的相关信息（昵称，头像等），可选。(限制512字节)
+ @param strUserData 播在开发者自己平台的相关信息（昵称，头像等）还可以加入字段来限制会议人数：MaxJoiner，可选。(限制512字节)
  @return 加入会议成功或者失败
  */
 - (BOOL)joinRTC:(NSString*)strAnyRTCId andIsHoster:(BOOL)isHoster andUserId:(NSString*)strUserId andUserData:(NSString*)strUserData;
@@ -136,11 +149,14 @@
  @param render 对方视频的窗口，本地设置；
  说明：该方法用于与会者接通后，与会者视频接通回调中（OnRTCOpenVideoRender）使用。
  */
-#if TARGET_OS_IPHONE
-- (void)setRTCVideoRender:(NSString*)strRTCPubId andRender:(UIView*)render;
-#else
-- (void)setRTCVideoRender:(NSString*)strRTCPubId andRender:(NSView*)render;
-#endif
+- (void)setRTCVideoRender:(NSString*)strRTCPubId andRender:(VIEW_CLASS *)render;
+/**
+ 设置其他人显示模式
+ 
+ @param eVideoRenderMode 显示模式
+ 说明：默认：AnyRTCVideoRenderScaleAspectFill，等比例填充视图模式
+ */
+- (void)updateRTCVideoRenderModel:(AnyRTCVideoRenderMode)eVideoRenderMode;
 
 /**
  设置开车模式（只听音频）
@@ -193,12 +209,19 @@
  */
 - (BOOL)networkStatusEnabled;
 
+/**
+ 网络检测、服务链接状态(加入房间成功后才能调用)
+ 说明：如果本地网络状态发生变化，开发者调用该接口：然后等待服务返回当前链接状态：onRTCCheckConnectionRealtime
+ @return 返回check成功与失败
+ */
+- (BOOL)doCheckConnection;
+
 #pragma mark - 白板功能模块
 
 /**
  设置共享回调
  */
-@property (nonatomic, weak)id<AnyRTCUserShareBlockDelegate>delegate;
+@property (nonatomic, weak) id<AnyRTCUserShareBlockDelegate>delegate;
 
 /**
  判断是否可以共享

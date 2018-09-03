@@ -12,7 +12,8 @@
 #import <UIKit/UIKit.h>
 
 @protocol RTMeetAudioKitDelegate <NSObject>
-@required
+
+@optional
 /**
  加入会议成功的回调
  
@@ -76,7 +77,6 @@
  */
 -(void)onRTCAudioActive:(NSString*)strRTCPeerId withUserId:(NSString *)strUserId withAudioLevel:(int)nLevel withShowTime:(int)nTime;
 
-@optional
 /**
  网络状态
  
@@ -128,6 +128,14 @@
  @param strRTCPeerId RTC服务生成的标识Id (用于标识与会者，每次加入会议随机生成)；
  */
 - (void)onRtcTalkOnlyOff:(NSString*)strRTCPeerId;
+
+/**
+ 检测服务链接与否
+ 
+ @param bOk YES/NO 成功／失败
+ */
+- (void)onRTCCheckConnectionRealtime:(BOOL)bOk;
+
 
 @end
 
