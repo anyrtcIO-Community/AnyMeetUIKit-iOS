@@ -1,6 +1,0 @@
-framework module AnyMeetUIKit {
-  umbrella header "AnyMeetUIKit.h"
-
-  export *
-  module * { export * }
-}

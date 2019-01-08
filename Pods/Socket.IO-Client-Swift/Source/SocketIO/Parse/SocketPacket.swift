@@ -116,7 +116,7 @@ public struct SocketPacket : CustomStringConvertible {
     private func createPacketString() -> String {
         let typeString = String(type.rawValue)
         // Binary count?
-        let binaryCountString = typeString + (type == .binaryEvent || type == .binaryAck ? "\(String(binary.count))-" : "")
+        let binaryCountString = typeString + (type.isBinary ? "\(String(binary.count))-" : "")
         // Namespace?
         let nspString = binaryCountString + (nsp != "/" ? "\(nsp)," : "")
         // Ack number?
@@ -181,6 +181,13 @@ public extension SocketPacket {
 
         /// Binary Ack: 6
         case binaryAck
+
+        // MARK: Properties
+
+        /// Whether or not this type is binary
+        public var isBinary: Bool {
+            return self == .binaryAck || self == .binaryEvent
+        }
     }
 }
 
@@ -200,11 +207,15 @@ extension SocketPacket {
         }
     }
 
-    static func packetFromEmit(_ items: [Any], id: Int, nsp: String, ack: Bool) -> SocketPacket {
-        let (parsedData, binary) = deconstructData(items)
+    static func packetFromEmit(_ items: [Any], id: Int, nsp: String, ack: Bool, checkForBinary: Bool = true) -> SocketPacket {
+        if checkForBinary {
+            let (parsedData, binary) = deconstructData(items)
 
-        return SocketPacket(type: findType(binary.count, ack: ack), data: parsedData, id: id, nsp: nsp,
-                            binary: binary)
+            return SocketPacket(type: findType(binary.count, ack: ack), data: parsedData, id: id, nsp: nsp,
+                                binary: binary)
+        } else {
+            return SocketPacket(type: findType(0, ack: ack), data: items, id: id, nsp: nsp)
+        }
     }
 }
 

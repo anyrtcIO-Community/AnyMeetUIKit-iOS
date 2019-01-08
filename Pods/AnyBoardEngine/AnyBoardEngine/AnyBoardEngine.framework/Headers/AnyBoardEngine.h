@@ -15,6 +15,10 @@ FOUNDATION_EXPORT double AnyBoardEngineVersionNumber;
 FOUNDATION_EXPORT const unsigned char AnyBoardEngineVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AnyBoardEngine/PublicHeader.h>
+#import <AnyBoardEngine/AnyBoardDelegate.h>
 #import <AnyBoardEngine/AnyBoardOption.h>
-#import <AnyBoardEngine/AnyBoardView.h>
 
+//画板（背景不能放大缩小，即将过期）
+#import <AnyBoardEngine/AnyBoardView.h>
+//画板（背景可放大缩小）
+#import <AnyBoardEngine/ARBoardView.h>
