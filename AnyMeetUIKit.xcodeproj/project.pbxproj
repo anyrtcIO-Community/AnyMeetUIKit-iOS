@@ -39,23 +39,23 @@
 		6349216320AD74DE00F129F5 /* AMInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215220AD74DD00F129F5 /* AMInformationModel.m */; };
 		6349216420AD74DE00F129F5 /* AMInformationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215320AD74DD00F129F5 /* AMInformationController.h */; };
 		6349216520AD74DE00F129F5 /* AMInformationCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215420AD74DD00F129F5 /* AMInformationCell.h */; };
-		6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215520AD74DD00F129F5 /* AMInformationModel.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215520AD74DD00F129F5 /* AMInformationModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6349216720AD74DE00F129F5 /* AMInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215620AD74DD00F129F5 /* AMInformationController.m */; };
 		6349216820AD74DE00F129F5 /* AMInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215720AD74DD00F129F5 /* AMInformationCell.m */; };
 		6349216920AD74DE00F129F5 /* AMMoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215A20AD74DD00F129F5 /* AMMoreController.m */; };
 		6349216A20AD74DE00F129F5 /* AMMoreController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215B20AD74DD00F129F5 /* AMMoreController.h */; };
 		6349216B20AD74DE00F129F5 /* AMConfereeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215D20AD74DD00F129F5 /* AMConfereeController.h */; };
 		6349216C20AD74DE00F129F5 /* AMConfereeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215E20AD74DD00F129F5 /* AMConfereeCell.m */; };
-		6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215F20AD74DD00F129F5 /* AMConfereeModel.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215F20AD74DD00F129F5 /* AMConfereeModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6349216E20AD74DE00F129F5 /* AMConfereeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349216020AD74DD00F129F5 /* AMConfereeController.m */; };
 		6349216F20AD74DE00F129F5 /* AMConfereeCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349216120AD74DD00F129F5 /* AMConfereeCell.h */; };
 		6349217020AD74DE00F129F5 /* AMConfereeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349216220AD74DD00F129F5 /* AMConfereeModel.m */; };
 		6349217D20AD74EF00F129F5 /* AMVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217220AD74EF00F129F5 /* AMVideoController.m */; };
 		6349217E20AD74EF00F129F5 /* AMTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217320AD74EF00F129F5 /* AMTabbarView.m */; };
-		6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217420AD74EF00F129F5 /* AMVideoView.h */; };
+		6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217420AD74EF00F129F5 /* AMVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6349218020AD74EF00F129F5 /* AnyMeetVideoController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217520AD74EF00F129F5 /* AnyMeetVideoController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217620AD74EF00F129F5 /* AMTopToolView.h */; };
-		6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217720AD74EF00F129F5 /* AMTabbarView.h */; };
+		6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217620AD74EF00F129F5 /* AMTopToolView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217720AD74EF00F129F5 /* AMTabbarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6349218320AD74EF00F129F5 /* AMVideoController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217820AD74EF00F129F5 /* AMVideoController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217A20AD74EF00F129F5 /* AMVideoView.m */; };
 		6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217B20AD74EF00F129F5 /* AMTopToolView.m */; };
@@ -719,6 +719,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */,
+				6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */,
+				6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */,
+				6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */,
+				6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */,
 				653395DB20AEC5BB00BA13B7 /* AMApiCommon.h in Headers */,
 				6349218320AD74EF00F129F5 /* AMVideoController.h in Headers */,
 				63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */,
@@ -728,11 +733,6 @@
 				6349218020AD74EF00F129F5 /* AnyMeetVideoController.h in Headers */,
 				653395DA20AEC5BB00BA13B7 /* AMNetManager.h in Headers */,
 				634920E420AD70F800F129F5 /* AMDocToolView.h in Headers */,
-				6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */,
-				6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */,
-				6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */,
-				6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */,
-				6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */,
 				634920E620AD70F800F129F5 /* AMPopverViewConfiguration.h in Headers */,
 				6593C81920A5335300D83DD1 /* AMApiManager.h in Headers */,
 				63F026E320C680EB007D25AB /* anyRTCMeeting.pch in Headers */,
