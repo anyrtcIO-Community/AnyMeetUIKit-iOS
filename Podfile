@@ -1,6 +1,6 @@
 platform :ios,'8.0'
 target 'AnyMeetUIKit' do
-pod 'RTMeetEngine', '~> 1.1.0'
+pod 'RTMeetEngine'
 pod 'AnyBoardEngine'
 pod 'Masonry'
 pod 'MJExtension'
@@ -9,7 +9,7 @@ pod 'MBProgressHUD'
 pod 'TZImagePickerController'
 
 target 'anyRTCMeeting' do
-#pod 'AnyMeetUIKit', '~> 2.0.8'
+pod 'AnyMeetUIKit', '~> 2.0.9'
 pod 'WechatOpenSDK'
 pod 'AFNetworking', :inhibit_warnings => true
 pod 'XHToast', '~> 1.4.0'

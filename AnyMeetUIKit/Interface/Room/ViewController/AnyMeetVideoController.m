@@ -61,6 +61,9 @@
 #pragma mark- 离开会议
 - (void)leaveMeet{
     [self.meetKit leaveRTC];
+    if (self.leaveBlock) {
+        self.leaveBlock();
+    }
     //多层级模态返回
     if ([AMCommon topViewController] != self) {
         UIViewController *rootVc = [AMCommon topViewController].presentingViewController;

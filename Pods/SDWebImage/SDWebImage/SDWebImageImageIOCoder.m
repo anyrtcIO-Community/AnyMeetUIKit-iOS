@@ -98,7 +98,20 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
     
     UIImage *image = [[UIImage alloc] initWithData:data];
     
+#if SD_MAC
     return image;
+#else
+    if (!image) {
+        return nil;
+    }
+    
+    UIImageOrientation orientation = [[self class] sd_imageOrientationFromImageData:data];
+    if (orientation != UIImageOrientationUp) {
+        image = [[UIImage alloc] initWithCGImage:image.CGImage scale:image.scale orientation:orientation];
+    }
+    
+    return image;
+#endif
 }
 
 - (UIImage *)incrementallyDecodedImageWithData:(NSData *)data finished:(BOOL)finished {
@@ -138,6 +151,25 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
     if (_width + _height > 0) {
         // Create the image
         CGImageRef partialImageRef = CGImageSourceCreateImageAtIndex(_imageSource, 0, NULL);
+        
+#if SD_UIKIT || SD_WATCH
+        // Workaround for iOS anamorphic image
+        if (partialImageRef) {
+            const size_t partialHeight = CGImageGetHeight(partialImageRef);
+            CGColorSpaceRef colorSpace = SDCGColorSpaceGetDeviceRGB();
+            CGContextRef bmContext = CGBitmapContextCreate(NULL, _width, _height, 8, 0, colorSpace, kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedFirst);
+            if (bmContext) {
+                CGContextDrawImage(bmContext, (CGRect){.origin.x = 0.0f, .origin.y = 0.0f, .size.width = _width, .size.height = partialHeight}, partialImageRef);
+                CGImageRelease(partialImageRef);
+                partialImageRef = CGBitmapContextCreateImage(bmContext);
+                CGContextRelease(bmContext);
+            }
+            else {
+                CGImageRelease(partialImageRef);
+                partialImageRef = nil;
+            }
+        }
+#endif
         
         if (partialImageRef) {
 #if SD_UIKIT || SD_WATCH
@@ -204,12 +236,7 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
     @autoreleasepool{
         
         CGImageRef imageRef = image.CGImage;
-        // device color space
-        CGColorSpaceRef colorspaceRef = SDCGColorSpaceGetDeviceRGB();
-        BOOL hasAlpha = SDCGImageRefContainsAlpha(imageRef);
-        // iOS display alpha info (BRGA8888/BGRX8888)
-        CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Host;
-        bitmapInfo |= hasAlpha ? kCGImageAlphaPremultipliedFirst : kCGImageAlphaNoneSkipFirst;
+        CGColorSpaceRef colorspaceRef = [[self class] colorSpaceForImageRef:imageRef];
         
         size_t width = CGImageGetWidth(imageRef);
         size_t height = CGImageGetHeight(imageRef);
@@ -223,7 +250,7 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
                                                      kBitsPerComponent,
                                                      0,
                                                      colorspaceRef,
-                                                     bitmapInfo);
+                                                     kCGBitmapByteOrderDefault|kCGImageAlphaNoneSkipLast);
         if (context == NULL) {
             return image;
         }
@@ -267,12 +294,8 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
         destResolution.width = (int)(sourceResolution.width*imageScale);
         destResolution.height = (int)(sourceResolution.height*imageScale);
         
-        // device color space
-        CGColorSpaceRef colorspaceRef = SDCGColorSpaceGetDeviceRGB();
-        BOOL hasAlpha = SDCGImageRefContainsAlpha(sourceImageRef);
-        // iOS display alpha info (BGRA8888/BGRX8888)
-        CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Host;
-        bitmapInfo |= hasAlpha ? kCGImageAlphaPremultipliedFirst : kCGImageAlphaNoneSkipFirst;
+        // current color space
+        CGColorSpaceRef colorspaceRef = [[self class] colorSpaceForImageRef:sourceImageRef];
         
         // kCGImageAlphaNone is not supported in CGBitmapContextCreate.
         // Since the original image here has no alpha info, use kCGImageAlphaNoneSkipLast
@@ -283,7 +306,7 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
                                             kBitsPerComponent,
                                             0,
                                             colorspaceRef,
-                                            bitmapInfo);
+                                            kCGBitmapByteOrderDefault|kCGImageAlphaNoneSkipLast);
         
         if (destContext == NULL) {
             return image;
@@ -430,6 +453,14 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
         return NO;
     }
     
+    CGImageRef imageRef = image.CGImage;
+    
+    BOOL hasAlpha = SDCGImageRefContainsAlpha(imageRef);
+    // do not decode images with alpha
+    if (hasAlpha) {
+        return NO;
+    }
+    
     return YES;
 }
 
@@ -485,6 +516,31 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
 }
 
 #if SD_UIKIT || SD_WATCH
+#pragma mark EXIF orientation tag converter
++ (UIImageOrientation)sd_imageOrientationFromImageData:(nonnull NSData *)imageData {
+    UIImageOrientation result = UIImageOrientationUp;
+    CGImageSourceRef imageSource = CGImageSourceCreateWithData((__bridge CFDataRef)imageData, NULL);
+    if (imageSource) {
+        CFDictionaryRef properties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, NULL);
+        if (properties) {
+            CFTypeRef val;
+            NSInteger exifOrientation;
+            val = CFDictionaryGetValue(properties, kCGImagePropertyOrientation);
+            if (val) {
+                CFNumberGetValue(val, kCFNumberNSIntegerType, &exifOrientation);
+                result = [SDWebImageCoderHelper imageOrientationFromEXIFOrientation:exifOrientation];
+            } // else - if it's not set it remains at up
+            CFRelease((CFTypeRef) properties);
+        } else {
+            //NSLog(@"NO PROPERTIES, FAIL");
+        }
+        CFRelease(imageSource);
+    }
+    return result;
+}
+#endif
+
+#if SD_UIKIT || SD_WATCH
 + (BOOL)shouldScaleDownImage:(nonnull UIImage *)image {
     BOOL shouldScaleDown = YES;
     
@@ -501,6 +557,21 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
     }
     
     return shouldScaleDown;
+}
+
++ (CGColorSpaceRef)colorSpaceForImageRef:(CGImageRef)imageRef {
+    // current
+    CGColorSpaceModel imageColorSpaceModel = CGColorSpaceGetModel(CGImageGetColorSpace(imageRef));
+    CGColorSpaceRef colorspaceRef = CGImageGetColorSpace(imageRef);
+    
+    BOOL unsupportedColorSpace = (imageColorSpaceModel == kCGColorSpaceModelUnknown ||
+                                  imageColorSpaceModel == kCGColorSpaceModelMonochrome ||
+                                  imageColorSpaceModel == kCGColorSpaceModelCMYK ||
+                                  imageColorSpaceModel == kCGColorSpaceModelIndexed);
+    if (unsupportedColorSpace) {
+        colorspaceRef = SDCGColorSpaceGetDeviceRGB();
+    }
+    return colorspaceRef;
 }
 #endif
 

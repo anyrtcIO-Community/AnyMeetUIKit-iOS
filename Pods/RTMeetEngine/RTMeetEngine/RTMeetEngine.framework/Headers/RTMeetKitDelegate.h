@@ -77,18 +77,17 @@
  
  @param strRTCPeerId RTC服务生成的与会者标识Id（用于标识与会者用户，每次随机生成）
  @param strUserId 连麦者在自己平台的用户Id；
- @param nLevel 音频检测音量；
  @param nTime 音频检测在nTime毫秒内不会再回调该方法（单位：毫秒）；
- 说明：对方关闭音频后（setLocalAudioEnable为NO）,该回调将不再回调；对方关闭音频检测后（setAudioActiveCheck为NO）,该回调也将不再回调。
+ 说明：当与会者关闭视频聊天时，才会有音频监测的回调。
  */
--(void)onRTCAudioActive:(NSString*)strRTCPeerId withUserId:(NSString *)strUserId withAudioLevel:(int)nLevel withShowTime:(int)nTime;
+-(void)onRTCAudioActive:(NSString*)strRTCPeerId withUserId:(NSString *)strUserId withShowTime:(int)nTime;
 
 /**
  视频窗口大小的回调
 
  @param videoView 视频窗口
- @param size 视频的分辨率
- 说明：与会者或者自己视频窗口大小变化的回调。一般处理视频窗口第一针视频显示:美颜相机没有该回调
+ @param size 视频的大小
+ 说明：与会者或者自己视频窗口大小变化的回调。一般处理视频窗口第一针视频显示
  */
 #if TARGET_OS_IPHONE
 -(void) onRTCViewChanged:(UIView*)videoView didChangeVideoSize:(CGSize)size;
@@ -96,15 +95,6 @@
 #endif
 
 @optional
-/**
- 网络状态
- 
- @param strRTCPeerId RTC服务生成的与会者标识Id（用于标识与会者用户，每次随机生成）
- @param strUserId 连麦者在自己平台的用户Id；
- @param nNetSpeed 网络上行
- @param nPacketLost 丢包率
- */
-- (void)onRtcNetworkStatus:(NSString*)strRTCPeerId withUserId:(NSString *)strUserId withNetSpeed:(int)nNetSpeed withPacketLost:(int)nPacketLost;
 
 /**
  收到消息回调
@@ -149,13 +139,6 @@
  @param strRTCPeerId RTC服务生成的标识Id (用于标识与会者，每次加入会议随机生成)；
  */
 - (void)onRtcTalkOnlyOff:(NSString*)strRTCPeerId;
-
-/**
- 检测服务链接与否
-
- @param bOk YES/NO 成功／失败
- */
-- (void)onRTCCheckConnectionRealtime:(BOOL)bOk;
 
 @end
 

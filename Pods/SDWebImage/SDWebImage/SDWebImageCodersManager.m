@@ -13,12 +13,10 @@
 #import "SDWebImageWebPCoder.h"
 #endif
 
-#define LOCK(lock) dispatch_semaphore_wait(lock, DISPATCH_TIME_FOREVER);
-#define UNLOCK(lock) dispatch_semaphore_signal(lock);
-
 @interface SDWebImageCodersManager ()
 
-@property (nonatomic, strong, nonnull) dispatch_semaphore_t codersLock;
+@property (strong, nonatomic, nonnull) NSMutableArray<SDWebImageCoder>* mutableCoders;
+@property (strong, nonatomic, nullable) dispatch_queue_t mutableCodersAccessQueue;
 
 @end
 
@@ -36,12 +34,11 @@
 - (instancetype)init {
     if (self = [super init]) {
         // initialize with default coders
-        NSMutableArray<id<SDWebImageCoder>> *mutableCoders = [@[[SDWebImageImageIOCoder sharedCoder]] mutableCopy];
+        _mutableCoders = [@[[SDWebImageImageIOCoder sharedCoder]] mutableCopy];
 #ifdef SD_WEBP
-        [mutableCoders addObject:[SDWebImageWebPCoder sharedCoder]];
+        [_mutableCoders addObject:[SDWebImageWebPCoder sharedCoder]];
 #endif
-        _coders = [mutableCoders copy];
-        _codersLock = dispatch_semaphore_create(1);
+        _mutableCodersAccessQueue = dispatch_queue_create("com.hackemist.SDWebImageCodersManager", DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
 }
@@ -49,36 +46,36 @@
 #pragma mark - Coder IO operations
 
 - (void)addCoder:(nonnull id<SDWebImageCoder>)coder {
-    if (![coder conformsToProtocol:@protocol(SDWebImageCoder)]) {
-        return;
+    if ([coder conformsToProtocol:@protocol(SDWebImageCoder)]) {
+        dispatch_barrier_sync(self.mutableCodersAccessQueue, ^{
+            [self.mutableCoders addObject:coder];
+        });
     }
-    LOCK(self.codersLock);
-    NSMutableArray<id<SDWebImageCoder>> *mutableCoders = [self.coders mutableCopy];
-    if (!mutableCoders) {
-        mutableCoders = [NSMutableArray array];
-    }
-    [mutableCoders addObject:coder];
-    self.coders = [mutableCoders copy];
-    UNLOCK(self.codersLock);
 }
 
 - (void)removeCoder:(nonnull id<SDWebImageCoder>)coder {
-    if (![coder conformsToProtocol:@protocol(SDWebImageCoder)]) {
-        return;
-    }
-    LOCK(self.codersLock);
-    NSMutableArray<id<SDWebImageCoder>> *mutableCoders = [self.coders mutableCopy];
-    [mutableCoders removeObject:coder];
-    self.coders = [mutableCoders copy];
-    UNLOCK(self.codersLock);
+    dispatch_barrier_sync(self.mutableCodersAccessQueue, ^{
+        [self.mutableCoders removeObject:coder];
+    });
+}
+
+- (NSArray<SDWebImageCoder> *)coders {
+    __block NSArray<SDWebImageCoder> *sortedCoders = nil;
+    dispatch_sync(self.mutableCodersAccessQueue, ^{
+        sortedCoders = (NSArray<SDWebImageCoder> *)[[[self.mutableCoders copy] reverseObjectEnumerator] allObjects];
+    });
+    return sortedCoders;
+}
+
+- (void)setCoders:(NSArray<SDWebImageCoder> *)coders {
+    dispatch_barrier_sync(self.mutableCodersAccessQueue, ^{
+        self.mutableCoders = [coders mutableCopy];
+    });
 }
 
 #pragma mark - SDWebImageCoder
 - (BOOL)canDecodeFromData:(NSData *)data {
-    LOCK(self.codersLock);
-    NSArray<id<SDWebImageCoder>> *coders = self.coders;
-    UNLOCK(self.codersLock);
-    for (id<SDWebImageCoder> coder in coders.reverseObjectEnumerator) {
+    for (id<SDWebImageCoder> coder in self.coders) {
         if ([coder canDecodeFromData:data]) {
             return YES;
         }
@@ -87,10 +84,7 @@
 }
 
 - (BOOL)canEncodeToFormat:(SDImageFormat)format {
-    LOCK(self.codersLock);
-    NSArray<id<SDWebImageCoder>> *coders = self.coders;
-    UNLOCK(self.codersLock);
-    for (id<SDWebImageCoder> coder in coders.reverseObjectEnumerator) {
+    for (id<SDWebImageCoder> coder in self.coders) {
         if ([coder canEncodeToFormat:format]) {
             return YES;
         }
@@ -99,10 +93,10 @@
 }
 
 - (UIImage *)decodedImageWithData:(NSData *)data {
-    LOCK(self.codersLock);
-    NSArray<id<SDWebImageCoder>> *coders = self.coders;
-    UNLOCK(self.codersLock);
-    for (id<SDWebImageCoder> coder in coders.reverseObjectEnumerator) {
+    if (!data) {
+        return nil;
+    }
+    for (id<SDWebImageCoder> coder in self.coders) {
         if ([coder canDecodeFromData:data]) {
             return [coder decodedImageWithData:data];
         }
@@ -116,10 +110,7 @@
     if (!image) {
         return nil;
     }
-    LOCK(self.codersLock);
-    NSArray<id<SDWebImageCoder>> *coders = self.coders;
-    UNLOCK(self.codersLock);
-    for (id<SDWebImageCoder> coder in coders.reverseObjectEnumerator) {
+    for (id<SDWebImageCoder> coder in self.coders) {
         if ([coder canDecodeFromData:*data]) {
             return [coder decompressedImageWithImage:image data:data options:optionsDict];
         }
@@ -131,10 +122,7 @@
     if (!image) {
         return nil;
     }
-    LOCK(self.codersLock);
-    NSArray<id<SDWebImageCoder>> *coders = self.coders;
-    UNLOCK(self.codersLock);
-    for (id<SDWebImageCoder> coder in coders.reverseObjectEnumerator) {
+    for (id<SDWebImageCoder> coder in self.coders) {
         if ([coder canEncodeToFormat:format]) {
             return [coder encodedDataWithImage:image format:format];
         }

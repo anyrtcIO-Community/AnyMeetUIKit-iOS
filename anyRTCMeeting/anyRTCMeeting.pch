@@ -14,10 +14,12 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 //账号信息
+#error 配置开发者信息
 static NSString *developerID = @"XXX";
 static NSString *token = @"XXX";
 static NSString *key = @"XXX";
 static NSString *appID = @"XXX";
+
 
 static NSString *verifyUrl = @"www.baidu.com";
 

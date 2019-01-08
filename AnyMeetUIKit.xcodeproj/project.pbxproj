@@ -39,30 +39,27 @@
 		6349216320AD74DE00F129F5 /* AMInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215220AD74DD00F129F5 /* AMInformationModel.m */; };
 		6349216420AD74DE00F129F5 /* AMInformationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215320AD74DD00F129F5 /* AMInformationController.h */; };
 		6349216520AD74DE00F129F5 /* AMInformationCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215420AD74DD00F129F5 /* AMInformationCell.h */; };
-		6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215520AD74DD00F129F5 /* AMInformationModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215520AD74DD00F129F5 /* AMInformationModel.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6349216720AD74DE00F129F5 /* AMInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215620AD74DD00F129F5 /* AMInformationController.m */; };
 		6349216820AD74DE00F129F5 /* AMInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215720AD74DD00F129F5 /* AMInformationCell.m */; };
 		6349216920AD74DE00F129F5 /* AMMoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215A20AD74DD00F129F5 /* AMMoreController.m */; };
 		6349216A20AD74DE00F129F5 /* AMMoreController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215B20AD74DD00F129F5 /* AMMoreController.h */; };
 		6349216B20AD74DE00F129F5 /* AMConfereeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215D20AD74DD00F129F5 /* AMConfereeController.h */; };
 		6349216C20AD74DE00F129F5 /* AMConfereeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349215E20AD74DD00F129F5 /* AMConfereeCell.m */; };
-		6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215F20AD74DD00F129F5 /* AMConfereeModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349215F20AD74DD00F129F5 /* AMConfereeModel.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6349216E20AD74DE00F129F5 /* AMConfereeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349216020AD74DD00F129F5 /* AMConfereeController.m */; };
 		6349216F20AD74DE00F129F5 /* AMConfereeCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349216120AD74DD00F129F5 /* AMConfereeCell.h */; };
 		6349217020AD74DE00F129F5 /* AMConfereeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349216220AD74DD00F129F5 /* AMConfereeModel.m */; };
 		6349217D20AD74EF00F129F5 /* AMVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217220AD74EF00F129F5 /* AMVideoController.m */; };
 		6349217E20AD74EF00F129F5 /* AMTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217320AD74EF00F129F5 /* AMTabbarView.m */; };
-		6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217420AD74EF00F129F5 /* AMVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217420AD74EF00F129F5 /* AMVideoView.h */; };
 		6349218020AD74EF00F129F5 /* AnyMeetVideoController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217520AD74EF00F129F5 /* AnyMeetVideoController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217620AD74EF00F129F5 /* AMTopToolView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217720AD74EF00F129F5 /* AMTabbarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217620AD74EF00F129F5 /* AMTopToolView.h */; };
+		6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217720AD74EF00F129F5 /* AMTabbarView.h */; };
 		6349218320AD74EF00F129F5 /* AMVideoController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6349217820AD74EF00F129F5 /* AMVideoController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6349218520AD74EF00F129F5 /* AMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217A20AD74EF00F129F5 /* AMVideoView.m */; };
 		6349218620AD74EF00F129F5 /* AMTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217B20AD74EF00F129F5 /* AMTopToolView.m */; };
 		6349218720AD74EF00F129F5 /* AnyMeetVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */; };
-		635AA39D213CE7BB002D3511 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635AA39C213CE7BB002D3511 /* AnyMeetUIKit.framework */; };
-		635AA39E213CE7C8002D3511 /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635AA39C213CE7BB002D3511 /* AnyMeetUIKit.framework */; };
-		635AA39F213CE7C8002D3511 /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 635AA39C213CE7BB002D3511 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63D115CA20AE6BB200BC0A36 /* AnyMeetUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */; };
 		63D115EF20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */; };
 		63D115F020AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */; };
@@ -118,28 +115,7 @@
 			remoteGlobalIDString = 63F0267320C67EE0007D25AB;
 			remoteInfo = anyRTCMeeting;
 		};
-		6545F89220DB97D000AB5A8B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6593C7F120A52F8D00D83DD1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6593C7F920A52F8D00D83DD1;
-			remoteInfo = AnyMeetUIKit;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		6545F89420DB97D000AB5A8B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				635AA39F213CE7C8002D3511 /* AnyMeetUIKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,7 +177,6 @@
 		6349217A20AD74EF00F129F5 /* AMVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMVideoView.m; sourceTree = "<group>"; };
 		6349217B20AD74EF00F129F5 /* AMTopToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMTopToolView.m; sourceTree = "<group>"; };
 		6349217C20AD74EF00F129F5 /* AnyMeetVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyMeetVideoController.m; sourceTree = "<group>"; };
-		635AA39C213CE7BB002D3511 /* AnyMeetUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnyMeetUIKit.framework; sourceTree = "<group>"; };
 		63D115C920AE6BB200BC0A36 /* AnyMeetUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AnyMeetUIKit.bundle; sourceTree = "<group>"; };
 		63D115ED20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		63D115EE20AE9CD800BC0A36 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
@@ -267,8 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */,
-				635AA39D213CE7BB002D3511 /* AnyMeetUIKit.framework in Frameworks */,
-				635AA39E213CE7C8002D3511 /* AnyMeetUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +490,6 @@
 		63F0267520C67EE0007D25AB /* anyRTCMeeting */ = {
 			isa = PBXGroup;
 			children = (
-				635AA39C213CE7BB002D3511 /* AnyMeetUIKit.framework */,
 				63F026D320C680DA007D25AB /* Main */,
 				63F026DE20C680DA007D25AB /* Base */,
 				63F0267C20C67EE0007D25AB /* Main.storyboard */,
@@ -732,11 +704,11 @@
 				6349218020AD74EF00F129F5 /* AnyMeetVideoController.h in Headers */,
 				653395DA20AEC5BB00BA13B7 /* AMNetManager.h in Headers */,
 				634920E420AD70F800F129F5 /* AMDocToolView.h in Headers */,
-				6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */,
+				6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */,
 				6349216620AD74DE00F129F5 /* AMInformationModel.h in Headers */,
+				6349218120AD74EF00F129F5 /* AMTopToolView.h in Headers */,
 				6349218220AD74EF00F129F5 /* AMTabbarView.h in Headers */,
 				6349217F20AD74EF00F129F5 /* AMVideoView.h in Headers */,
-				6349216D20AD74DE00F129F5 /* AMConfereeModel.h in Headers */,
 				634920E620AD70F800F129F5 /* AMPopverViewConfiguration.h in Headers */,
 				6593C81920A5335300D83DD1 /* AMApiManager.h in Headers */,
 				63F026E320C680EB007D25AB /* anyRTCMeeting.pch in Headers */,
@@ -774,12 +746,10 @@
 				63F0267120C67EE0007D25AB /* Frameworks */,
 				63F0267220C67EE0007D25AB /* Resources */,
 				988D0AD360BA78B4E5934D87 /* [CP] Embed Pods Frameworks */,
-				6545F89420DB97D000AB5A8B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6545F89320DB97D000AB5A8B /* PBXTargetDependency */,
 			);
 			name = anyRTCMeeting;
 			productName = anyRTCMeeting;
@@ -852,6 +822,11 @@
 				TargetAttributes = {
 					63F0267320C67EE0007D25AB = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					63F0268A20C67EE1007D25AB = {
 						CreatedOnToolsVersion = 9.3;
@@ -961,6 +936,7 @@
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${PODS_ROOT}/AnyMeetUIKit/AnyMeetUIKit/AnyMeetUIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XHToast/XHToast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -975,6 +951,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnyMeetUIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XHToast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1090,11 +1067,6 @@
 			target = 63F0267320C67EE0007D25AB /* anyRTCMeeting */;
 			targetProxy = 63F0269720C67EE1007D25AB /* PBXContainerItemProxy */;
 		};
-		6545F89320DB97D000AB5A8B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6593C7F920A52F8D00D83DD1 /* AnyMeetUIKit */;
-			targetProxy = 6545F89220DB97D000AB5A8B /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1113,7 +1085,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66866F4893F2B7BB31A8E3AD /* Pods-AnyMeetUIKit-anyRTCMeeting.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1144,7 +1115,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B15D7F2E9E331B4560424375 /* Pods-AnyMeetUIKit-anyRTCMeeting.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1369,7 +1339,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90EF4D576BF63003CC24540C /* Pods-AnyMeetUIKit.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
@@ -1417,7 +1387,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C156BAF614A3C731528F9CB2 /* Pods-AnyMeetUIKit.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5543CP4MRT;

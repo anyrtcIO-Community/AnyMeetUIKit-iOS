@@ -14,38 +14,47 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - AnyBoardEngine (1.0.7):
+  - AnyBoardEngine (1.0.9):
     - Socket.IO-Client-Swift (~> 13.1.3)
+  - AnyMeetUIKit (2.0.9):
+    - AnyBoardEngine (~> 1.0.4)
+    - Masonry (~> 1.1.0)
+    - MBProgressHUD (~> 1.1.0)
+    - MJExtension (~> 3.0.13)
+    - RTMeetEngine (~> 0.0.5)
+    - SDWebImage (~> 4.3.3)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.15.1)
-  - RTMeetEngine (1.1.0)
-  - SDWebImage (4.4.1):
-    - SDWebImage/Core (= 4.4.1)
-  - SDWebImage/Core (4.4.1)
+  - RTMeetEngine (0.0.9)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
   - Socket.IO-Client-Swift (13.1.3):
     - Starscream (~> 3.0.2)
-  - Starscream (3.0.5)
-  - TZImagePickerController (2.1.6)
-  - WechatOpenSDK (1.8.2)
+  - Starscream (3.0.6)
+  - TZImagePickerController (3.1.7)
+  - WechatOpenSDK (1.8.3)
   - XHToast (1.4.0)
 
 DEPENDENCIES:
   - AFNetworking
   - AnyBoardEngine
+  - AnyMeetUIKit (~> 2.0.9)
   - Masonry
   - MBProgressHUD
   - MJExtension
-  - RTMeetEngine (~> 1.1.0)
+  - RTMeetEngine
   - SDWebImage
   - TZImagePickerController
   - WechatOpenSDK
   - XHToast (~> 1.4.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - AnyBoardEngine
+    - AnyMeetUIKit
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -59,18 +68,19 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AnyBoardEngine: e64a2bc436f319a1a65472acedbce72097b2d565
+  AnyBoardEngine: edf6c7275be1f80261251104f2cc757b18287209
+  AnyMeetUIKit: fa58d5dc7322da18052b3b75bf643e43cd1555f0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
-  RTMeetEngine: bf9e60358209f104fd27c3698acea6279225ed38
-  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+  RTMeetEngine: 4fa2382c6aa809c7d5eadb375670af0047cc4d61
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   Socket.IO-Client-Swift: d30d6fd08a38ad2a182b090936a043bf512ab2de
-  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
-  TZImagePickerController: bc25e933c9d970a622d052f0d4de16202bbcd863
-  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  TZImagePickerController: 3027e1e2029c830186c6a167c88c933b8556fdc7
+  WechatOpenSDK: 3117412f8aafde4758cac1e8d20b93c67cafcfef
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
 
-PODFILE CHECKSUM: c3dd1ccc3d4b55f8a817a758a9c9185ea300dbeb
+PODFILE CHECKSUM: fa0509a0b8d025e5121cb6982c4ba173f3f588e1
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

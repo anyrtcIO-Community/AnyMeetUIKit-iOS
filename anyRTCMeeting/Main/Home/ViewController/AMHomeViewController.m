@@ -192,6 +192,9 @@
     meetVc.uploadBlock = ^(NSArray *picArray) {
         [weakSelf uploadPics:picArray withController:tempVideoController];
     };
+    meetVc.leaveBlock = ^{
+        
+    };
     [self.navigationController pushViewController:meetVc animated:YES];
 }
 

@@ -18,7 +18,6 @@ typedef enum {
 	AnyRTC_NET_DISSCONNECT = 101,	// 网络断开
     AnyRTC_LIVE_ERR	= 102,			// 直播出错
 	AnyRTC_EXP_ERR = 103,			// 异常错误
-	AnyRTC_EXP_Unauthorized = 104,	// 服务未授权(仅可能出现在私有云项目)
 
     AnyRTC_BAD_REQ = 201,		// 服务不支持的错误请求
     AnyRTC_AUTH_FAIL = 202,		// 认证失败
@@ -118,7 +117,6 @@ typedef enum {
     RTMPC_LINE_V_Fullscrn = 0,		// 　默认模式：主播全屏，副主播小屏
     RTMPC_LINE_V_1_equal_others = 1,	// 　主播跟副主播视频大小一致
     RTMPC_LINE_V_1big_3small = 2,		// 　主播大屏（非全屏）副主播小屏
-	RTMPC_LINE_V_1full_4small = 3,		// 主大(是全屏),四小副
 }RTMPCLineVideoLayout;
 
 typedef enum {
@@ -193,16 +191,9 @@ typedef enum {
 }RTMPCVideoTempDir;
 
 typedef enum {
-    RTC_Nomal_Message_Type = 0,//普通文本消息
-    RTC_Barrage_Message_Type = 1   //弹幕消息
-}RTCMessageType;
-
-// 相机类型
-typedef enum {
-    AnyRTCCameraTypeNomal = 0,
-    AnyRTCCameraTypeBeauty = 1
-}AnyRTCCameraType;
-
+    RTMPC_Nomal_Message_Type = 0,//普通文本消息
+    RTMPC_Barrage_Message_Type = 1   //弹幕消息
+}RTMPCMessageType;
 //滤镜常量
 typedef enum : char {
     //美颜滤镜
@@ -214,14 +205,5 @@ typedef enum : char {
     
 } AnyCameraDeviceFilter;
 
-typedef enum {
-    //表示按比例缩放并且填满view，意味着图片可能超出view，可能被裁减掉
-    AnyRTCVideoRenderScaleAspectFill = 0,
-    //表示通过缩放来填满view，也就是说图片会变形
-    AnyRTCVideoRenderScaleToFill,
-    //表示按比例缩放并且图片要完全显示出来，意味着view可能会留有空白
-    AnyRTCVideoRenderScaleAspectFit
-    
-}AnyRTCVideoRenderMode;
 
 #endif	// __RTC_COMMON_H__

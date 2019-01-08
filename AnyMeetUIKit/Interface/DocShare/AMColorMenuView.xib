@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,17 +27,6 @@
                         <action selector="lineWidthEvent:" destination="iN0-l3-epB" eventType="valueChanged" id="ttT-bx-4F9"/>
                     </connections>
                 </slider>
-                <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2U-aC-v30">
-                    <rect key="frame" x="15" y="51" width="59" height="59"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="o2U-aC-v30" secondAttribute="height" multiplier="1:1" id="UYk-5h-PCj"/>
-                    </constraints>
-                    <state key="normal" image="red"/>
-                    <state key="selected" image="red_selected"/>
-                    <connections>
-                        <action selector="doSomeEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="Tsl-UU-5XH"/>
-                    </connections>
-                </button>
                 <button opaque="NO" tag="203" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsG-I8-OBC">
                     <rect key="frame" x="220" y="54" width="39" height="39"/>
                     <constraints>
@@ -92,6 +80,17 @@
                     <state key="selected" image="blue_selected"/>
                     <connections>
                         <action selector="doSomeEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="Bew-FY-daE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="200" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2U-aC-v30">
+                    <rect key="frame" x="15" y="44" width="59" height="59"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="o2U-aC-v30" secondAttribute="height" multiplier="1:1" id="UYk-5h-PCj"/>
+                    </constraints>
+                    <state key="normal" image="red"/>
+                    <state key="selected" image="red_selected"/>
+                    <connections>
+                        <action selector="doSomeEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="Tsl-UU-5XH"/>
                     </connections>
                 </button>
             </subviews>
