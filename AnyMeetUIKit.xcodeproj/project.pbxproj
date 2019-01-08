@@ -96,6 +96,8 @@
 		65972F1420A57159005E5CEA /* AMUserModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F1220A57159005E5CEA /* AMUserModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65972F1A20A5772E005E5CEA /* AMMeetListModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 65972F1620A5772E005E5CEA /* AMMeetListModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65972F1B20A5772E005E5CEA /* AMMeetListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65972F1720A5772E005E5CEA /* AMMeetListModel.m */; };
+		78336AC321E4832000DFC99D /* AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */; };
+		78336AC421E4832000DFC99D /* AnyMeetUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6593C7FA20A52F8D00D83DD1 /* AnyMeetUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E8B002AF9C682AEFAE20FD8 /* Pods_AnyMeetUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */; };
 		CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95746D7527360FE42DBB6B09 /* Pods_AnyMeetUIKit_anyRTCMeeting.framework */; };
 /* End PBXBuildFile section */
@@ -115,7 +117,28 @@
 			remoteGlobalIDString = 63F0267320C67EE0007D25AB;
 			remoteInfo = anyRTCMeeting;
 		};
+		78336AC521E4832000DFC99D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6593C7F120A52F8D00D83DD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6593C7F920A52F8D00D83DD1;
+			remoteInfo = AnyMeetUIKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78336AC721E4832100DFC99D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				78336AC421E4832000DFC99D /* AnyMeetUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		157885A680EF598C698235FF /* Pods_AnyMeetUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyMeetUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE8C115BC5F40E11BE11ADA /* Pods_AnyMeetUIKit_anyRTCMeeting.framework in Frameworks */,
+				78336AC321E4832000DFC99D /* AnyMeetUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,10 +770,12 @@
 				63F0267120C67EE0007D25AB /* Frameworks */,
 				63F0267220C67EE0007D25AB /* Resources */,
 				988D0AD360BA78B4E5934D87 /* [CP] Embed Pods Frameworks */,
+				78336AC721E4832100DFC99D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				78336AC621E4832000DFC99D /* PBXTargetDependency */,
 			);
 			name = anyRTCMeeting;
 			productName = anyRTCMeeting;
@@ -1066,6 +1092,11 @@
 			isa = PBXTargetDependency;
 			target = 63F0267320C67EE0007D25AB /* anyRTCMeeting */;
 			targetProxy = 63F0269720C67EE1007D25AB /* PBXContainerItemProxy */;
+		};
+		78336AC621E4832000DFC99D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6593C7F920A52F8D00D83DD1 /* AnyMeetUIKit */;
+			targetProxy = 78336AC521E4832000DFC99D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
