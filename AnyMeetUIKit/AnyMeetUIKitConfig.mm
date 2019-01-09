@@ -56,7 +56,7 @@ BOOL getDebugLog() {
 }
 
 + (NSString*)getSdkVersion {
-    return @"V2.1.2 2019-01-08";
+    return @"V2.1.3 2019-01-09";
 }
 + (void)setDebugLogOpen:(BOOL)isDebugLogOpen {
     gDebugLog = isDebugLogOpen;

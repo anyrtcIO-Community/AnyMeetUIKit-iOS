@@ -20,7 +20,6 @@ static NSString *token = @"XXX";
 static NSString *key = @"XXX";
 static NSString *appID = @"XXX";
 
-
 static NSString *verifyUrl = @"www.baidu.com";
 
 //微信

@@ -87,7 +87,7 @@
         [self.sharedView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
         }];
-        [self makeResolution:[NSMutableArray arrayWithObject:self.sharedView] itemWidth:UIScreen.mainScreen.bounds.size.height itemHeight:UIScreen.mainScreen.bounds.size.width fill:NO];
+        [self makeResolution:[NSMutableArray arrayWithObject:self.sharedView.localView] itemWidth:UIScreen.mainScreen.bounds.size.height itemHeight:UIScreen.mainScreen.bounds.size.width fill:NO];
     }
     
     self.isHide ? (padding = 5) : (padding = 54);

@@ -55,8 +55,8 @@
     
     NSDictionary *customDict = [NSDictionary dictionaryWithObjectsAndKeys:self.userModel.userName,@"nickName",self.userModel.userId,@"userId",self.userModel.userHeadUrl,@"headUrl",[NSNumber numberWithInt:1],@"devType",nil];
     NSString *customStr = [AMCommon fromDicToJSONStr:customDict];
-    //加入会议
-    [self.meetKit joinRTC:self.meetModel.meetingid andIsHoster:NO andUserId:self.userModel.userId andUserData:customStr];
+    //加入会议 self.meetModel.meetingid
+    [self.meetKit joinRTC:@"anymeeting10001" andIsHoster:NO andUserId:self.userModel.userId andUserData:customStr];
 }
 #pragma mark- 离开会议
 - (void)leaveMeet{
@@ -241,13 +241,6 @@
 
 -(void)onRTCOpenVideoRender:(NSString*)strRTCPeerId withRTCPubId:(NSString *)strRTCPubId withUserId:(NSString*)strUserId withUserData:(NSString*)strUserData{
     //其他与会者视频接通回调(音视频)
-    if (self.sharedView) {
-        //共享屏幕流
-        if ([self.sharedView.strPubId isEqualToString:strRTCPubId]) {
-            return;
-        }
-    }
-    
     AMVideoView *video = [AMVideoView loadVideoWithpeerId:strRTCPeerId pubId:strRTCPubId size:CGSizeZero];
     [self.videoArr addObject:video];
     [self.meetKit setRTCVideoRender:strRTCPubId andRender:video.localView];
@@ -274,12 +267,6 @@
 }
 
 -(void)onRTCCloseVideoRender:(NSString*)strRTCPeerId withRTCPubId:(NSString *)strRTCPubId withUserId:(NSString*)strUserId{
-    //共享屏幕流
-    if (self.sharedView) {
-        if ([self.sharedView.strPubId isEqualToString:strRTCPubId]) {
-            return;
-        }
-    }
     
     //当离开者为大屏时，将自身切换为大屏
     UIView *currentView = [self.view viewWithTag:1000];
@@ -322,9 +309,23 @@
             *stop = YES;
         }
     }];
-    
     //发送刷新参会列表通知
     [NSNotificationCenter.defaultCenter postNotificationName:@"AnyMeetConferee_ChangeNotification" object:self.memberArr];
+}
+-(void)onRTCOpenScreenRender:(NSString*)strRTCPeerId withRTCPubId:(NSString *)strRTCPubId withUserId:(NSString*)strUserId withUserData:(NSString*)strUserData {
+    if (self.sharedView) {
+        //共享屏幕流
+        if ([self.sharedView.strPubId isEqualToString:strRTCPubId]) {
+             [self.meetKit setRTCVideoRender:self.sharedView.strPubId andRender:self.sharedView.localView];
+        }
+    }
+}
+-(void)onRTCCloseScreenRender:(NSString*)strRTCPeerId withRTCPubId:(NSString *)strRTCPubId withUserId:(NSString*)strUserId {
+    //共享屏幕流
+    if (self.sharedView) {
+        if ([self.sharedView.strPubId isEqualToString:strRTCPubId]) {
+        }
+    }
 }
 
 - (void)onRTCAVStatus:(NSString*)strRTCPeerId withAudio:(BOOL)bAudio withVideo:(BOOL)bVideo{
@@ -355,9 +356,12 @@
 
 - (void)onRTCViewChanged:(UIView*)videoView didChangeVideoSize:(CGSize)size{
     if (self.sharedView.localView == videoView) {
+        [ASHUD hideHUD];
         //屏幕共享流size
         self.sharedView.videoSize = size;
+
         [self makeResolution:[NSMutableArray arrayWithObject:self.sharedView] itemWidth:UIScreen.mainScreen.bounds.size.width itemHeight:UIScreen.mainScreen.bounds.size.height fill:NO];
+        
         return;
     }
     
@@ -495,12 +499,12 @@
                 self.sharedView = [AMVideoView loadVideoWithpeerId:@"" pubId:strUserShareInfo size:CGSizeZero];
                 [self.view insertSubview:self.sharedView aboveSubview:self.horizontalScrollView];
                 self.sharedView.frame = self.view.bounds;
-                self.sharedView.localView.frame = self.view.bounds;
+//                self.sharedView.localView.frame = self.view.bounds;
                 [ASHUD showHUDWithLoadingStyleInView:self.view belowView:nil content:@"正在打开屏幕共享"];
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [ASHUD hideHUD];
-                    [self.meetKit setRTCVideoRender:self.sharedView.strPubId andRender:self.sharedView.localView];
-                });
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//
+//                    [self.meetKit setRTCVideoRender:self.sharedView.strPubId andRender:self.sharedView.localView];
+//                });
                 
                 //添加手势
                 UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(interfaceAnimation)];
